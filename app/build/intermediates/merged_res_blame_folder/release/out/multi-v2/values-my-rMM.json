@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "hyphenate.demo.push.app-mergeReleaseResources-18:/values-my-rMM/values-my-rMM.xml",
+            "map": [
+                {
+                    "source": "/Users/wt/.gradle/caches/transforms-3/2ad977cc590a0ae7805553616b6f1c24/transformed/jetified-oppo_push_3.5.2/res/values-my-rMM/values-my-rMM.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "69",
+                        "endOffsets": "120"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "122",
+                        "endColumns": "69",
+                        "endOffsets": "187"
+                    }
+                },
+                {
+                    "source": "/Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/res/values-my-rMM/values-my-rMM.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}

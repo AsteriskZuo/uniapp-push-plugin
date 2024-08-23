@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "hyphenate.demo.push.app-mergeReleaseResources-18:/values-hr-rHR/values-hr-rHR.xml",
+            "map": [
+                {
+                    "source": "/Users/wt/.gradle/caches/transforms-3/2ad977cc590a0ae7805553616b6f1c24/transformed/jetified-oppo_push_3.5.2/res/values-hr-rHR/values-hr-rHR.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "71",
+                        "endOffsets": "122"
+                    }
+                }
+            ]
+        }
+    ]
+}

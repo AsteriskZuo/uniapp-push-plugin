@@ -1,0 +1,67 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://developer.hihonor.com/repo")}
+        maven { url = uri("https://developer.huawei.com/repo/")}
+    }
+    dependencies {
+        classpath("com.huawei.agconnect:agcp:1.9.0.300")
+        classpath("com.hihonor.mcs:asplugin:2.0.1.300")
+    }
+}
+
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    // Add the Huawei services Gradle plugin
+    id("com.huawei.agconnect")
+    // Add honor services Gradle plugin
+    id("com.hihonor.mcs.asplugin")
+}
+
+android {
+    namespace 'com.hyphenate.push'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 21
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    compileOnly fileTree(dir: '../app/libs', include: ['uniapp-v8-release.aar'])
+    compileOnly fileTree(dir: '../app/libs', include: ['oppo_push_3.5.2.aar'])
+    compileOnly fileTree(dir: '../app/libs', include: ['vivo_push_v4.0.4.0_504.aar'])
+    compileOnly fileTree(dir: '../app/libs', include: ['MiPush_SDK_Client_6_0_1-C_3rd.aar'])
+    compileOnly("com.huawei.hms:push:6.12.0.300")
+    compileOnly("com.hihonor.mcs:push:7.0.61.303")
+    compileOnly("com.meizu.flyme.internet:push-internal:4.3.0")
+
+    //必须添加的依赖
+    compileOnly 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    compileOnly 'androidx.core:core:1.1.0'
+    compileOnly 'androidx.fragment:fragment:1.1.0'
+    compileOnly 'androidx.appcompat:appcompat:1.1.0'
+    compileOnly 'androidx.recyclerview:recyclerview:1.1.0'
+    compileOnly 'com.alibaba:fastjson:1.2.83'
+}

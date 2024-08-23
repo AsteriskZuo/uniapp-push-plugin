@@ -1,0 +1,1064 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="hyphenate.demo.push"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <supports-screens
+11-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:5:5-10:39
+12        android:anyDensity="true"
+12-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:6:9-34
+13        android:largeScreens="true"
+13-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:7:9-36
+14        android:normalScreens="true"
+14-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:8:9-37
+15        android:resizeable="true"
+15-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:9:9-34
+16        android:smallScreens="true" />
+16-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:10:9-36
+17
+18    <!-- Barcode(二维码)  begin -->
+19    <uses-permission android:name="android.permission.CAMERA" />
+19-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:13:5-65
+19-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:13:22-62
+20    <uses-permission
+20-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:14:5-81
+21        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+21-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:14:22-78
+22        android:maxSdkVersion="32" />
+22-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:22:9-35
+23
+24    <uses-feature android:name="android.hardware.camera" />
+24-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:16:5-60
+24-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:16:19-57
+25    <uses-feature android:name="android.hardware.camera.autofocus" />
+25-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:17:5-70
+25-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:17:19-67
+26
+27    <uses-permission android:name="android.permission.VIBRATE" />
+27-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:19:5-66
+27-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:19:22-63
+28    <uses-permission android:name="android.permission.FLASHLIGHT" />
+28-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:20:5-69
+28-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:20:22-66
+29
+30    <!-- 适配android 13 图片选择权限 -->
+31    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+31-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:17:5-76
+31-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:17:22-73
+32    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+32-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:18:5-75
+32-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:18:22-72
+33    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+33-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:19:5-90
+33-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:19:22-87
+34    <uses-permission android:name="android.permission.INTERNET" />
+34-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:20:5-67
+34-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:20:22-64
+35    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+35-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:21:5-79
+35-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:21:22-76
+36    <!--
+37    <uses-permission
+38        android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+39    -->
+40    <!-- 华为修改角标需要设置权限 -->
+41    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" /> <!-- vivo 修改角标需要设置权限 -->
+41-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:27:5-91
+41-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:27:22-88
+42    <uses-permission android:name="com.vivo.notification.permission.BADGE_ICON" />
+42-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:29:5-83
+42-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:29:22-80
+43
+44    <queries>
+44-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:31:5-40:15
+45        <intent>
+45-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:32:9-34:18
+46            <action android:name="android.intent.action.MAIN" />
+46-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:52:17-68
+46-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:52:25-66
+47        </intent>
+48        <intent>
+48-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:35:9-39:18
+49            <action android:name="android.intent.action.VIEW" />
+49-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:41:17-68
+49-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:41:25-66
+50
+51            <category android:name="android.intent.category.DEFAULT" />
+51-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:17-75
+51-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:27-73
+52        </intent>
+53        <intent>
+53-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:33:9-35:18
+54            <action android:name="com.hihonor.push.action.BIND_PUSH_SERVICE" />
+54-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:34:13-80
+54-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:34:21-77
+55        </intent>
+56
+57        <package android:name="com.huawei.android.pushagent" />
+57-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:26:9-64
+57-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:26:18-61
+58
+59        <intent>
+59-->[com.huawei.hms:device:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/1c566bc303abe65dfada0bb5c73f6891/transformed/jetified-device-6.11.0.302/AndroidManifest.xml:15:9-17:18
+60            <action android:name="com.huawei.hms.core.aidlservice" />
+60-->[com.huawei.hms:device:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/1c566bc303abe65dfada0bb5c73f6891/transformed/jetified-device-6.11.0.302/AndroidManifest.xml:16:13-70
+60-->[com.huawei.hms:device:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/1c566bc303abe65dfada0bb5c73f6891/transformed/jetified-device-6.11.0.302/AndroidManifest.xml:16:21-67
+61        </intent>
+62        <intent>
+62-->[com.huawei.hms:device:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/1c566bc303abe65dfada0bb5c73f6891/transformed/jetified-device-6.11.0.302/AndroidManifest.xml:18:9-20:18
+63            <action android:name="com.huawei.hms.core" />
+63-->[com.huawei.hms:device:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/1c566bc303abe65dfada0bb5c73f6891/transformed/jetified-device-6.11.0.302/AndroidManifest.xml:19:13-58
+63-->[com.huawei.hms:device:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/1c566bc303abe65dfada0bb5c73f6891/transformed/jetified-device-6.11.0.302/AndroidManifest.xml:19:21-55
+64        </intent>
+65
+66        <package android:name="com.huawei.works" />
+66-->[com.huawei.hms:network-common:6.0.11.300] /Users/wt/.gradle/caches/transforms-3/0bb59bcffd2366508d5b55bc252bb5cd/transformed/jetified-network-common-6.0.11.300/AndroidManifest.xml:12:9-52
+66-->[com.huawei.hms:network-common:6.0.11.300] /Users/wt/.gradle/caches/transforms-3/0bb59bcffd2366508d5b55bc252bb5cd/transformed/jetified-network-common-6.0.11.300/AndroidManifest.xml:12:18-49
+67    </queries>
+68
+69    <uses-permission
+70        android:name="android.permission.READ_EXTERNAL_STORAGE"
+71        android:maxSdkVersion="32" />
+71-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:19:9-35
+72    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+72-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:13:5-76
+72-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:13:22-73
+73    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- 这里applicationId为app的包名 -->
+73-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:15:5-77
+73-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:15:22-74
+74    <permission
+74-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:18:5-20:47
+75        android:name="hyphenate.demo.push.permission.MIPUSH_RECEIVE"
+75-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:19:9-66
+76        android:protectionLevel="signature" /> <!-- 这里applicationId为app的包名 -->
+76-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:20:9-44
+77    <uses-permission android:name="hyphenate.demo.push.permission.MIPUSH_RECEIVE" />
+77-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:22:5-82
+77-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:22:22-79
+78    <uses-permission android:name="com.asus.msa.SupplementaryDID.ACCESS" />
+78-->[oaid_sdk_1.0.25.aar] /Users/wt/.gradle/caches/transforms-3/1821f242f83413b884363664dd877db8/transformed/jetified-oaid_sdk_1.0.25/AndroidManifest.xml:13:5-76
+78-->[oaid_sdk_1.0.25.aar] /Users/wt/.gradle/caches/transforms-3/1821f242f83413b884363664dd877db8/transformed/jetified-oaid_sdk_1.0.25/AndroidManifest.xml:13:22-73
+79    <uses-permission android:name="freemme.permission.msa" />
+79-->[oaid_sdk_1.0.25.aar] /Users/wt/.gradle/caches/transforms-3/1821f242f83413b884363664dd877db8/transformed/jetified-oaid_sdk_1.0.25/AndroidManifest.xml:15:5-62
+79-->[oaid_sdk_1.0.25.aar] /Users/wt/.gradle/caches/transforms-3/1821f242f83413b884363664dd877db8/transformed/jetified-oaid_sdk_1.0.25/AndroidManifest.xml:15:22-59
+80    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Oppo推送配置（如果应用无透传权限，则不用配置） start -->
+80-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:8:5-68
+80-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:8:22-65
+81    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
+81-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:25:5-86
+81-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:25:22-83
+82    <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
+82-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:26:5-85
+82-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:26:22-82
+83
+84    <permission
+84-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:9:5-11:47
+85        android:name="hyphenate.demo.push.permission.PROCESS_PUSH_MSG"
+85-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:10:9-68
+86        android:protectionLevel="signature" /> <!-- PUSH_PROVIDER and PUSH_WRITE_PROVIDER are both provider registered permissions for the notification switch. -->
+86-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:11:9-44
+87    <!-- The SDK's notification bar switch, EMUI 9.x becomes write to the local sp, sharing the file through the provider to the push-rom, which reads the sp file to get the status of the notification bar switch. -->
+88    <permission
+88-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:14:5-16:47
+89        android:name="hyphenate.demo.push.permission.PUSH_PROVIDER"
+89-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:15:9-65
+90        android:protectionLevel="signature" />
+90-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:16:9-44
+91    <permission
+91-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:17:5-19:47
+92        android:name="hyphenate.demo.push.permission.PUSH_WRITE_PROVIDER"
+92-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:18:9-71
+93        android:protectionLevel="signature" />
+93-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:19:9-44
+94
+95    <uses-permission android:name="hyphenate.demo.push.permission.PROCESS_PUSH_MSG" />
+95-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:21:5-84
+95-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:21:22-81
+96    <uses-permission android:name="hyphenate.demo.push.permission.PUSH_PROVIDER" />
+96-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:22:5-81
+96-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:22:22-78
+97    <uses-permission android:name="com.hihonor.push.permission.READ_PUSH_NOTIFICATION_INFO" /> <!-- Barcode(二维码)  end -->
+97-->[com.hihonor.mcs:push:7.0.61.303] /Users/wt/.gradle/caches/transforms-3/69ec79763389f505ff96cd6790333343/transformed/jetified-push-7.0.61.303/AndroidManifest.xml:11:5-95
+97-->[com.hihonor.mcs:push:7.0.61.303] /Users/wt/.gradle/caches/transforms-3/69ec79763389f505ff96cd6790333343/transformed/jetified-push-7.0.61.303/AndroidManifest.xml:11:22-92
+98    <application
+98-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:23:5-128:19
+99        android:name="io.dcloud.application.DCloudApplication"
+99-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:24:9-63
+100        android:allowBackup="true"
+100-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:39:9-35
+101        android:allowClearUserData="true"
+101-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:25:9-42
+102        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+102-->[androidx.core:core:1.6.0] /Users/wt/.gradle/caches/transforms-3/cd21def6b3ac4ad9ad1b6370bbb183e7/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+103        android:extractNativeLibs="true"
+104        android:icon="@drawable/icon"
+104-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:26:9-38
+105        android:label="@string/app_name"
+105-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:27:9-41
+106        android:largeHeap="true"
+106-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:28:9-33
+107        android:supportsRtl="true"
+107-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:29:9-35
+108        android:usesCleartextTraffic="true" >
+108-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:175:9-44
+109
+110        <!-- 应用入口 -->
+111        <activity
+111-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:32:9-55:20
+112            android:name="io.dcloud.PandoraEntry"
+112-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:33:13-50
+113            android:configChanges="orientation|keyboardHidden|screenSize|mcc|mnc|fontScale"
+113-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:35:13-92
+114            android:exported="true"
+114-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:37:13-36
+115            android:hardwareAccelerated="true"
+115-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:36:13-47
+116            android:theme="@style/TranslucentTheme"
+116-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:34:13-52
+117            android:windowSoftInputMode="adjustResize" >
+117-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:38:13-55
+118            <intent-filter>
+118-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:39:13-45:29
+119                <data android:scheme="hbuilder" />
+119-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:40:17-50
+119-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:40:23-48
+120
+121                <action android:name="android.intent.action.VIEW" />
+121-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:41:17-68
+121-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:41:25-66
+122
+123                <category android:name="android.intent.category.DEFAULT" />
+123-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:17-75
+123-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:27-73
+124                <category android:name="android.intent.category.BROWSABLE" />
+124-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:44:17-77
+124-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:44:27-75
+125            </intent-filter>
+126            <intent-filter>
+126-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:46:13-50:29
+127                <data android:mimeType="image/*" />
+127-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:40:17-50
+127-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:47:23-49
+128
+129                <action android:name="android.intent.action.SEND" />
+129-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:48:17-68
+129-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:48:25-66
+130
+131                <category android:name="android.intent.category.DEFAULT" />
+131-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:17-75
+131-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:27-73
+132            </intent-filter>
+133            <intent-filter>
+133-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:51:13-54:29
+134                <action android:name="android.intent.action.MAIN" />
+134-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:52:17-68
+134-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:52:25-66
+135
+136                <category android:name="android.intent.category.LAUNCHER" />
+136-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:53:17-76
+136-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:53:27-74
+137            </intent-filter>
+138        </activity>
+139
+140        <meta-data
+140-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:56:9-57:35
+141            android:name="dcloud_uninview_background"
+141-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:56:20-61
+142            android:value="true" />
+142-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:57:13-33
+143
+144        <activity
+144-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:59:9-84:20
+145            android:name="io.dcloud.PandoraEntryActivity"
+145-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:60:13-58
+146            android:configChanges="orientation|keyboardHidden|screenSize|mcc|mnc|fontScale|keyboard|smallestScreenSize|screenLayout|screenSize|uiMode"
+146-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:62:13-151
+147            android:exported="true"
+147-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:67:13-36
+148            android:hardwareAccelerated="true"
+148-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:63:13-47
+149            android:launchMode="singleTask"
+149-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:61:13-44
+150            android:permission="com.miui.securitycenter.permission.AppPermissionsEditor"
+150-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:64:13-89
+151            android:screenOrientation="user"
+151-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:65:13-45
+152            android:theme="@style/DCloudTheme"
+152-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:66:13-47
+153            android:windowSoftInputMode="adjustResize" >
+153-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:68:13-55
+154            <intent-filter>
+154-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:70:13-83:29
+155                <category android:name="android.intent.category.DEFAULT" />
+155-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:17-75
+155-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:27-73
+156                <category android:name="android.intent.category.BROWSABLE" />
+156-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:44:17-77
+156-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:44:27-75
+157
+158                <action android:name="android.intent.action.VIEW" />
+158-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:41:17-68
+158-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:41:25-66
+159
+160                <data android:scheme=" " />
+160-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:40:17-50
+160-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:40:23-48
+161            </intent-filter>
+162        </activity>
+163        <!-- dcloud 离线打包需要的 appkey -->
+164        <meta-data
+164-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:86:9-88:64
+165            android:name="dcloud_appkey"
+165-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:87:13-41
+166            android:value="0eea0a1d239112de3b8963a71c3b85df" />
+166-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:88:13-61
+167
+168        <!-- 本地调试推送配置 start -->
+169        <meta-data
+169-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:91:9-93:41
+170            android:name="com.hihonor.push.app_id"
+170-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:92:13-51
+171            android:value="104459115" />
+171-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:93:13-38
+172        <meta-data
+172-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:95:9-97:64
+173            android:name="OPPO_APP_KEY"
+173-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:96:13-40
+174            android:value="0b70d6a74a7148468899c3dca737654a" />
+174-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:97:13-61
+175        <meta-data
+175-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:99:9-101:64
+176            android:name="OPPO_APP_SECRET"
+176-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:100:13-43
+177            android:value="d9eaefb90c4b4c8e837e3e30cda6ffb2" />
+177-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:101:13-61
+178        <meta-data
+178-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:103:9-105:64
+179            android:name="com.vivo.push.api_key"
+179-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:104:13-49
+180            android:value="bf9b5941615f32b60ab906966b3b9755" />
+180-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:105:13-61
+181        <meta-data
+181-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:107:9-109:41
+182            android:name="com.vivo.push.app_id"
+182-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:108:13-48
+183            android:value="105792633" />
+183-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:109:13-38
+184        <meta-data
+184-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:111:9-113:51
+185            android:name="XIAO_MI_APP_ID"
+185-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:112:13-42
+186            android:value="2882303761520334485" />
+186-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:113:13-48
+187        <meta-data
+187-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:115:9-117:45
+188            android:name="XIAO_MI_APP_KEY"
+188-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:116:13-43
+189            android:value="5912033445485" />
+189-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:117:13-42
+190        <meta-data
+190-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:119:9-121:38
+191            android:name="MEI_ZU_APP_ID"
+191-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:120:13-41
+192            android:value="153508" />
+192-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:121:13-35
+193        <meta-data
+193-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:123:9-125:64
+194            android:name="MEI_ZU_APP_KEY"
+194-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:124:13-42
+195            android:value="99c0860422a649fbb0b4654a82b06e3f" />
+195-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:125:13-61
+196
+197        <!--
+198        <activity
+199            android:name="io.dcloud.imagepick.CustomGalleryActivity"
+200            android:noHistory="true"
+201            android:exported="false"/>
+202        -->
+203        <activity
+203-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:184:9-190:58
+204            android:name="io.dcloud.feature.nativeObj.photoview.PhotoActivity"
+204-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:185:13-79
+205            android:configChanges="orientation|keyboardHidden"
+205-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:186:13-63
+206            android:exported="false"
+206-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:187:13-37
+207            android:noHistory="false"
+207-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:188:13-38
+208            android:screenOrientation="behind"
+208-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:189:13-47
+209            android:theme="@style/DeviceDefault.Light" />
+209-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:190:13-55
+210        <activity
+210-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:191:9-200:58
+211            android:name="io.dcloud.WebAppActivity"
+211-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:192:13-52
+212            android:configChanges="orientation|keyboard|keyboardHidden|smallestScreenSize|screenLayout|screenSize|mcc|mnc|fontScale|navigation"
+212-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:193:13-144
+213            android:hardwareAccelerated="true"
+213-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:194:13-47
+214            android:icon="@drawable/dcloud_recent"
+214-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:195:13-51
+215            android:label="@string/stream_my"
+215-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:196:13-46
+216            android:launchMode="singleTask"
+216-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:197:13-44
+217            android:screenOrientation="portrait"
+217-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:198:13-49
+218            android:theme="@style/DCloudTheme"
+218-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:199:13-47
+219            android:windowSoftInputMode="adjustResize" />
+219-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:200:13-55
+220        <activity
+220-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:201:9-205:75
+221            android:name="io.dcloud.ProcessMediator"
+221-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:202:13-53
+222            android:excludeFromRecents="true"
+222-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:203:13-46
+223            android:exported="false"
+223-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:204:13-37
+224            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+224-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:205:13-72
+225        <activity
+225-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:206:9-212:20
+226            android:name="io.dcloud.WebviewActivity"
+226-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:207:13-53
+227            android:exported="false"
+227-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:208:13-37
+228            android:screenOrientation="portrait"
+228-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:209:13-49
+229            android:theme="@style/ThemeNoTitleBar"
+229-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:210:13-51
+230            android:windowSoftInputMode="adjustPan" >
+230-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:211:13-52
+231        </activity> <!-- gallery******start -->
+232        <activity
+232-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:215:9-220:63
+233            android:name="com.dmcbig.mediapicker.PickerActivity"
+233-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:216:13-65
+234            android:configChanges="orientation|screenSize"
+234-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:217:13-59
+235            android:exported="false"
+235-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:218:13-37
+236            android:theme="@style/DeviceDefault.Light"
+236-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:219:13-55
+237            android:windowSoftInputMode="stateAlwaysHidden" />
+237-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:220:13-60
+238        <activity
+238-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:221:9-226:63
+239            android:name="com.dmcbig.mediapicker.PreviewActivity"
+239-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:222:13-66
+240            android:configChanges="orientation|screenSize"
+240-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:223:13-59
+241            android:exported="false"
+241-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:224:13-37
+242            android:theme="@style/DeviceDefault.Light"
+242-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:225:13-55
+243            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- gallery******end -->
+243-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:226:13-60
+244        <provider
+244-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:229:9-237:20
+245            android:name="io.dcloud.common.util.DCloud_FileProvider"
+245-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:230:13-69
+246            android:authorities="hyphenate.demo.push.dc.fileprovider"
+246-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:231:13-67
+247            android:exported="false"
+247-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:232:13-37
+248            android:grantUriPermissions="true" >
+248-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:233:13-47
+249            <meta-data
+249-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:234:13-236:64
+250                android:name="android.support.FILE_PROVIDER_PATHS"
+250-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:235:17-67
+251                android:resource="@xml/dcloud_file_provider" />
+251-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:236:17-61
+252        </provider>
+253        <!--
+254            <meta-data
+255            android:name="DCLOUD_STREAMAPP_CHANNEL"
+256            android:value="io.dcloud.%APPID%|%APPID%|" />
+257        -->
+258        <meta-data
+258-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:244:9-246:35
+259            android:name="android.max_aspect"
+259-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:245:13-46
+260            android:value="2.4" />
+260-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:246:13-32
+261
+262        <activity
+262-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:248:9-253:63
+263            android:name="io.dcloud.feature.gallery.imageedit.IMGEditActivity"
+263-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:249:13-79
+264            android:configChanges="orientation|keyboardHidden|screenSize"
+264-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:250:13-74
+265            android:exported="false"
+265-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:251:13-37
+266            android:theme="@style/ImageEditTheme"
+266-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:252:13-50
+267            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 广告相关配置开始 -->
+267-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:253:13-60
+268        <activity
+268-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:256:9-261:55
+269            android:name="io.dcloud.sdk.activity.WebViewActivity"
+269-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:257:13-66
+270            android:exported="false"
+270-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:258:13-37
+271            android:screenOrientation="portrait"
+271-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:259:13-49
+272            android:theme="@style/ThemeNoTitleBar"
+272-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:260:13-51
+273            android:windowSoftInputMode="adjustPan" />
+273-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:261:13-52
+274
+275        <service
+275-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:263:9-266:72
+276            android:name="io.dcloud.sdk.base.service.DownloadService"
+276-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:264:13-70
+277            android:exported="false"
+277-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:265:13-37
+278            android:permission="android.permission.BIND_JOB_SERVICE" />
+278-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:266:13-69
+279
+280        <provider
+280-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:268:9-276:20
+281            android:name="io.dcloud.sdk.base.service.provider.DCloudAdFileProvider"
+281-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:269:13-84
+282            android:authorities="hyphenate.demo.push.dc.fileprovider"
+282-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:270:13-67
+283            android:exported="false"
+283-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:271:13-37
+284            android:grantUriPermissions="true" >
+284-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:272:13-47
+285            <meta-data
+285-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:234:13-236:64
+286                android:name="android.support.FILE_PROVIDER_PATHS"
+286-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:235:17-67
+287                android:resource="@xml/dcloud_gg_file_provider" />
+287-->[lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:236:17-61
+288        </provider>
+289
+290        <meta-data
+290-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:25:9-27:37
+291            android:name="MIPUSH_SDK_VERSION_CODE"
+291-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:26:13-51
+292            android:value="60001" />
+292-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:27:13-34
+293        <meta-data
+293-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:28:9-30:39
+294            android:name="MIPUSH_SDK_VERSION_NAME"
+294-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:29:13-51
+295            android:value="6_0_1-C" />
+295-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:30:13-36
+296
+297        <service
+297-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:32:9-35:46
+298            android:name="com.xiaomi.push.service.XMPushService"
+298-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:33:13-65
+299            android:enabled="true"
+299-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:34:13-35
+300            android:process=":pushservice" /> <!-- 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 -->
+300-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:35:13-43
+301        <service
+301-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:38:9-43:46
+302            android:name="com.xiaomi.push.service.XMJobService"
+302-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:39:13-64
+303            android:enabled="true"
+303-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:40:13-35
+304            android:exported="false"
+304-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:41:13-37
+305            android:permission="android.permission.BIND_JOB_SERVICE"
+305-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:42:13-69
+306            android:process=":pushservice" /> <!-- 注：com.xiaomi.xmsf.permission.MIPUSH_RECEIVE这里的包名不能改为app的包名 -->
+306-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:43:13-43
+307        <service
+307-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:46:9-50:78
+308            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+308-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:47:13-68
+309            android:enabled="true"
+309-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:48:13-35
+310            android:exported="true"
+310-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:49:13-36
+311            android:permission="com.xiaomi.xmsf.permission.MIPUSH_RECEIVE" /> <!-- 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 -->
+311-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:50:13-75
+312        <service
+312-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:53:9-55:38
+313            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+313-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:54:13-70
+314            android:enabled="true" />
+314-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:55:13-35
+315
+316        <receiver
+316-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:57:9-64:20
+317            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+317-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:58:13-74
+318            android:exported="false"
+318-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:59:13-37
+319            android:process=":pushservice" >
+319-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:60:13-43
+320            <intent-filter>
+320-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:61:13-63:29
+321                <action android:name="com.xiaomi.push.PING_TIMER" />
+321-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:62:17-69
+321-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:62:25-66
+322            </intent-filter>
+323        </receiver> <!-- 支持VoIP和场景化通过透明页点击跳转 -->
+324        <!-- 对于targetSdkVersion变更为S及以上的应用，需要接入MiPushSDK 4.9.1及以上版本(海外版需接入4.8.6及以上版本)，并声明NotificationClickedActivity -->
+325        <activity
+325-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:68:9-78:20
+326            android:name="com.xiaomi.mipush.sdk.NotificationClickedActivity"
+326-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:69:13-77
+327            android:enabled="true"
+327-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:70:13-35
+328            android:excludeFromRecents="true"
+328-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:71:13-46
+329            android:exported="true"
+329-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:72:13-36
+330            android:launchMode="singleInstance"
+330-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:73:13-48
+331            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+331-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:74:13-72
+332            <meta-data
+332-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:75:13-77:46
+333                android:name="supportStyle"
+333-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:76:17-44
+334                android:value="scene|voip" />
+334-->[MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:77:17-43
+335        </activity>
+336
+337        <receiver
+337-->[uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:30:9-34:20
+338            android:name="com.taobao.weex.WXGlobalEventReceiver"
+338-->[uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:31:13-65
+339            android:enabled="true"
+339-->[uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:32:13-35
+340            android:exported="false" >
+340-->[uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:33:13-37
+341        </receiver>
+342
+343        <meta-data
+343-->[oppo_push_3.5.2.aar] /Users/wt/.gradle/caches/transforms-3/2ad977cc590a0ae7805553616b6f1c24/transformed/jetified-oppo_push_3.5.2/AndroidManifest.xml:12:9-14:36
+344            android:name="sdkVersion"
+344-->[oppo_push_3.5.2.aar] /Users/wt/.gradle/caches/transforms-3/2ad977cc590a0ae7805553616b6f1c24/transformed/jetified-oppo_push_3.5.2/AndroidManifest.xml:13:13-38
+345            android:value="3502" /> <!-- 该字段大于等于480，则表示支持点击消息直接打开应用activity，优化启动慢问题。 -->
+345-->[oppo_push_3.5.2.aar] /Users/wt/.gradle/caches/transforms-3/2ad977cc590a0ae7805553616b6f1c24/transformed/jetified-oppo_push_3.5.2/AndroidManifest.xml:14:13-33
+346        <meta-data
+346-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:16:9-18:35
+347            android:name="sdk_version_vivo"
+347-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:17:13-44
+348            android:value="504" />
+348-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:18:13-32
+349
+350        <service
+350-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:20:9-23:71
+351            android:name="com.vivo.push.sdk.service.CommandClientService"
+351-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:21:13-74
+352            android:exported="true"
+352-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:22:13-36
+353            android:permission="com.push.permission.UPSTAGESERVICE" />
+353-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:23:13-68
+354
+355        <meta-data
+355-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:25:9-27:295
+356            android:name="local_iv"
+356-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:26:13-36
+357            android:value="MzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsMzIsMzgsMzcsMzYsMzUsMzQsMzMsI0AzNCwzMiwzMywzNywzMywzNCwzMiwzMywzMywzMywzNCw0MSwzNSwzNSwzMiwzMiwjQDMzLDM0LDM1LDM2LDM3LDM4LDM5LDQwLDQxLDMyLDM4LDM3LDMzLDM1LDM0LDMzLCNAMzQsMzIsMzMsMzcsMzMsMzQsMzIsMzMsMzMsMzMsMzQsNDEsMzUsMzIsMzIsMzI" /> <!-- 支持性能监控 -->
+357-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:27:13-292
+358        <meta-data
+358-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:28:9-30:33
+359            android:name="com.vivo.push.support_monitor"
+359-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:29:13-57
+360            android:value="1" />
+360-->[vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:30:13-30
+361
+362        <activity
+362-->[:uniplugin_module] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_module/build/intermediates/merged_manifest/release/AndroidManifest.xml:8:9-10:84
+363            android:name="io.dcloud.uniplugin.NativePageActivity"
+363-->[:uniplugin_module] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_module/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:13-66
+364            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
+364-->[:uniplugin_module] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_module/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:13-81
+365        <activity
+365-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:44:9-54:20
+366            android:name="com.hyphenate.push.OnClickNotifyActivity"
+366-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:45:13-68
+367            android:exported="true" >
+367-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:46:13-36
+368            <intent-filter>
+368-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:47:13-53:29
+369                <action android:name="android.intent.action.VIEW" />
+369-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:41:17-68
+369-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:41:25-66
+370
+371                <category android:name="android.intent.category.DEFAULT" />
+371-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:17-75
+371-->/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:43:27-73
+372
+373                <action android:name="com.hyphenate.push.OnClickNotifyActivity" />
+373-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:52:17-83
+373-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:52:25-80
+374            </intent-filter>
+375        </activity> <!-- Honor推送配置 start -->
+376        <service
+376-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:57:9-63:19
+377            android:name="com.hyphenate.push.platform.honor.HONORPushService"
+377-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:58:13-78
+378            android:exported="false" >
+378-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:59:13-37
+379            <intent-filter>
+379-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:60:13-62:29
+380                <action android:name="com.hihonor.push.action.MESSAGING_EVENT" />
+380-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:61:17-82
+380-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:61:25-79
+381            </intent-filter>
+382        </service> <!-- Honor推送配置 end -->
+383        <!-- Oppo推送配置 start -->
+384        <service
+384-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:68:9-75:19
+385            android:name="com.heytap.msp.push.service.CompatibleDataMessageCallbackService"
+385-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:69:13-92
+386            android:exported="false"
+386-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:70:13-37
+387            android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE" >
+387-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:71:13-77
+388            <intent-filter>
+388-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:72:13-74:29
+389                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE" />
+389-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:73:17-85
+389-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:73:25-82
+390            </intent-filter>
+391        </service> <!-- 兼容Q以下版本 -->
+392        <service
+392-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:77:9-85:19
+393            android:name="com.heytap.msp.push.service.DataMessageCallbackService"
+393-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:78:13-82
+394            android:exported="false"
+394-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:79:13-37
+395            android:permission="com.heytap.mcs.permission.SEND_PUSH_MESSAGE" >
+395-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:80:13-77
+396            <intent-filter>
+396-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:81:13-84:29
+397                <action android:name="com.heytap.mcs.action.RECEIVE_MCS_MESSAGE" />
+397-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:82:17-84
+397-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:82:25-81
+398                <action android:name="com.heytap.msp.push.RECEIVE_MCS_MESSAGE" />
+398-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:83:17-82
+398-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:83:25-79
+399            </intent-filter>
+400        </service> <!-- 兼容Q版本 -->
+401        <!-- Oppo推送配置 end -->
+402        <!-- huawei HMS Config -->
+403        <service
+403-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:90:9-96:19
+404            android:name="com.hyphenate.push.platform.huawei.HMSPushService"
+404-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:91:13-77
+405            android:exported="false" >
+405-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:92:13-37
+406            <intent-filter>
+406-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:93:13-95:29
+407                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+407-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:94:17-81
+407-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:94:25-78
+408            </intent-filter>
+409        </service>
+410
+411        <receiver
+411-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:106:9-114:20
+412            android:name="com.hyphenate.push.platform.vivo.ViVoMsgReceiver"
+412-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:107:13-76
+413            android:exported="false" >
+413-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:108:13-37
+414            <intent-filter>
+414-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:109:13-113:29
+415
+416                <!-- 接收 push 消息 -->
+417                <action android:name="com.vivo.pushclient.action.RECEIVE" />
+417-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:112:17-77
+417-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:112:25-74
+418            </intent-filter>
+419        </receiver> <!-- ViVo推送配置 end -->
+420        <!-- MEIZU推送配置 start -->
+421        <receiver
+421-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:119:9-134:20
+422            android:name="com.hyphenate.push.platform.meizu.MzMsgReceiver"
+422-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:120:13-75
+423            android:exported="false" >
+423-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:121:13-37
+424            <intent-filter>
+424-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:122:13-133:29
+425
+426                <!-- 接收 push 消息 -->
+427                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
+427-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:125:17-78
+427-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:125:25-75
+428                <!-- 接收 register 消息 -->
+429                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
+429-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:127:17-88
+429-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:127:25-85
+430                <!-- 接收 unregister 消息 -->
+431                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />
+431-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:129:17-90
+431-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:129:25-87
+432                <!-- 兼容低版本 Flyme3 推送服务配置 -->
+433                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
+433-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:131:17-77
+433-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:131:25-74
+434                <action android:name="com.meizu.c2dm.intent.RECEIVE" />
+434-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:132:17-72
+434-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:132:25-69
+435            </intent-filter>
+436        </receiver> <!-- MEIZU推送配置 end -->
+437        <!-- Mi推送配置 start -->
+438        <receiver
+438-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:139:9-151:20
+439            android:name="com.hyphenate.push.platform.xiaomi.MiPushService"
+439-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:140:13-76
+440            android:exported="true" >
+440-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:141:13-36
+441            <intent-filter>
+441-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:142:13-144:29
+442                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+442-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:143:17-76
+442-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:143:25-73
+443            </intent-filter>
+444            <intent-filter>
+444-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:145:13-147:29
+445                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+445-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:146:17-76
+445-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:146:25-73
+446            </intent-filter>
+447            <intent-filter>
+447-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:148:13-150:29
+448                <action android:name="com.xiaomi.mipush.ERROR" />
+448-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:149:17-66
+448-->[:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:149:25-63
+449            </intent-filter>
+450        </receiver>
+451        <receiver
+451-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:30:9-42:20
+452            android:name="com.huawei.hms.support.api.push.PushMsgReceiver"
+452-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:31:13-75
+453            android:directBootAware="true"
+453-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:32:13-43
+454            android:exported="true"
+454-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:33:13-36
+455            android:permission="hyphenate.demo.push.permission.PROCESS_PUSH_MSG" >
+455-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:34:13-78
+456            <intent-filter>
+456-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:35:13-41:29
+457
+458                <!-- Mandatory, be used to receive notification bar message click event. -->
+459                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY" />
+459-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:38:17-85
+459-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:38:25-82
+460                <!-- Optional, compatible with old huawei phones. -->
+461                <action android:name="com.huawei.intent.action.PUSH" />
+461-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:40:17-72
+461-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:40:25-69
+462            </intent-filter>
+463        </receiver>
+464        <receiver
+464-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:43:9-55:20
+465            android:name="com.huawei.hms.support.api.push.PushReceiver"
+465-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:44:13-72
+466            android:directBootAware="true"
+466-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:45:13-43
+467            android:exported="true"
+467-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:46:13-36
+468            android:permission="hyphenate.demo.push.permission.PROCESS_PUSH_MSG" >
+468-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:47:13-78
+469            <intent-filter>
+469-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:48:13-54:29
+470
+471                <!-- Mandatory, be used to receive tokens. -->
+472                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+472-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:51:17-86
+472-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:51:25-83
+473                <!-- Mandatory, be used to receive messages. -->
+474                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+474-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:53:17-81
+474-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:53:25-78
+475            </intent-filter>
+476        </receiver> <!-- Definition of receiving service for notification bar and pass-through message of non-huawei mobile phone. -->
+477        <service
+477-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:58:9-68:19
+478            android:name="com.huawei.hms.support.api.push.service.HmsMsgService"
+478-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:59:13-81
+479            android:directBootAware="true"
+479-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:60:13-43
+480            android:enabled="true"
+480-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:61:13-35
+481            android:exported="true"
+481-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:62:13-36
+482            android:process=":pushservice" >
+482-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:63:13-43
+483            <intent-filter>
+483-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:64:13-67:29
+484                <action android:name="com.huawei.push.msg.NOTIFY_MSG" />
+484-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:65:17-73
+484-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:65:25-70
+485                <action android:name="com.huawei.push.msg.PASSBY_MSG" />
+485-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:66:17-73
+485-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:66:25-70
+486            </intent-filter>
+487        </service>
+488
+489        <provider
+489-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:70:9-75:89
+490            android:name="com.huawei.hms.support.api.push.PushProvider"
+490-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:71:13-72
+491            android:authorities="hyphenate.demo.push.huawei.push.provider"
+491-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:72:13-72
+492            android:exported="true"
+492-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:73:13-36
+493            android:readPermission="hyphenate.demo.push.permission.PUSH_PROVIDER"
+493-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:74:13-79
+494            android:writePermission="hyphenate.demo.push.permission.PUSH_WRITE_PROVIDER" />
+494-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:75:13-86
+495
+496        <meta-data
+496-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:77:9-79:47
+497            android:name="com.huawei.hms.client.service.name:push"
+497-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:78:13-67
+498            android:value="push:6.12.0.300" />
+498-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:79:13-44
+499        <meta-data
+499-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:80:9-82:33
+500            android:name="com.huawei.hms.min_api_level:push:push"
+500-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:81:13-66
+501            android:value="1" />
+501-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:82:13-30
+502
+503        <activity
+503-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:84:9-86:40
+504            android:name="com.huawei.hms.support.api.push.TransActivity"
+504-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:85:13-73
+505            android:exported="false" />
+505-->[com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:86:13-37
+506
+507        <meta-data
+507-->[com.hihonor.mcs:push:7.0.61.303] /Users/wt/.gradle/caches/transforms-3/69ec79763389f505ff96cd6790333343/transformed/jetified-push-7.0.61.303/AndroidManifest.xml:14:9-16:42
+508            android:name="com.hihonor.push.sdk_version"
+508-->[com.hihonor.mcs:push:7.0.61.303] /Users/wt/.gradle/caches/transforms-3/69ec79763389f505ff96cd6790333343/transformed/jetified-push-7.0.61.303/AndroidManifest.xml:15:13-56
+509            android:value="7.0.61.303" />
+509-->[com.hihonor.mcs:push:7.0.61.303] /Users/wt/.gradle/caches/transforms-3/69ec79763389f505ff96cd6790333343/transformed/jetified-push-7.0.61.303/AndroidManifest.xml:16:13-39
+510
+511        <service
+511-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:13:9-16:76
+512            android:name="com.meizu.cloud.pushsdk.NotificationService"
+512-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:14:13-71
+513            android:exported="true"
+513-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:15:13-36
+514            android:permission="com.meizu.cloud.push.permission.MESSAGE" />
+514-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:16:13-73
+515
+516        <receiver
+516-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:18:9-24:20
+517            android:name="com.meizu.cloud.pushsdk.MzPushSystemReceiver"
+517-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:19:13-72
+518            android:exported="false" >
+518-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:20:13-37
+519            <intent-filter>
+519-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:21:13-23:29
+520                <action android:name="com.meizu.flyme.push.intent.PUSH_SYSTEM" />
+520-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:22:17-82
+520-->[com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:22:25-79
+521            </intent-filter>
+522        </receiver>
+523
+524        <provider
+524-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:10:9-14:39
+525            android:name="com.huawei.hms.aaid.InitProvider"
+525-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:11:13-60
+526            android:authorities="hyphenate.demo.push.aaidinitprovider"
+526-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:12:13-68
+527            android:exported="false"
+527-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:13:13-37
+528            android:initOrder="500" />
+528-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:14:13-36
+529
+530        <meta-data
+530-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:16:9-18:53
+531            android:name="com.huawei.hms.client.service.name:opendevice"
+531-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:17:13-73
+532            android:value="opendevice:6.12.0.300" />
+532-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:18:13-50
+533        <meta-data
+533-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:19:9-21:33
+534            android:name="com.huawei.hms.min_api_level:opendevice:push"
+534-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:20:13-72
+535            android:value="1" /> <!-- 为后续统计第三方app集成了哪些Kit，因此需要Kit在自己的AndroidManifest.xml文件中定义业务标签元数据 -->
+535-->[com.huawei.hms:opendevice:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/a743816c7dd316cb66e1f1b97f86bb30/transformed/jetified-opendevice-6.12.0.300/AndroidManifest.xml:21:13-30
+536        <meta-data
+536-->[com.huawei.hms:base:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/0aea942257ff8fa2cb9c896e36d0f927/transformed/jetified-base-6.11.0.302/AndroidManifest.xml:15:9-17:47
+537            android:name="com.huawei.hms.client.service.name:base"
+537-->[com.huawei.hms:base:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/0aea942257ff8fa2cb9c896e36d0f927/transformed/jetified-base-6.11.0.302/AndroidManifest.xml:16:13-67
+538            android:value="base:6.11.0.302" /> <!-- SDK依赖的HMSCore的最低api level元数据 -->
+538-->[com.huawei.hms:base:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/0aea942257ff8fa2cb9c896e36d0f927/transformed/jetified-base-6.11.0.302/AndroidManifest.xml:17:13-44
+539        <meta-data
+539-->[com.huawei.hms:base:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/0aea942257ff8fa2cb9c896e36d0f927/transformed/jetified-base-6.11.0.302/AndroidManifest.xml:20:9-22:33
+540            android:name="com.huawei.hms.min_api_level:base:hmscore"
+540-->[com.huawei.hms:base:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/0aea942257ff8fa2cb9c896e36d0f927/transformed/jetified-base-6.11.0.302/AndroidManifest.xml:21:13-69
+541            android:value="1" /> <!-- 用于判断是否集成了本lib -->
+541-->[com.huawei.hms:base:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/0aea942257ff8fa2cb9c896e36d0f927/transformed/jetified-base-6.11.0.302/AndroidManifest.xml:22:13-30
+542        <meta-data
+542-->[com.huawei.hms:availableupdate:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/d35357ee1092797b3a22af09da7e8c53/transformed/jetified-availableupdate-6.11.0.302/AndroidManifest.xml:17:9-19:35
+543            android:name="availableLoaded"
+543-->[com.huawei.hms:availableupdate:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/d35357ee1092797b3a22af09da7e8c53/transformed/jetified-availableupdate-6.11.0.302/AndroidManifest.xml:18:13-43
+544            android:value="yes" />
+544-->[com.huawei.hms:availableupdate:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/d35357ee1092797b3a22af09da7e8c53/transformed/jetified-availableupdate-6.11.0.302/AndroidManifest.xml:19:13-32
+545
+546        <activity
+546-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:10:9-21:20
+547            android:name="com.huawei.hms.activity.BridgeActivity"
+547-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:11:13-66
+548            android:configChanges="orientation|locale|layoutDirection|fontScale|screenSize|smallestScreenSize|screenLayout|uiMode"
+548-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:12:13-131
+549            android:excludeFromRecents="true"
+549-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:13:13-46
+550            android:exported="false"
+550-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:14:13-37
+551            android:hardwareAccelerated="true"
+551-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:15:13-47
+552            android:screenOrientation="behind"
+552-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:16:13-47
+553            android:theme="@style/Base_Translucent" >
+553-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:17:13-52
+554            <meta-data
+554-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:18:13-20:77
+555                android:name="hwc-theme"
+555-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:19:17-41
+556                android:value="androidhwext:style/Theme.Emui.Translucent" />
+556-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:20:17-74
+557        </activity>
+558        <activity
+558-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:22:9-26:20
+559            android:name="com.huawei.hms.activity.EnableServiceActivity"
+559-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:23:13-73
+560            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|screenLayout"
+560-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:24:13-106
+561            android:exported="false" >
+561-->[com.huawei.hms:ui:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/4243adc10470a6a9d408ecd01930ee47/transformed/jetified-ui-6.11.0.302/AndroidManifest.xml:25:13-37
+562        </activity>
+563
+564        <provider
+564-->[com.huawei.agconnect:agconnect-core:1.8.1.300] /Users/wt/.gradle/caches/transforms-3/9af41dbc5f0dcce829b360e176735c60/transformed/jetified-agconnect-core-1.8.1.300/AndroidManifest.xml:11:9-14:40
+565            android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"
+565-->[com.huawei.agconnect:agconnect-core:1.8.1.300] /Users/wt/.gradle/caches/transforms-3/9af41dbc5f0dcce829b360e176735c60/transformed/jetified-agconnect-core-1.8.1.300/AndroidManifest.xml:12:13-90
+566            android:authorities="hyphenate.demo.push.AGCInitializeProvider"
+566-->[com.huawei.agconnect:agconnect-core:1.8.1.300] /Users/wt/.gradle/caches/transforms-3/9af41dbc5f0dcce829b360e176735c60/transformed/jetified-agconnect-core-1.8.1.300/AndroidManifest.xml:13:13-73
+567            android:exported="false" />
+567-->[com.huawei.agconnect:agconnect-core:1.8.1.300] /Users/wt/.gradle/caches/transforms-3/9af41dbc5f0dcce829b360e176735c60/transformed/jetified-agconnect-core-1.8.1.300/AndroidManifest.xml:14:13-37
+568
+569        <service
+569-->[com.huawei.agconnect:agconnect-core:1.8.1.300] /Users/wt/.gradle/caches/transforms-3/9af41dbc5f0dcce829b360e176735c60/transformed/jetified-agconnect-core-1.8.1.300/AndroidManifest.xml:16:9-18:40
+570            android:name="com.huawei.agconnect.core.ServiceDiscovery"
+570-->[com.huawei.agconnect:agconnect-core:1.8.1.300] /Users/wt/.gradle/caches/transforms-3/9af41dbc5f0dcce829b360e176735c60/transformed/jetified-agconnect-core-1.8.1.300/AndroidManifest.xml:17:13-70
+571            android:exported="false" />
+571-->[com.huawei.agconnect:agconnect-core:1.8.1.300] /Users/wt/.gradle/caches/transforms-3/9af41dbc5f0dcce829b360e176735c60/transformed/jetified-agconnect-core-1.8.1.300/AndroidManifest.xml:18:13-37
+572    </application>
+573
+574</manifest>
