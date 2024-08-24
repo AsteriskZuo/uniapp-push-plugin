@@ -1,11 +1,8 @@
 package com.hyphenate.push.platform.honor
 
-import android.content.Intent
 import android.util.Log
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.hihonor.push.sdk.HonorMessageService
 import com.hihonor.push.sdk.HonorPushDataMsg
-import com.hyphenate.push.common.PushConstants
 import com.hyphenate.push.common.PushHelper
 
 class HONORPushService : HonorMessageService() {
@@ -16,9 +13,6 @@ class HONORPushService : HonorMessageService() {
             Log.d("HONORPush", "service register honor push token success token:$token")
             PushHelper.saveRenewToken(token)
             PushHelper.sendCacheRenewToken()
-//            val intent = Intent(PushConstants.ACTION_SERVICE_ON_NEW_TOKEN)
-//            intent.putExtra(PushConstants.PUSH_TOKEN, token)
-//            LocalBroadcastManager.getInstance(applicationContext).sendBroadcast(intent)
         } else {
             Log.e("HONORPush", "service register honor push token fail!")
         }

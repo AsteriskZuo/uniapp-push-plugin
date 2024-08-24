@@ -1,9 +1,6 @@
 package com.hyphenate.push
 
 import android.content.Context
-import android.content.Context.RECEIVER_NOT_EXPORTED
-import android.content.IntentFilter
-import android.os.Build
 import android.util.Log
 import com.alibaba.fastjson.JSONObject
 import com.hyphenate.push.common.Notifier
@@ -62,27 +59,32 @@ class PushModule: UniDestroyableModule() {
         Log.e(TAG,"onRegister")
         pushClient = PushHelper.getPushClient(pushConfig)
         pushClient?.register(uniContext, pushConfig)
-        val jsonObject = JSONObject()
         pushClient?.setTokenResultListener(object : OnTokenResultListener {
             override fun getPushTokenSuccess(pushToken: String?) {
                 Log.e(TAG,"getPushTokenSuccess:${pushToken}")
-                jsonObject[PushConstants.PUSH_TOKEN] = pushToken
-                jsonObject[PushConstants.CODE] = PushConstants.CODE_SUCCESS
-                callback?.invoke(jsonObject)
+                callback?.let {
+                    PushHelper.saveRenewToken(pushToken)
+                    PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
+                    PushHelper.sendCacheRenewToken()
+                }
             }
 
             override fun getPushTokenFail(code: Int, error: String?) {
                 Log.e(TAG,"getPushTokenFail:$code $error")
-                jsonObject[PushConstants.CODE] = code
-                jsonObject[PushConstants.ERROR] = error
-                callback?.invoke(jsonObject)
+                callback?.let {
+                    PushHelper.saveRenewToken("",code,error)
+                    PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
+                    PushHelper.sendCacheRenewToken()
+                }
             }
 
             override fun onError(type: PushType, code: Int, error: String?) {
                 Log.e(TAG,"onError: ${type.name} $code $error")
-                jsonObject[PushConstants.CODE] = code
-                jsonObject[PushConstants.ERROR] = error
-                callback?.invoke(jsonObject)
+                callback?.let {
+                    PushHelper.saveRenewToken("",code,error)
+                    PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
+                    PushHelper.sendCacheRenewToken()
+                }
             }
         })
     }
@@ -104,47 +106,6 @@ class PushModule: UniDestroyableModule() {
             Log.d("apex","addNotificationListener")
             PushHelper.eventCallback[PushConstants.NOTIFICATION_EVENT] = it
             PushHelper.sendCacheNotify(0)
-        }
-    }
-
-    @UniJSMethod(uiThread = true)
-    fun addOnNewTokenListener(callback: JSCallback?){
-        updatePluginStatus()
-        callback?.let {
-            PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
-            PushHelper.sendCacheRenewToken()
-        }
-    }
-
-//    @UniJSMethod(uiThread = true)
-//    fun clearAllNotifications() {
-//        updatePluginStatus()
-//        // todo clearAllNotifications clearAllNotifications(mWXSDKInstance.getContext())
-//    }
-//
-//    @UniJSMethod(uiThread = true)
-//    fun clearNotificationById(readableMap: JSONObject?) {
-//        updatePluginStatus()
-//        if (readableMap == null) {
-//            Log.w("","PARAMS_NULL")
-//            return
-//        }
-//        if (readableMap.containsKey(PushConstants.NOTIFICATION_ID)) {
-//            val id = readableMap.getIntValue(PushConstants.NOTIFICATION_ID)
-//            // todo clearNotificationById clearNotificationById(mWXSDKInstance.context, id)
-//        } else {
-//            Log.w("","there are no id")
-//        }
-//    }
-
-    //用于页面监听持久性事件，例如定位信息，陀螺仪等的变化。
-    @UniJSMethod(uiThread = true)
-    fun onNotificationClick(data: String?){
-        data?.let {
-            val params: MutableMap<String, Any> = HashMap()
-            params["result"] = it
-            // 注意 globalEvent事件只能通过页面的UniSDKInstance实例给当前页面发送globalEvent事件。其他页面无法接受。
-            mUniSDKInstance.fireGlobalEventCallback("onNotificationClick", params)
         }
     }
 

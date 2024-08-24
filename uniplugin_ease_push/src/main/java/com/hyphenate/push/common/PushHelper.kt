@@ -88,9 +88,11 @@ object PushHelper {
         }
     }
 
-    fun saveRenewToken(token:String?){
+    fun saveRenewToken(token:String?,code:Int = 200,error:String? = ""){
         val jsonObject = JSONObject()
         jsonObject[PushConstants.PUSH_TOKEN] = token
+        jsonObject[PushConstants.CODE] = code
+        jsonObject[PushConstants.ERROR] = error
         RENEW_TOKEN = jsonObject
     }
 

@@ -1,10 +1,8 @@
 package com.hyphenate.push.platform.xiaomi
 
 import android.content.Context
-import android.content.Intent
 import android.util.Log
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.hyphenate.push.common.PushConstants
+import com.alibaba.fastjson.JSONObject
 import com.hyphenate.push.common.PushHelper
 import com.xiaomi.mipush.sdk.ErrorCode
 import com.xiaomi.mipush.sdk.MiPushClient
@@ -15,8 +13,25 @@ import com.xiaomi.mipush.sdk.PushMessageReceiver
 class MiPushService : PushMessageReceiver() {
 
 
-    override fun onNotificationMessageClicked(context: Context?, msg: MiPushMessage?) {
-
+    override fun onNotificationMessageClicked(context: Context?, miPushMessage: MiPushMessage?) {
+        val jsonObject = JSONObject()
+        val extStr = miPushMessage?.content
+        val extras = JSONObject.parseObject(extStr)
+        if (extras != null) {
+            val t: String = extras.getString("t")
+            jsonObject["to"] = t
+            val f: String = extras.getString("f")
+            jsonObject["from"] = f
+            val m: String = extras.getString("m")
+            jsonObject["msgId"] = m
+            val g: String = extras.getString("g")
+            jsonObject["groupId"] = g
+            val e: Any = extras.getJSONObject("e")
+            jsonObject["ext"] = e
+            PushHelper.sendNotificationEvent(jsonObject,0)
+            PushHelper.saveNotifyData(jsonObject,0)
+            context?.let { PushHelper.launchApp(it) }
+        }
     }
 
     override fun onReceiveRegisterResult(context: Context?, msg: MiPushCommandMessage?) {
@@ -31,9 +46,6 @@ class MiPushService : PushMessageReceiver() {
                     if (cmdArg1.isNullOrEmpty().not()){
                         PushHelper.saveRenewToken(cmdArg1)
                         PushHelper.sendCacheRenewToken()
-//                        val intent = Intent(PushConstants.ACTION_SERVICE_ON_NEW_TOKEN)
-//                        intent.putExtra(PushConstants.PUSH_TOKEN, cmdArg1)
-//                        LocalBroadcastManager.getInstance(it).sendBroadcast(intent)
                     }
                 }
             }

@@ -1,10 +1,8 @@
 package com.hyphenate.push.platform.meizu
 
 import android.content.Context
-import android.content.Intent
 import android.util.Log
-import androidx.localbroadcastmanager.content.LocalBroadcastManager
-import com.hyphenate.push.common.PushConstants
+import com.alibaba.fastjson.JSONObject
 import com.hyphenate.push.common.PushHelper
 import com.meizu.cloud.pushsdk.MzPushMessageReceiver
 import com.meizu.cloud.pushsdk.handler.MzPushMessage
@@ -25,9 +23,6 @@ class MzMsgReceiver: MzPushMessageReceiver() {
                 Log.d("MzMsgReceiver", "service register honor push token success token:$token")
                 PushHelper.saveRenewToken(token)
                 PushHelper.sendCacheRenewToken()
-//                val intent = Intent(PushConstants.ACTION_SERVICE_ON_NEW_TOKEN)
-//                intent.putExtra(PushConstants.PUSH_TOKEN, token)
-//                LocalBroadcastManager.getInstance(it).sendBroadcast(intent)
             } else {
                 Log.e("MzMsgReceiver", "service register honor push token fail!")
             }
@@ -50,8 +45,25 @@ class MzMsgReceiver: MzPushMessageReceiver() {
 
     }
 
-    override fun onNotificationClicked(p0: Context?, p1: MzPushMessage?) {
-
+    override fun onNotificationClicked(context: Context?, mzPushMessage: MzPushMessage?) {
+        val jsonObject = JSONObject()
+        val extStr = mzPushMessage?.content
+        val extras = JSONObject.parseObject(extStr)
+        if (extras != null) {
+            val t: String = extras.getString("t")
+            jsonObject["to"] = t
+            val f: String = extras.getString("f")
+            jsonObject["from"] = f
+            val m: String = extras.getString("m")
+            jsonObject["msgId"] = m
+            val g: String = extras.getString("g")
+            jsonObject["groupId"] = g
+            val e: Any = extras.getJSONObject("e")
+            jsonObject["ext"] = e
+            PushHelper.sendNotificationEvent(jsonObject,0)
+            PushHelper.saveNotifyData(jsonObject,0)
+            context?.let { PushHelper.launchApp(it) }
+        }
     }
 
 }

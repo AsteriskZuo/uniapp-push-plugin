@@ -42,6 +42,7 @@ class PushConfig {
     fun checkPushConfig(context:Context?,callback: JSCallback?){
         checkPush(context)
         jsonObject[PushConstants.PUSH_ENABLE_TYPES] = enabledPushTypes
+        Log.e("apex","enabledPushTypes:$enabledPushTypes")
         callback?.invoke(jsonObject)
     }
 

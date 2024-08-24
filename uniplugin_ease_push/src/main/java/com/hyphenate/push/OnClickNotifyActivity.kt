@@ -21,7 +21,7 @@ class OnClickNotifyActivity : Activity(){
             val f: String = it.getString("f","")
             jsonObject["from"] = f
             val m: String = it.getString("m","")
-            jsonObject["msg"] = m
+            jsonObject["msgId"] = m
             val g: String = it.getString("g","")
             jsonObject["groupId"] = g
             val e = it.getBundle("e")?.let { bundle ->
