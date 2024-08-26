@@ -1,5 +1,6 @@
 package com.hyphenate.push
 
+import android.app.NotificationManager
 import android.content.Context
 import android.util.Log
 import com.alibaba.fastjson.JSONObject
@@ -30,8 +31,6 @@ class PushModule: UniDestroyableModule() {
             uniContext = mUniSDKInstance.context
         }
         PushHelper.IS_DESTROY = false
-        val packageName = uniContext?.packageName
-        Log.e(TAG,"packageName $packageName")
     }
 
     @UniJSMethod(uiThread = true)
@@ -48,9 +47,12 @@ class PushModule: UniDestroyableModule() {
     }
 
     @UniJSMethod(uiThread = true)
-    fun getInfo(callback: UniJSCallback?){
+    fun clearAllNotification(){
         updatePluginStatus()
-        pushConfig.getInfo(uniContext,callback)
+        uniContext?.applicationContext?.let {
+            val notificationManager = it.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.cancelAll() // 清除所有通知
+        }
     }
 
     @UniJSMethod(uiThread = false)
@@ -95,15 +97,18 @@ class PushModule: UniDestroyableModule() {
         val jsonObject = JSONObject()
         pushClient = PushHelper.getPushClient(pushConfig)
         val token = uniContext?.let { pushClient?.getPushToken(it) }
-        jsonObject[PushConstants.PUSH_TOKEN] = token?:""
-        callback?.invoke(jsonObject)
+        token?.let {
+            jsonObject[PushConstants.CODE] = PushConstants.CODE_SUCCESS
+            jsonObject[PushConstants.PUSH_TOKEN] = token
+            callback?.invoke(jsonObject)
+        }
     }
 
     @UniJSMethod(uiThread = true)
     fun addNotificationListener(callback: JSCallback?) {
         updatePluginStatus()
         callback?.let {
-            Log.d("apex","addNotificationListener")
+            Log.d( TAG,"addNotificationListener")
             PushHelper.eventCallback[PushConstants.NOTIFICATION_EVENT] = it
             PushHelper.sendCacheNotify(0)
         }

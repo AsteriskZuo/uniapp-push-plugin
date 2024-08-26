@@ -5,7 +5,6 @@ INJECTED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_202407
 INJECTED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:2:1-130:12
 INJECTED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:2:1-130:12
 MERGED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:2:1-280:12
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:2:1-81:12
 MERGED from [uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:20:1-37:12
 MERGED from [android-gif-drawable-1.2.28.aar] /Users/wt/.gradle/caches/transforms-3/2c46fd2fbcc8b3ce58de4955fb2c47e1/transformed/jetified-android-gif-drawable-1.2.28/AndroidManifest.xml:2:1-7:12
 MERGED from [oppo_push_3.5.2.aar] /Users/wt/.gradle/caches/transforms-3/2ad977cc590a0ae7805553616b6f1c24/transformed/jetified-oppo_push_3.5.2/AndroidManifest.xml:2:1-17:12
@@ -35,7 +34,7 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/wt/.g
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/wt/.gradle/caches/transforms-3/7b1cfdd65d02baf8e726b69fd459479b/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.6.0] /Users/wt/.gradle/caches/transforms-3/cd21def6b3ac4ad9ad1b6370bbb183e7/transformed/core-1.6.0/AndroidManifest.xml:17:1-26:12
 MERGED from [:uniplugin_richalert] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_richalert/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-7:12
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-156:12
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-203:12
 MERGED from [:uts-toast] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uts-toast/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-7:12
 MERGED from [com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:2:1-89:12
 MERGED from [com.hihonor.mcs:push:7.0.61.303] /Users/wt/.gradle/caches/transforms-3/69ec79763389f505ff96cd6790333343/transformed/jetified-push-7.0.61.303/AndroidManifest.xml:2:1-19:12
@@ -108,10 +107,10 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:14:5-81
 MERGED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:14:5-81
 MERGED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:14:5-81
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:20:5-22:38
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:20:5-22:38
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:22:5-24:38
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:22:5-24:38
 	android:maxSdkVersion
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:22:9-35
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:24:9-35
 	android:name
 		ADDED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:14:22-78
 uses-feature#android.hardware.camera
@@ -124,8 +123,6 @@ ADDED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/
 		ADDED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:17:19-67
 uses-permission#android.permission.VIBRATE
 ADDED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:19:5-66
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:14:5-66
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:14:5-66
 	android:name
 		ADDED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:19:22-63
 uses-permission#android.permission.FLASHLIGHT
@@ -137,8 +134,6 @@ ADDED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/
 INJECTED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:23:5-128:19
 MERGED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:172:5-278:19
 MERGED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:172:5-278:19
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:24:5-79:19
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:24:5-79:19
 MERGED from [uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:29:5-35:19
 MERGED from [uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:29:5-35:19
 MERGED from [oppo_push_3.5.2.aar] /Users/wt/.gradle/caches/transforms-3/2ad977cc590a0ae7805553616b6f1c24/transformed/jetified-oppo_push_3.5.2/AndroidManifest.xml:11:5-15:19
@@ -151,8 +146,8 @@ MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/wt/.gradle/caches/tra
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/wt/.gradle/caches/transforms-3/3c9de5d88f95e3ae17f2a982c9b274b5/transformed/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
 MERGED from [androidx.core:core:1.6.0] /Users/wt/.gradle/caches/transforms-3/cd21def6b3ac4ad9ad1b6370bbb183e7/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.6.0] /Users/wt/.gradle/caches/transforms-3/cd21def6b3ac4ad9ad1b6370bbb183e7/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:38:5-154:19
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:38:5-154:19
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:40:5-201:19
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:40:5-201:19
 MERGED from [com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:29:5-87:19
 MERGED from [com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:29:5-87:19
 MERGED from [com.hihonor.mcs:push:7.0.61.303] /Users/wt/.gradle/caches/transforms-3/69ec79763389f505ff96cd6790333343/transformed/jetified-push-7.0.61.303/AndroidManifest.xml:13:5-17:19
@@ -191,7 +186,7 @@ MERGED from [com.huawei.agconnect:agconnect-core:1.8.1.300] /Users/wt/.gradle/ca
 	android:allowClearUserData
 		ADDED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:25:9-42
 	android:allowBackup
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:39:9-35
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:41:9-35
 	android:largeHeap
 		ADDED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:28:9-33
 	android:icon
@@ -344,8 +339,6 @@ INJECTED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_202407
 INJECTED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml
 MERGED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:5:5-44
 MERGED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:5:5-44
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:7:5-9:41
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:7:5-9:41
 MERGED from [uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:25:5-27:41
 MERGED from [uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:25:5-27:41
 MERGED from [android-gif-drawable-1.2.28.aar] /Users/wt/.gradle/caches/transforms-3/2c46fd2fbcc8b3ce58de4955fb2c47e1/transformed/jetified-android-gif-drawable-1.2.28/AndroidManifest.xml:5:5-44
@@ -494,26 +487,24 @@ MERGED from [com.huawei.hms:network-common:6.0.11.300] /Users/wt/.gradle/caches/
 		INJECTED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.READ_MEDIA_IMAGES
 ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:17:5-76
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-76
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-76
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:14:5-76
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:14:5-76
 	android:name
 		ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:17:22-73
 uses-permission#android.permission.READ_MEDIA_VIDEO
 ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:18:5-75
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:13:5-75
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:13:5-75
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:15:5-75
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:15:5-75
 	android:name
 		ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:18:22-72
 uses-permission#android.permission.READ_MEDIA_VISUAL_USER_SELECTED
 ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:19:5-90
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:15:5-90
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:15:5-90
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:17:5-90
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:17:5-90
 	android:name
 		ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:19:22-87
 uses-permission#android.permission.INTERNET
 ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:20:5-67
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:11:5-67
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:11:5-67
 MERGED from [vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:11:5-67
 MERGED from [vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:11:5-67
 MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:7:5-67
@@ -530,8 +521,8 @@ MERGED from [com.huawei.hms:stats:6.11.0.302] /Users/wt/.gradle/caches/transform
 		ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:20:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:21:5-79
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:12:5-79
-MERGED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:12:5-79
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-79
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-79
 MERGED from [com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:10:5-79
 MERGED from [com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:10:5-79
 MERGED from [com.huawei.hms:availableupdate:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/d35357ee1092797b3a22af09da7e8c53/transformed/jetified-availableupdate-6.11.0.302/AndroidManifest.xml:12:5-79
@@ -552,8 +543,8 @@ ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/be
 		ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:29:22-80
 queries
 ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:31:5-40:15
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:32:5-36:15
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:32:5-36:15
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:34:5-38:15
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:34:5-38:15
 MERGED from [com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:25:5-27:15
 MERGED from [com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:25:5-27:15
 MERGED from [com.huawei.hms:device:6.11.0.302] /Users/wt/.gradle/caches/transforms-3/1c566bc303abe65dfada0bb5c73f6891/transformed/jetified-device-6.11.0.302/AndroidManifest.xml:14:5-21:15
@@ -710,124 +701,10 @@ ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/be
 		ADDED from [lib.5plus.base-release.aar] /Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/AndroidManifest.xml:269:13-84
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 IMPLIED from /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/src/main/AndroidManifest.xml:2:1-130:12 reason: io.dcloud.base requested WRITE_EXTERNAL_STORAGE
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:17:5-19:38
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:17:5-19:38
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:19:5-21:38
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:19:5-21:38
 	android:maxSdkVersion
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:19:9-35
-uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:13:5-76
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:13:22-73
-uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:15:5-77
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-77
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-77
-MERGED from [com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:8:5-77
-MERGED from [com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:8:5-77
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:15:22-74
-permission#${applicationId}.permission.MIPUSH_RECEIVE
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:18:5-20:47
-	android:protectionLevel
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:20:9-44
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:19:9-66
-permission#hyphenate.demo.push.permission.MIPUSH_RECEIVE
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:18:5-20:47
-	android:protectionLevel
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:20:9-44
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:19:9-66
-uses-permission#${applicationId}.permission.MIPUSH_RECEIVE
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:22:5-82
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:22:22-79
-uses-permission#hyphenate.demo.push.permission.MIPUSH_RECEIVE
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:22:5-82
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:22:22-79
-meta-data#MIPUSH_SDK_VERSION_CODE
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:25:9-27:37
-	android:value
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:27:13-34
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:26:13-51
-meta-data#MIPUSH_SDK_VERSION_NAME
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:28:9-30:39
-	android:value
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:30:13-36
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:29:13-51
-service#com.xiaomi.push.service.XMPushService
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:32:9-35:46
-	android:process
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:35:13-43
-	android:enabled
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:34:13-35
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:33:13-65
-service#com.xiaomi.push.service.XMJobService
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:38:9-43:46
-	android:process
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:43:13-43
-	android:enabled
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:40:13-35
-	android:exported
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:41:13-37
-	android:permission
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:42:13-69
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:39:13-64
-service#com.xiaomi.mipush.sdk.PushMessageHandler
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:46:9-50:78
-	android:enabled
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:48:13-35
-	android:exported
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:49:13-36
-	android:permission
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:50:13-75
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:47:13-68
-service#com.xiaomi.mipush.sdk.MessageHandleService
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:53:9-55:38
-	android:enabled
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:55:13-35
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:54:13-70
-receiver#com.xiaomi.push.service.receivers.PingReceiver
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:57:9-64:20
-	android:process
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:60:13-43
-	android:exported
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:59:13-37
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:58:13-74
-intent-filter#action:name:com.xiaomi.push.PING_TIMER
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:61:13-63:29
-action#com.xiaomi.push.PING_TIMER
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:62:17-69
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:62:25-66
-activity#com.xiaomi.mipush.sdk.NotificationClickedActivity
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:68:9-78:20
-	android:enabled
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:70:13-35
-	android:excludeFromRecents
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:71:13-46
-	android:launchMode
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:73:13-48
-	android:exported
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:72:13-36
-	android:theme
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:74:13-72
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:69:13-77
-meta-data#supportStyle
-ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:75:13-77:46
-	android:value
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:77:17-43
-	android:name
-		ADDED from [MiPush_SDK_Client_6_0_1-C_3rd.aar] /Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/AndroidManifest.xml:76:17-44
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:21:9-35
 receiver#com.taobao.weex.WXGlobalEventReceiver
 ADDED from [uniapp-v8-release.aar] /Users/wt/.gradle/caches/transforms-3/dfed5381395470738e81d7d15ab388d3/transformed/jetified-uniapp-v8-release/AndroidManifest.xml:30:9-34:20
 	android:enabled
@@ -858,8 +735,8 @@ ADDED from [vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87
 		ADDED from [vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:17:13-44
 service#com.vivo.push.sdk.service.CommandClientService
 ADDED from [vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:20:9-23:71
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:101:9-104:71
-MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:101:9-104:71
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:113:9-116:71
+MERGED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:113:9-116:71
 	android:exported
 		ADDED from [vivo_push_v4.0.4.0_504.aar] /Users/wt/.gradle/caches/transforms-3/87995a7c1651e77cff32083a62c8ee7e/transformed/jetified-vivo_push_v4.0.4.0_504/AndroidManifest.xml:22:13-36
 	android:permission
@@ -888,152 +765,232 @@ uses-permission#android.permission.WAKE_LOCK
 ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:8:5-68
 	android:name
 		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:8:22-65
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-73
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:5-77
+MERGED from [com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:8:5-77
+MERGED from [com.meizu.flyme.internet:push-internal:4.3.0] /Users/wt/.gradle/caches/transforms-3/25b331caefa1a8e88c422b59f9f6e700/transformed/jetified-push-internal-4.3.0/AndroidManifest.xml:8:5-77
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:12:22-74
 uses-permission#com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:25:5-86
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:27:5-86
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:25:22-83
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:27:22-83
 uses-permission#com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:26:5-85
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:28:5-85
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:26:22-82
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:28:22-82
 intent#action:name:com.hihonor.push.action.BIND_PUSH_SERVICE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:33:9-35:18
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:35:9-37:18
 action#com.hihonor.push.action.BIND_PUSH_SERVICE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:34:13-80
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:36:13-80
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:34:21-77
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:36:21-77
 activity#com.hyphenate.push.OnClickNotifyActivity
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:44:9-54:20
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:46:9-56:20
 	android:exported
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:46:13-36
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:48:13-36
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:45:13-68
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:47:13-68
 intent-filter#action:name:android.intent.action.VIEW+action:name:com.hyphenate.push.OnClickNotifyActivity+category:name:android.intent.category.DEFAULT
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:47:13-53:29
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:49:13-55:29
 action#com.hyphenate.push.OnClickNotifyActivity
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:52:17-83
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:54:17-83
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:52:25-80
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:54:25-80
+provider#androidx.core.content.FileProvider
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:58:9-66:20
+	android:grantUriPermissions
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:62:13-47
+	android:authorities
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:60:13-64
+	android:exported
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:61:13-37
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:59:13-62
 service#com.hyphenate.push.platform.honor.HONORPushService
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:57:9-63:19
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:69:9-75:19
 	android:exported
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:59:13-37
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:71:13-37
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:58:13-78
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:70:13-78
 intent-filter#action:name:com.hihonor.push.action.MESSAGING_EVENT
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:60:13-62:29
-action#com.hihonor.push.action.MESSAGING_EVENT
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:61:17-82
-	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:61:25-79
-service#com.heytap.msp.push.service.CompatibleDataMessageCallbackService
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:68:9-75:19
-	android:exported
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:70:13-37
-	android:permission
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:71:13-77
-	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:69:13-92
-intent-filter#action:name:com.coloros.mcs.action.RECEIVE_MCS_MESSAGE
 ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:72:13-74:29
-action#com.coloros.mcs.action.RECEIVE_MCS_MESSAGE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:73:17-85
+action#com.hihonor.push.action.MESSAGING_EVENT
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:73:17-82
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:73:25-82
-service#com.heytap.msp.push.service.DataMessageCallbackService
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:77:9-85:19
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:73:25-79
+service#com.heytap.msp.push.service.CompatibleDataMessageCallbackService
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:80:9-87:19
 	android:exported
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:79:13-37
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:82:13-37
 	android:permission
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:80:13-77
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:83:13-77
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:78:13-82
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:81:13-92
+intent-filter#action:name:com.coloros.mcs.action.RECEIVE_MCS_MESSAGE
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:84:13-86:29
+action#com.coloros.mcs.action.RECEIVE_MCS_MESSAGE
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:85:17-85
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:85:25-82
+service#com.heytap.msp.push.service.DataMessageCallbackService
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:89:9-97:19
+	android:exported
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:91:13-37
+	android:permission
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:92:13-77
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:90:13-82
 intent-filter#action:name:com.heytap.mcs.action.RECEIVE_MCS_MESSAGE+action:name:com.heytap.msp.push.RECEIVE_MCS_MESSAGE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:81:13-84:29
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:93:13-96:29
 action#com.heytap.mcs.action.RECEIVE_MCS_MESSAGE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:82:17-84
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:94:17-84
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:82:25-81
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:94:25-81
 action#com.heytap.msp.push.RECEIVE_MCS_MESSAGE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:83:17-82
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:95:17-82
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:83:25-79
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:95:25-79
 service#com.hyphenate.push.platform.huawei.HMSPushService
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:90:9-96:19
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:102:9-108:19
 	android:exported
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:92:13-37
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:104:13-37
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:91:13-77
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:103:13-77
 intent-filter#action:name:com.huawei.push.action.MESSAGING_EVENT
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:93:13-95:29
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:105:13-107:29
 action#com.huawei.push.action.MESSAGING_EVENT
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:94:17-81
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:106:17-81
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:94:25-78
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:106:25-78
 receiver#com.hyphenate.push.platform.vivo.ViVoMsgReceiver
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:106:9-114:20
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:118:9-126:20
 	android:exported
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:108:13-37
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:120:13-37
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:107:13-76
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:119:13-76
 intent-filter#action:name:com.vivo.pushclient.action.RECEIVE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:109:13-113:29
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:121:13-125:29
 action#com.vivo.pushclient.action.RECEIVE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:112:17-77
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:124:17-77
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:112:25-74
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:124:25-74
 receiver#com.hyphenate.push.platform.meizu.MzMsgReceiver
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:119:9-134:20
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:131:9-146:20
 	android:exported
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:121:13-37
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:133:13-37
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:120:13-75
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:132:13-75
 intent-filter#action:name:com.meizu.c2dm.intent.RECEIVE+action:name:com.meizu.c2dm.intent.REGISTRATION+action:name:com.meizu.flyme.push.intent.MESSAGE+action:name:com.meizu.flyme.push.intent.REGISTER.FEEDBACK+action:name:com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:122:13-133:29
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:134:13-145:29
 action#com.meizu.flyme.push.intent.MESSAGE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:125:17-78
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:137:17-78
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:125:25-75
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:137:25-75
 action#com.meizu.flyme.push.intent.REGISTER.FEEDBACK
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:127:17-88
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:139:17-88
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:127:25-85
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:139:25-85
 action#com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:129:17-90
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:141:17-90
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:129:25-87
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:141:25-87
 action#com.meizu.c2dm.intent.REGISTRATION
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:131:17-77
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:143:17-77
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:131:25-74
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:143:25-74
 action#com.meizu.c2dm.intent.RECEIVE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:132:17-72
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:144:17-72
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:132:25-69
-receiver#com.hyphenate.push.platform.xiaomi.MiPushService
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:139:9-151:20
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:144:25-69
+service#com.xiaomi.push.service.XMPushService
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:151:9-154:46
+	android:process
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:154:13-43
+	android:enabled
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:153:13-35
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:152:13-65
+service#com.xiaomi.push.service.XMJobService
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:155:9-160:46
+	android:process
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:160:13-43
+	android:enabled
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:157:13-35
 	android:exported
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:141:13-36
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:158:13-37
+	android:permission
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:159:13-69
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:140:13-76
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:156:13-64
+service#com.xiaomi.mipush.sdk.PushMessageHandler
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:162:9-165:39
+	android:enabled
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:164:13-35
+	android:exported
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:165:13-36
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:163:13-68
+service#com.xiaomi.mipush.sdk.MessageHandleService
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:166:9-168:38
+	android:enabled
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:168:13-35
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:167:13-70
+receiver#com.xiaomi.push.service.receivers.NetworkStatusReceiver
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:169:9-177:20
+	android:exported
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:171:13-36
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:170:13-83
+intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE+category:name:android.intent.category.DEFAULT
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:172:13-176:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:173:17-79
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:173:25-76
+receiver#com.xiaomi.push.service.receivers.PingReceiver
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:178:9-185:20
+	android:process
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:181:13-43
+	android:exported
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:180:13-37
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:179:13-74
+intent-filter#action:name:com.xiaomi.push.PING_TIMER
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:182:13-184:29
+action#com.xiaomi.push.PING_TIMER
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:183:17-69
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:183:25-66
+receiver#com.hyphenate.push.platform.xiaomi.MiPushService
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:186:9-198:20
+	android:exported
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:188:13-36
+	android:name
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:187:13-76
 intent-filter#action:name:com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:142:13-144:29
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:189:13-191:29
 action#com.xiaomi.mipush.RECEIVE_MESSAGE
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:143:17-76
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:190:17-76
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:143:25-73
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:190:25-73
 intent-filter#action:name:com.xiaomi.mipush.MESSAGE_ARRIVED
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:145:13-147:29
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:192:13-194:29
 action#com.xiaomi.mipush.MESSAGE_ARRIVED
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:146:17-76
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:193:17-76
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:146:25-73
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:193:25-73
 intent-filter#action:name:com.xiaomi.mipush.ERROR
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:148:13-150:29
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:195:13-197:29
 action#com.xiaomi.mipush.ERROR
-ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:149:17-66
+ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:196:17-66
 	android:name
-		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:149:25-63
+		ADDED from [:uniplugin_ease_push] /Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/uniplugin_ease_push/build/intermediates/merged_manifest/release/AndroidManifest.xml:196:25-63
 permission#${applicationId}.permission.PROCESS_PUSH_MSG
 ADDED from [com.huawei.hms:push:6.12.0.300] /Users/wt/.gradle/caches/transforms-3/54373936bede6c9278c39068ac485fc0/transformed/jetified-push-6.12.0.300/AndroidManifest.xml:9:5-11:47
 	android:protectionLevel

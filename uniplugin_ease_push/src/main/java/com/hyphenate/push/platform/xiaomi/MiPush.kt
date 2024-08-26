@@ -19,12 +19,13 @@ class MiPush: IPush() {
     }
 
     override fun onRegister(context: Context?, config: PushConfig) {
-        Log.e("apex","MiPush onRegister $context  ${config.xiaomiAppId} - ${config.xiaomiAppKey}")
+        Log.d("MiPush","MiPush onRegister $context  ${config.xiaomiAppId} - ${config.xiaomiAppKey}")
         context?.let {
             pushToken = MiPushClient.getRegId(context)
-            Log.e("apex","MiPush onRegister pushToken:$pushToken")
+            Log.d("MiPush","MiPush onRegister pushToken:$pushToken - ${config.xiaomiAppId} - ${config.xiaomiAppKey}")
             if (pushToken.isNullOrEmpty()){
                 MiPushClient.registerPush(context, config.xiaomiAppId, config.xiaomiAppKey)
+                Log.e("MiPush","registerPush end")
                 pushToken = MiPushClient.getRegId(context)
             }else{
                 resultListener?.getPushTokenSuccess(pushToken)

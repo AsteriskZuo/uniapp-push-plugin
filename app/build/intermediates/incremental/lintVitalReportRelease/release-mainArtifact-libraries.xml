@@ -1,22 +1,13 @@
 <libraries>
   <library
+      name="__local_aars__:/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/libs/mi_push_v3.6.12.jar:unspecified@jar"
+      jars="/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/libs/mi_push_v3.6.12.jar"
+      resolved="__local_aars__:/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/libs/mi_push_v3.6.12.jar:unspecified"/>
+  <library
       name="__local_aars__:/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/libs/lib.5plus.base-release.aar:unspecified@jar"
       jars="/Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release/jars/classes.jar"
       resolved="__local_aars__:/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/libs/lib.5plus.base-release.aar:unspecified"
       folder="/Users/wt/.gradle/caches/transforms-3/bec8bb671c54d1731dde0a16e06b54a0/transformed/jetified-lib.5plus.base-release"
-      manifest="AndroidManifest.xml"
-      resFolder="res"
-      assetsFolder="assets"
-      lintJar="lint.jar"
-      publicResources="public.txt"
-      symbolFile="R.txt"
-      externalAnnotations="annotations.zip"
-      proguardRules="proguard.txt"/>
-  <library
-      name="__local_aars__:/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/libs/MiPush_SDK_Client_6_0_1-C_3rd.aar:unspecified@jar"
-      jars="/Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/jars/classes.jar:/Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd/jars/libs/MiPush_SDK_Client_6_0_1-C.jar"
-      resolved="__local_aars__:/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/libs/MiPush_SDK_Client_6_0_1-C_3rd.aar:unspecified"
-      folder="/Users/wt/.gradle/caches/transforms-3/fbd6967b111540bcd1b999c4ab2d725b/transformed/jetified-MiPush_SDK_Client_6_0_1-C_3rd"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
