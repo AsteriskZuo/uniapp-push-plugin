@@ -19,6 +19,5 @@ class PushConstants {
         const val CODE_SUCCESS = 200
         const val PUSH_ENABLE_TYPES = "enabledPushTypes"
 
-        const val CHECK_PUSH_ERROR = "check_push_config_error"
     }
 }

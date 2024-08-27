@@ -25,6 +25,8 @@ class HMSPush: IPush() {
     override fun onRegister(context: Context?, config: PushConfig) {
         context?.let {
             getToken(it,config.hwAppId)
+        }?:kotlin.run {
+            resultListener?.onError(PushType.HMSPUSH,2000,"push plugin context is null.")
         }
     }
 

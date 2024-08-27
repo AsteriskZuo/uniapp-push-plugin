@@ -30,6 +30,8 @@ class MiPush: IPush() {
             }else{
                 resultListener?.getPushTokenSuccess(PushType.MIPUSH, pushToken)
             }
+        }?:kotlin.run {
+            resultListener?.onError(PushType.HONORPUSH,2000,"push plugin context is null.")
         }
     }
 

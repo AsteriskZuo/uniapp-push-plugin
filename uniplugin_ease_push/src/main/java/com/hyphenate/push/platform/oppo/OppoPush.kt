@@ -19,41 +19,36 @@ class OppoPush: IPush() {
 
     override fun onRegister(context: Context?, config: PushConfig) {
         context?.let {
-            try {
-                HeytapPushManager.init(it,true)
-                HeytapPushManager.register(it,config.oppoAppKey,config.oppoAppSecret,object : ICallBackResultService{
-                    override fun onRegister(responseCode: Int, registerID: String?, packageName: String?, miniPackageName: String?) {
-                        if (responseCode == 0) {
-                            resultListener?.getPushTokenSuccess(PushType.OPPOPUSH, registerID)
-                        }
+            HeytapPushManager.init(it,true)
+            HeytapPushManager.register(it,config.oppoAppKey,config.oppoAppSecret,object : ICallBackResultService{
+                override fun onRegister(responseCode: Int, registerID: String?, packageName: String?, miniPackageName: String?) {
+                    if (responseCode == 0) {
+                        resultListener?.getPushTokenSuccess(PushType.OPPOPUSH, registerID)
                     }
+                }
 
-                    override fun onUnRegister(responseCode: Int, packageName: String?, miniPackageName: String?) {
+                override fun onUnRegister(responseCode: Int, packageName: String?, miniPackageName: String?) {
 
-                    }
+                }
 
-                    override fun onSetPushTime(responseCode: Int, pushTime: String?) {
+                override fun onSetPushTime(responseCode: Int, pushTime: String?) {
 
-                    }
+                }
 
-                    override fun onGetPushStatus(responseCode: Int, status: Int) {
+                override fun onGetPushStatus(responseCode: Int, status: Int) {
 
-                    }
+                }
 
-                    override fun onGetNotificationStatus(responseCode: Int, status: Int) {
+                override fun onGetNotificationStatus(responseCode: Int, status: Int) {
 
-                    }
+                }
 
-                    override fun onError(responseCode: Int, error: String?, packageName: String?, miniPackageName: String?) {
-                        resultListener?.getPushTokenFail(PushType.OPPOPUSH, responseCode, error)
-                    }
-                })
-            }catch (e:Exception){
-                resultListener?.getPushTokenFail(PushType.OPPOPUSH, 1111, e.message)
-            }
-
+                override fun onError(responseCode: Int, error: String?, packageName: String?, miniPackageName: String?) {
+                    resultListener?.getPushTokenFail(PushType.OPPOPUSH, responseCode, error)
+                }
+            })
         }?:kotlin.run {
-            resultListener?.onError(PushType.OPPOPUSH,-4,"")
+            resultListener?.onError(PushType.OPPOPUSH,2000,"push plugin context is null.")
         }
 
     }

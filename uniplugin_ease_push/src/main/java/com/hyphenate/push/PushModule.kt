@@ -36,14 +36,14 @@ class PushModule: UniDestroyableModule() {
     @UniJSMethod(uiThread = true)
     fun initPushModule(callback: UniJSCallback?){
         updatePluginStatus()
-        Log.e(TAG,"initPushModule start")
+        Log.d(TAG,"initPushModule start")
         uniContext?.applicationContext?.let {
-            Log.e("apex","create Notifier")
+            Log.d(TAG,"create Notifier")
             Notifier(it)
         }
-        Log.e(TAG,"initPushModule checkPushConfig")
+        Log.d(TAG,"initPushModule checkPushConfig")
         pushConfig.checkPushConfig(uniContext,callback)
-        Log.e(TAG,"initPushModule end")
+        Log.d(TAG,"initPushModule end")
     }
 
     @UniJSMethod(uiThread = true)
@@ -58,12 +58,12 @@ class PushModule: UniDestroyableModule() {
     @UniJSMethod(uiThread = false)
     fun onRegister(callback: UniJSCallback?){
         updatePluginStatus()
-        Log.e(TAG,"onRegister")
+        Log.d(TAG,"onRegister")
         pushClient = PushHelper.getPushClient(pushConfig)
         pushClient?.register(uniContext, pushConfig)
         pushClient?.setTokenResultListener(object : OnTokenResultListener {
             override fun getPushTokenSuccess(pushType: PushType, pushToken: String?) {
-                Log.e(TAG,"getPushTokenSuccess:${pushType.name} $pushToken")
+                Log.d(TAG,"getPushTokenSuccess:${pushType.name} $pushToken")
                 callback?.let {
                     PushHelper.saveRenewToken(pushToken,pushType)
                     PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it

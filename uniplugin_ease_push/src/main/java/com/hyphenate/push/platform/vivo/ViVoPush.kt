@@ -42,6 +42,8 @@ class ViVoPush : IPush() {
             }catch (e: VivoPushException){
                 resultListener?.onError(PushType.VIVOPUSH, e.code, e.message)
             }
+        }?:kotlin.run {
+            resultListener?.onError(PushType.VIVOPUSH,2000,"push plugin context is null.")
         }
     }
 

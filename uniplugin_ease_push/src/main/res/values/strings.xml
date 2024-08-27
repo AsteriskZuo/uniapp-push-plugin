@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ease_push</string>
+    <string name="check_config_error"> push config meta-data: not found in AndroidManifest.xml.</string>
 </resources>

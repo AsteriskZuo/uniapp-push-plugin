@@ -31,10 +31,10 @@ class HonorPush: IPush() {
                     }
                 } )
             }else{
-                resultListener?.onError(PushType.HONORPUSH,-4,"isSupportHonor false")
+                resultListener?.onError(PushType.HONORPUSH,2003,"isSupportPush false")
             }
         }?:kotlin.run {
-            resultListener?.onError(PushType.HONORPUSH,-4,"")
+            resultListener?.onError(PushType.HONORPUSH,2000,"push plugin context is null.")
         }
 
     }

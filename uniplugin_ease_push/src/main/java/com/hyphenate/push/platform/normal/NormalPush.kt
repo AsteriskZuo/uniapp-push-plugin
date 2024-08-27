@@ -11,7 +11,7 @@ class NormalPush: IPush() {
     }
 
     override fun getPushToken(context: Context): String? {
-       return pushToken
+       return ""
     }
 
     override fun onRegister(context: Context?, config: PushConfig) {

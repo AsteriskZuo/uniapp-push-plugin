@@ -29,8 +29,10 @@ class MzPush: IPush() {
                     resultListener?.getPushTokenSuccess(PushType.MEIZUPUSH, pushToken)
                 }
             }else{
-                resultListener?.onError(PushType.MEIZUPUSH,-9,"support is false")
+                resultListener?.onError(PushType.MEIZUPUSH,2003,"isSupportPush false")
             }
+        }?:kotlin.run {
+            resultListener?.onError(PushType.MEIZUPUSH,2000,"push plugin context is null.")
         }
     }
 
