@@ -4,7 +4,6 @@ import android.app.NotificationManager
 import android.content.Context
 import android.util.Log
 import com.alibaba.fastjson.JSONObject
-import com.hyphenate.push.common.Notifier
 import com.hyphenate.push.common.PushConstants
 import com.hyphenate.push.common.PushHelper
 import com.hyphenate.push.platform.IPush
@@ -36,14 +35,7 @@ class PushModule: UniDestroyableModule() {
     @UniJSMethod(uiThread = true)
     fun initPushModule(callback: UniJSCallback?){
         updatePluginStatus()
-        Log.d(TAG,"initPushModule start")
-        uniContext?.applicationContext?.let {
-            Log.d(TAG,"create Notifier")
-            Notifier(it)
-        }
-        Log.d(TAG,"initPushModule checkPushConfig")
         pushConfig.checkPushConfig(uniContext,callback)
-        Log.d(TAG,"initPushModule end")
     }
 
     @UniJSMethod(uiThread = true)
