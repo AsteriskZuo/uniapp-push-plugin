@@ -62,19 +62,19 @@ class PushModule: UniDestroyableModule() {
         pushClient = PushHelper.getPushClient(pushConfig)
         pushClient?.register(uniContext, pushConfig)
         pushClient?.setTokenResultListener(object : OnTokenResultListener {
-            override fun getPushTokenSuccess(pushToken: String?) {
-                Log.e(TAG,"getPushTokenSuccess:${pushToken}")
+            override fun getPushTokenSuccess(pushType: PushType, pushToken: String?) {
+                Log.e(TAG,"getPushTokenSuccess:${pushType.name} $pushToken")
                 callback?.let {
-                    PushHelper.saveRenewToken(pushToken)
+                    PushHelper.saveRenewToken(pushToken,pushType)
                     PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
                     PushHelper.sendCacheRenewToken()
                 }
             }
 
-            override fun getPushTokenFail(code: Int, error: String?) {
-                Log.e(TAG,"getPushTokenFail:$code $error")
+            override fun getPushTokenFail(pushType: PushType, code: Int, error: String?) {
+                Log.e(TAG,"getPushTokenFail:${pushType.name} $code $error")
                 callback?.let {
-                    PushHelper.saveRenewToken("",code,error)
+                    PushHelper.saveRenewToken("",pushType,code,error)
                     PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
                     PushHelper.sendCacheRenewToken()
                 }
@@ -83,7 +83,7 @@ class PushModule: UniDestroyableModule() {
             override fun onError(type: PushType, code: Int, error: String?) {
                 Log.e(TAG,"onError: ${type.name} $code $error")
                 callback?.let {
-                    PushHelper.saveRenewToken("",code,error)
+                    PushHelper.saveRenewToken("",type,code,error)
                     PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
                     PushHelper.sendCacheRenewToken()
                 }
@@ -95,9 +95,11 @@ class PushModule: UniDestroyableModule() {
     fun getToken(callback: UniJSCallback?){
         updatePluginStatus()
         val jsonObject = JSONObject()
+        val type = PushHelper.getPreferPushType(pushConfig)
         pushClient = PushHelper.getPushClient(pushConfig)
         val token = uniContext?.let { pushClient?.getPushToken(it) }
         token?.let {
+            jsonObject[PushConstants.PUSH_TYPE] = PushHelper.checkPushType(type)
             jsonObject[PushConstants.CODE] = PushConstants.CODE_SUCCESS
             jsonObject[PushConstants.PUSH_TOKEN] = token
             callback?.invoke(jsonObject)

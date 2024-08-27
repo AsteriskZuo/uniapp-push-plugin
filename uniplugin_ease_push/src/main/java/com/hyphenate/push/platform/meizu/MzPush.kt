@@ -26,7 +26,7 @@ class MzPush: IPush() {
                 if (pushToken.isNullOrEmpty()){
                     PushManager.register(context, config.mzAppId, config.mzAppKey)
                 }else{
-                    resultListener?.getPushTokenSuccess(pushToken)
+                    resultListener?.getPushTokenSuccess(PushType.MEIZUPUSH, pushToken)
                 }
             }else{
                 resultListener?.onError(PushType.MEIZUPUSH,-9,"support is false")

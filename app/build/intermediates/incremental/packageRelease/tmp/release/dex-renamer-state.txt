@@ -1,4 +1,4 @@
-#Mon Aug 26 00:17:52 CST 2024
+#Tue Aug 27 11:05:32 CST 2024
 base.0=/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 base.1=/Users/wt/Desktop/uniapp-android-SDK/Android-SDK@4.24.82145_20240723/UniPlugin-Hello-AS/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
 path.0=classes.dex

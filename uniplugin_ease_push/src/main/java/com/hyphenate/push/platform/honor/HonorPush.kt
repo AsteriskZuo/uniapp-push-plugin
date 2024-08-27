@@ -23,11 +23,11 @@ class HonorPush: IPush() {
                 HonorPushClient.getInstance().getPushToken(object : HonorPushCallback<String> {
                     override fun onSuccess(token: String?) {
                         pushToken = token
-                        resultListener?.getPushTokenSuccess(token)
+                        resultListener?.getPushTokenSuccess(PushType.HONORPUSH, token)
                     }
 
                     override fun onFailure(code: Int, error: String?) {
-                        resultListener?.getPushTokenFail(code, error)
+                        resultListener?.getPushTokenFail(PushType.HONORPUSH, code, error)
                     }
                 } )
             }else{

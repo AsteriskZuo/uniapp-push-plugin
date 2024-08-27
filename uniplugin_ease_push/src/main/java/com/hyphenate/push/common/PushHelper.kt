@@ -29,6 +29,16 @@ import java.io.InputStreamReader
 
 object PushHelper {
     const val TAG = "PushHelper"
+    const val FCM = 1
+    const val HMSPUSH = 2
+    const val MIPUSH = 3
+    const val MEIZUPUSH = 4
+    const val OPPOPUSH = 5
+    const val VIVOPUSH = 6
+    const val HONORPUSH = 7
+    const val NORMAL = 8
+
+
     var isAppForeground = false
     // 标识当前插件是否被销毁
     var IS_DESTROY = true
@@ -88,9 +98,10 @@ object PushHelper {
         }
     }
 
-    fun saveRenewToken(token:String?,code:Int = 200,error:String? = ""){
+    fun saveRenewToken(token:String?, pushType: PushType? = PushType.NORMAL, code:Int = 200, error:String? = ""){
         val jsonObject = JSONObject()
         jsonObject[PushConstants.PUSH_TOKEN] = token
+        jsonObject[PushConstants.PUSH_TYPE] = checkPushType(pushType)
         jsonObject[PushConstants.CODE] = code
         jsonObject[PushConstants.ERROR] = error
         RENEW_TOKEN = jsonObject
@@ -137,6 +148,20 @@ object PushHelper {
             PushType.HMSPUSH -> HMSPush()
             PushType.NORMAL -> NormalPush()
             else -> NormalPush()
+        }
+    }
+
+    fun checkPushType(pushType: PushType?):Int{
+        return when(pushType){
+            PushType.FCM -> { FCM }
+            PushType.HMSPUSH -> { HMSPUSH }
+            PushType.MIPUSH -> { MIPUSH }
+            PushType.MEIZUPUSH -> { MEIZUPUSH }
+            PushType.VIVOPUSH -> { VIVOPUSH }
+            PushType.OPPOPUSH -> { OPPOPUSH }
+            PushType.HONORPUSH -> { HONORPUSH }
+            PushType.NORMAL -> { NORMAL }
+            else -> { NORMAL }
         }
     }
 

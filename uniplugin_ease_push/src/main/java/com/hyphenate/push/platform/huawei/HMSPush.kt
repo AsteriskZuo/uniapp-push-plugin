@@ -49,11 +49,11 @@ class HMSPush: IPush() {
                     Log.i(TAG, "get token success")
                     if (!TextUtils.isEmpty(token)) {
                         pushToken = token
-                        resultListener?.getPushTokenSuccess(token)
+                        resultListener?.getPushTokenSuccess(PushType.HMSPUSH, token)
                     }
                 } catch (e: ApiException) {
                     Log.e(TAG, "get token failed, $e")
-                    resultListener?.getPushTokenFail(e.errorCode,e.message)
+                    resultListener?.getPushTokenFail(PushType.HMSPUSH, e.errorCode, e.message)
                 }
             }
         }.start()

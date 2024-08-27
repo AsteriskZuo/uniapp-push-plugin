@@ -12,6 +12,7 @@ class PushConstants {
 
         const val PUSH_TOKEN = "push_token"
         const val PUSH_EVENT = "push_event"
+        const val PUSH_TYPE = "push_type"
 
         const val CODE = "code"
         const val ERROR = "error"

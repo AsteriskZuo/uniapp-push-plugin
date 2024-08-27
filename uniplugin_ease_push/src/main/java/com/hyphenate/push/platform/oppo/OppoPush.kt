@@ -1,7 +1,6 @@
 package com.hyphenate.push.platform.oppo
 
 import android.content.Context
-import android.util.Log
 import com.heytap.msp.push.HeytapPushManager
 import com.heytap.msp.push.callback.ICallBackResultService
 import com.hyphenate.push.PushConfig
@@ -25,7 +24,7 @@ class OppoPush: IPush() {
                 HeytapPushManager.register(it,config.oppoAppKey,config.oppoAppSecret,object : ICallBackResultService{
                     override fun onRegister(responseCode: Int, registerID: String?, packageName: String?, miniPackageName: String?) {
                         if (responseCode == 0) {
-                            resultListener?.getPushTokenSuccess(registerID)
+                            resultListener?.getPushTokenSuccess(PushType.OPPOPUSH, registerID)
                         }
                     }
 
@@ -46,11 +45,11 @@ class OppoPush: IPush() {
                     }
 
                     override fun onError(responseCode: Int, error: String?, packageName: String?, miniPackageName: String?) {
-                        resultListener?.getPushTokenFail(responseCode,error)
+                        resultListener?.getPushTokenFail(PushType.OPPOPUSH, responseCode, error)
                     }
                 })
             }catch (e:Exception){
-                resultListener?.getPushTokenFail(1111,e.message)
+                resultListener?.getPushTokenFail(PushType.OPPOPUSH, 1111, e.message)
             }
 
         }?:kotlin.run {

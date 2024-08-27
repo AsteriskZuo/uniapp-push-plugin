@@ -28,19 +28,19 @@ class ViVoPush : IPush() {
                     if (state == 0) {
                         PushClient.getInstance(it).getRegId(object : IPushQueryActionListener{
                             override fun onSuccess(regId: String?) {
-                                resultListener?.getPushTokenSuccess(regId)
+                                resultListener?.getPushTokenSuccess(PushType.VIVOPUSH, regId)
                             }
 
                             override fun onFail(error: Int) {
-                                resultListener?.getPushTokenFail(error,"")
+                                resultListener?.getPushTokenFail(PushType.VIVOPUSH, error, "")
                             }
                         })
                     }else{
-                        resultListener?.getPushTokenFail(state," state != 0")
+                        resultListener?.getPushTokenFail(PushType.VIVOPUSH, state, " state != 0")
                     }
                 }
             }catch (e: VivoPushException){
-                resultListener?.getPushTokenFail(e.code,e.message)
+                resultListener?.onError(PushType.VIVOPUSH, e.code, e.message)
             }
         }
     }

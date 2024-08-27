@@ -28,7 +28,7 @@ class MiPush: IPush() {
                 Log.e("MiPush","registerPush end")
                 pushToken = MiPushClient.getRegId(context)
             }else{
-                resultListener?.getPushTokenSuccess(pushToken)
+                resultListener?.getPushTokenSuccess(PushType.MIPUSH, pushToken)
             }
         }
     }
