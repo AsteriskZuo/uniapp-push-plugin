@@ -33,7 +33,7 @@
       "plugins": [
         {
           "type": "module",
-          "name": "Apex-Push",
+          "name": "EMPushUniPlugin",
           "class": "com.hyphenate.push.PushModule"
         }
       ]
