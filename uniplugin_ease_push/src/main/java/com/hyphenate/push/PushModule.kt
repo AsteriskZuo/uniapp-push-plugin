@@ -91,7 +91,7 @@ class PushModule: UniDestroyableModule() {
         pushClient = PushHelper.getPushClient(pushConfig)
         val token = uniContext?.let { pushClient?.getPushToken(it) }
         token?.let {
-            jsonObject[PushConstants.PUSH_TYPE] = PushHelper.checkPushType(type)
+            jsonObject[PushConstants.PUSH_TYPE] = type
             jsonObject[PushConstants.CODE] = PushConstants.CODE_SUCCESS
             jsonObject[PushConstants.PUSH_TOKEN] = token
             callback?.invoke(jsonObject)

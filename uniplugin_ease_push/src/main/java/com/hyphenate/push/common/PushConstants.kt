@@ -17,7 +17,7 @@ class PushConstants {
         const val CODE = "code"
         const val ERROR = "error"
         const val CODE_SUCCESS = 200
-        const val PUSH_ENABLE_TYPES = "enabledPushTypes"
+        const val PUSH_ENABLE_TYPES = "pushConfigTypes"
 
     }
 }

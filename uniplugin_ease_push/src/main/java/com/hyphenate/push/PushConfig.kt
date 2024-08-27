@@ -3,13 +3,11 @@ package com.hyphenate.push
 import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import android.os.Build
 import android.util.Log
 import com.alibaba.fastjson.JSONObject
 import com.hyphenate.push.common.PushConstants
 import com.hyphenate.push.common.PushHelper
 import com.taobao.weex.bridge.JSCallback
-import kotlin.jvm.internal.Intrinsics.Kotlin
 
 
 class PushConfig {
@@ -33,26 +31,17 @@ class PushConfig {
     var mzAppId: String = ""
     var mzAppKey: String = ""
 
-    val enabledPushTypes: MutableList<PushType> = mutableListOf()
+    val pushConfigTypes: MutableList<PushType> = mutableListOf()
 
     val isAgreeAgreement: Boolean = false
 
     var jsonObject: JSONObject = JSONObject()
-    var errorList = mutableListOf<String>()
 
     fun checkPushConfig(context:Context?,callback: JSCallback?){
-        enabledPushTypes.clear()
-        errorList.clear()
+        pushConfigTypes.clear()
         checkPush(context)
-        jsonObject[PushConstants.PUSH_ENABLE_TYPES] = enabledPushTypes
-        if (errorList.size > 0){
-            context?.let {
-                val content = "$errorList" + it.resources.getString(R.string.check_config_error)
-                jsonObject[PushConstants.CODE] = 2001
-                jsonObject[PushConstants.ERROR] = content
-            }
-        }
-        Log.e(TAG,"enabledPushTypes:$enabledPushTypes")
+        jsonObject[PushConstants.PUSH_ENABLE_TYPES] = pushConfigTypes
+        Log.e(TAG,"pushConfigTypes:$pushConfigTypes")
         callback?.invoke(jsonObject)
     }
 
@@ -63,8 +52,7 @@ class PushConfig {
                     it.packageName, PackageManager.GET_META_DATA
                 ).let { appInfo->
                     if (appInfo.metaData.isEmpty){
-                        jsonObject[PushConstants.CODE] = 2002
-                        jsonObject[PushConstants.ERROR] = "metaData info is empty"
+                        Log.e(TAG,"metaData info is empty")
                         return
                     }
                     try {
@@ -108,11 +96,10 @@ class PushConfig {
                             }
                         }
                         if (xiaomiAppId.isNotEmpty() && xiaomiAppKey.isNotEmpty()){
-                            enabledPushTypes.add(PushType.MIPUSH)
+                            pushConfigTypes.add(PushType.MIPUSH)
                         }
                     }catch (e: NullPointerException){
                         Log.e( TAG, "mi push config meta-data: not found in AndroidManifest.xml.")
-                        errorList.add(PushType.MIPUSH.name)
                     }
 
                     try {
@@ -124,11 +111,10 @@ class PushConfig {
                             oppoAppSecret = appInfo.metaData.getString("OPPO_APP_SECRET","")
                         }
                         if (oppoAppKey.isNotEmpty() && oppoAppSecret.isNotEmpty()){
-                            enabledPushTypes.add(PushType.OPPOPUSH)
+                            pushConfigTypes.add(PushType.OPPOPUSH)
                         }
                     }catch (e: NullPointerException){
                         Log.e( TAG, "oppo push config meta-data: not found in AndroidManifest.xml.")
-                        errorList.add(PushType.OPPOPUSH.name)
                     }
 
                     try {
@@ -160,12 +146,11 @@ class PushConfig {
                             vivoAppKey = appInfo.metaData.getString("com.vivo.push.api_key","")
                         }
                         if (vivoAppId.isNotEmpty() && vivoAppKey.isNotEmpty()){
-                            enabledPushTypes.add(PushType.VIVOPUSH)
+                            pushConfigTypes.add(PushType.VIVOPUSH)
                         }
 
                     }catch (e: NullPointerException){
                         Log.e( TAG, "vivo push config meta-data: not found in AndroidManifest.xml.")
-                        errorList.add(PushType.VIVOPUSH.name)
                     }
 
                     try {
@@ -193,11 +178,10 @@ class PushConfig {
                             mzAppKey = appInfo.metaData.getString("MEI_ZU_APP_KEY","")
                         }
                         if (mzAppId.isNotEmpty() && mzAppKey.isNotEmpty()){
-                            enabledPushTypes.add(PushType.MEIZUPUSH)
+                            pushConfigTypes.add(PushType.MEIZUPUSH)
                         }
                     }catch (e: NullPointerException){
                         Log.e( TAG, "meizu push config meta-data: not found in AndroidManifest.xml.")
-                        errorList.add(PushType.MEIZUPUSH.name)
                     }
 
                     try {
@@ -206,12 +190,11 @@ class PushConfig {
                             val id = appInfo.metaData.getInt("com.hihonor.push.app_id",0)
                             if (id != 0){
                                 honorAppId = id.toString()
-                                enabledPushTypes.add(PushType.HONORPUSH)
+                                pushConfigTypes.add(PushType.HONORPUSH)
                             }
                         }
                     }catch (e: NullPointerException){
                         Log.e( TAG, "honor push config meta-data: not found in AndroidManifest.xml.")
-                        errorList.add(PushType.HONORPUSH.name)
                     }
 
                     // hms
@@ -231,22 +214,18 @@ class PushConfig {
                             Log.d(TAG,"appId:$hwAppId")
                         }
                         if (hwAppId.isEmpty().not()){
-                            enabledPushTypes.add(PushType.HMSPUSH)
+                            pushConfigTypes.add(PushType.HMSPUSH)
                         }else{}
                     }catch (e: NullPointerException){
                         Log.e( TAG, "hms push config meta-data: not found in AndroidManifest.xml.")
-                        errorList.add(PushType.HMSPUSH.name)
                     }
                 }
             } catch (e: PackageManager.NameNotFoundException) {
                 e.printStackTrace()
-                jsonObject[PushConstants.CODE] = 2001
-                jsonObject[PushConstants.ERROR] = "${e.message}"
+                Log.e(TAG,"${e.message}")
             }
         }?:kotlin.run {
             Log.e( TAG, "context is null.")
-            jsonObject[PushConstants.CODE] = 2000
-            jsonObject[PushConstants.ERROR] = "push plugin context is null."
         }
     }
 
@@ -267,15 +246,13 @@ class PushConfig {
                         jsonObject[s+i] = v.get(s)?.javaClass.toString()
                         i++
                     }
-                    Log.e("apex","getInfo: $jsonObject")
+                    Log.e(TAG,"getInfo: $jsonObject")
                     callback?.invoke(jsonObject)
                 }?:kotlin.run {
-                    jsonObject[PushConstants.CODE] = -10
                     jsonObject[PushConstants.ERROR] = "value is null."
                     callback?.invoke(jsonObject)
                 }
             } catch (e: PackageManager.NameNotFoundException){
-                jsonObject[PushConstants.CODE] = -11
                 jsonObject[PushConstants.ERROR] = "${e.message}"
                 callback?.invoke(jsonObject)
             }
