@@ -3,6 +3,7 @@ package com.hyphenate.push.platform.honor
 import android.util.Log
 import com.hihonor.push.sdk.HonorMessageService
 import com.hihonor.push.sdk.HonorPushDataMsg
+import com.hyphenate.push.PushType
 import com.hyphenate.push.common.PushHelper
 
 class HONORPushService : HonorMessageService() {
@@ -11,8 +12,7 @@ class HONORPushService : HonorMessageService() {
         if (token.isNullOrEmpty().not()) {
             //没有失败回调，假定token失败时token为null
             Log.d("HONORPush", "service register honor push token success token:$token")
-            PushHelper.saveRenewToken(token)
-            PushHelper.sendCacheRenewToken()
+            PushHelper.sendRenewTokenEvent(PushType.HONORPUSH,token)
         } else {
             Log.e("HONORPush", "service register honor push token fail!")
         }

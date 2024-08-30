@@ -45,7 +45,6 @@ class HMSPush: IPush() {
                     val appId = id.ifEmpty {
                         AGConnectOptionsBuilder().build(context).getString("client/app_id")
                     }
-                    Log.d(PushHelper.TAG,"appId:$appId")
                     val tokenScope = "HCM"
                     val token = HmsInstanceId.getInstance(context).getToken(appId, tokenScope)
                     Log.i(TAG, "get token success")

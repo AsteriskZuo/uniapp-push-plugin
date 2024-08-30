@@ -3,6 +3,7 @@ package com.hyphenate.push.platform.xiaomi
 import android.content.Context
 import android.util.Log
 import com.alibaba.fastjson.JSONObject
+import com.hyphenate.push.PushType
 import com.hyphenate.push.common.PushHelper
 import com.xiaomi.mipush.sdk.ErrorCode
 import com.xiaomi.mipush.sdk.MiPushClient
@@ -14,9 +15,11 @@ class MiPushService : PushMessageReceiver() {
 
 
     override fun onNotificationMessageClicked(context: Context?, miPushMessage: MiPushMessage?) {
+        Log.e("MiPushService","Mi onNotificationMessageClicked $context")
         val jsonObject = JSONObject()
         val extStr = miPushMessage?.content
         val extras = JSONObject.parseObject(extStr)
+        Log.e("MiPushService","Mi onNotificationMessageClicked $extras")
         if (extras != null) {
             val t: String = extras.getString("t")
             jsonObject["to"] = t
@@ -28,8 +31,8 @@ class MiPushService : PushMessageReceiver() {
             jsonObject["groupId"] = g
             val e: Any = extras.getJSONObject("e")
             jsonObject["ext"] = e
-            PushHelper.sendNotificationEvent(jsonObject,0)
-            PushHelper.saveNotifyData(jsonObject,0)
+            PushHelper.sendNotificationEvent(jsonObject,1)
+            PushHelper.saveNotifyData(jsonObject,1)
             context?.let { PushHelper.launchApp(it) }
         }
     }
@@ -44,8 +47,7 @@ class MiPushService : PushMessageReceiver() {
             if (MiPushClient.COMMAND_REGISTER == command) {
                 if (msg.resultCode == ErrorCode.SUCCESS.toLong()) {
                     if (cmdArg1.isNullOrEmpty().not()){
-                        PushHelper.saveRenewToken(cmdArg1)
-                        PushHelper.sendCacheRenewToken()
+                        PushHelper.sendRenewTokenEvent(PushType.MIPUSH,cmdArg1)
                     }
                 }
             }

@@ -3,6 +3,7 @@ package com.hyphenate.push
 import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
+import android.nfc.Tag
 import android.util.Log
 import com.alibaba.fastjson.JSONObject
 import com.hyphenate.push.common.PushConstants
@@ -33,14 +34,12 @@ class PushConfig {
 
     val pushConfigTypes: MutableList<PushType> = mutableListOf()
 
-    val isAgreeAgreement: Boolean = false
-
     var jsonObject: JSONObject = JSONObject()
 
     fun checkPushConfig(context:Context?,callback: JSCallback?){
         pushConfigTypes.clear()
         checkPush(context)
-        jsonObject[PushConstants.PUSH_ENABLE_TYPES] = pushConfigTypes
+        jsonObject[PushConstants.PUSH_ENABLE_TYPES] = pushConfigTypes.map { PushHelper.checkPushType(it) }
         Log.e(TAG,"pushConfigTypes:$pushConfigTypes")
         callback?.invoke(jsonObject)
     }
@@ -60,7 +59,12 @@ class PushConfig {
                         if (appInfo.metaData.containsKey("XIAO_MI_APP_ID")){
                             when(appInfo.metaData.get("XIAO_MI_APP_ID")){
                                 is String -> {
-                                    xiaomiAppId = appInfo.metaData.getString("XIAO_MI_APP_ID","")
+                                    val id = appInfo.metaData.getString("XIAO_MI_APP_ID","")
+                                    xiaomiAppId = if (id.contains("_")){
+                                        id.substringAfter("_")
+                                    }else{
+                                        appInfo.metaData.getString("XIAO_MI_APP_ID","")
+                                    }
                                 }
                                 is Float -> {
                                     val a = appInfo.metaData.getFloat("XIAO_MI_APP_ID",0f)
@@ -72,27 +76,14 @@ class PushConfig {
                                     Log.e(TAG,"Parameter type exception")
                                 }
                             }
+
                         }
                         if (appInfo.metaData.containsKey("XIAO_MI_APP_KEY")){
-                            when(appInfo.metaData.get("XIAO_MI_APP_KEY")){
-                                is String -> {
-                                    xiaomiAppKey = appInfo.metaData.getString("XIAO_MI_APP_KEY","")
-                                }
-                                is Float -> {
-                                    val a = appInfo.metaData.getFloat("XIAO_MI_APP_KEY",0f)
-                                    if (a != 0f){
-                                        xiaomiAppKey = a.toString()
-                                    }
-                                }
-                                is Int -> {
-                                    val a = appInfo.metaData.getInt("XIAO_MI_APP_KEY",0)
-                                    if (a != 0){
-                                        xiaomiAppKey = a.toString()
-                                    }
-                                }
-                                else -> {
-                                    Log.e(TAG,"Parameter type exception")
-                                }
+                            val key = appInfo.metaData.getString("XIAO_MI_APP_KEY","")
+                            xiaomiAppKey = if (key.contains("_")){
+                                key.substringAfter("_")
+                            }else{
+                                appInfo.metaData.getString("XIAO_MI_APP_KEY","")
                             }
                         }
                         if (xiaomiAppId.isNotEmpty() && xiaomiAppKey.isNotEmpty()){
@@ -105,10 +96,20 @@ class PushConfig {
                     try {
                         // oppo
                         if (appInfo.metaData.containsKey("OPPO_APP_KEY")){
-                            oppoAppKey = appInfo.metaData.getString("OPPO_APP_KEY","")
+                            val key = appInfo.metaData.getString("OPPO_APP_KEY","")
+                            oppoAppKey = if (key.contains("_")){
+                                key.substringAfter("_")
+                            }else{
+                                appInfo.metaData.getString("OPPO_APP_KEY","")
+                            }
                         }
                         if (appInfo.metaData.containsKey("OPPO_APP_SECRET")){
-                            oppoAppSecret = appInfo.metaData.getString("OPPO_APP_SECRET","")
+                            val secret = appInfo.metaData.getString("OPPO_APP_SECRET","")
+                            oppoAppSecret = if (secret.contains("_")){
+                                secret.substringAfter("_")
+                            }else{
+                                appInfo.metaData.getString("OPPO_APP_SECRET","")
+                            }
                         }
                         if (oppoAppKey.isNotEmpty() && oppoAppSecret.isNotEmpty()){
                             pushConfigTypes.add(PushType.OPPOPUSH)
@@ -121,14 +122,14 @@ class PushConfig {
                         // vivo
                         if (appInfo.metaData.containsKey("com.vivo.push.app_id")){
                             when(appInfo.metaData.get("com.vivo.push.app_id")){
+                                is String -> {
+                                    vivoAppId = appInfo.metaData.getString("com.vivo.push.app_id","")
+                                }
                                 is Int -> {
                                     val vid = appInfo.metaData.getInt("com.vivo.push.app_id",0)
                                     if (vid != 0){
                                         vivoAppId = vid.toString()
                                     }
-                                }
-                                is String -> {
-                                    vivoAppId = appInfo.metaData.getString("com.vivo.push.app_id","")
                                 }
                                 is Float -> {
                                     val a = appInfo.metaData.getFloat("com.vivo.push.app_id",0f)
@@ -142,6 +143,7 @@ class PushConfig {
                             }
 
                         }
+                        Log.e(TAG,"vivoAppId:$vivoAppId - vivoAppKey:$vivoAppKey")
                         if (appInfo.metaData.containsKey("com.vivo.push.api_key")){
                             vivoAppKey = appInfo.metaData.getString("com.vivo.push.api_key","")
                         }
@@ -156,26 +158,20 @@ class PushConfig {
                     try {
                         // meizu
                         if (appInfo.metaData.containsKey("MEI_ZU_APP_ID")){
-                            when(appInfo.metaData.get("MEI_ZU_APP_ID")){
-                                is Int -> {
-                                    val id = appInfo.metaData.getInt("MEI_ZU_APP_ID",0)
-                                    if (id != 0){
-                                        mzAppId = id.toString()
-                                    }
-                                }
-                                is String -> {
-                                    mzAppId = appInfo.metaData.getString("MEI_ZU_APP_ID","")
-                                }
-                                is Float -> {
-                                    val a = appInfo.metaData.getFloat("MEI_ZU_APP_ID",0f)
-                                    if (a != 0f){
-                                        mzAppId = a.toString()
-                                    }
-                                }
+                            val id = appInfo.metaData.getString("MEI_ZU_APP_ID","")
+                            mzAppId = if (id.contains("_")){
+                                id.substringAfter("_")
+                            }else{
+                                appInfo.metaData.getString("MEI_ZU_APP_ID","")
                             }
                         }
                         if (appInfo.metaData.containsKey("MEI_ZU_APP_KEY")){
-                            mzAppKey = appInfo.metaData.getString("MEI_ZU_APP_KEY","")
+                            val key = appInfo.metaData.getString("MEI_ZU_APP_KEY","")
+                            mzAppKey = if (key.contains("_")){
+                                key.substringAfter("_")
+                            }else{
+                                appInfo.metaData.getString("MEI_ZU_APP_KEY","")
+                            }
                         }
                         if (mzAppId.isNotEmpty() && mzAppKey.isNotEmpty()){
                             pushConfigTypes.add(PushType.MEIZUPUSH)
@@ -187,35 +183,35 @@ class PushConfig {
                     try {
                         // honor
                         if (appInfo.metaData.containsKey("com.hihonor.push.app_id")){
-                            val id = appInfo.metaData.getInt("com.hihonor.push.app_id",0)
-                            if (id != 0){
-                                honorAppId = id.toString()
+                            when(appInfo.metaData.get("com.hihonor.push.app_id")){
+                                is String -> {
+                                    honorAppId = appInfo.metaData.getString("com.hihonor.push.app_id","")
+                                }
+                                is Int -> {
+                                    val id = appInfo.metaData.getInt("com.hihonor.push.app_id",0)
+                                    if (id != 0){
+                                        honorAppId = id.toString()
+                                    }
+                                }
+                                else -> {}
+                            }
+                            if (honorAppId.isNotEmpty()){
                                 pushConfigTypes.add(PushType.HONORPUSH)
                             }
+
                         }
                     }catch (e: NullPointerException){
                         Log.e( TAG, "honor push config meta-data: not found in AndroidManifest.xml.")
                     }
-
                     // hms
                     try {
-                        if (appInfo.metaData.containsKey("com.huawei.hms.client.appid")){
-                            hwAppId = appInfo.metaData.getString("com.huawei.hms.client.appid","")
-                            hwAppId = if (hwAppId.contains("=")) {
-                                hwAppId.split("=".toRegex()).dropLastWhile { it.isEmpty() }
-                                    .toTypedArray()[1]
-                            } else {
-                                val id = appInfo.metaData.getInt("com.huawei.hms.client.appid")
-                                id.toString()
-                            }
-                        }else{
-                            val id = PushHelper.getHMSAppId(context)
-                            id?.let { hwAppId = it }
-                            Log.d(TAG,"appId:$hwAppId")
-                        }
-                        if (hwAppId.isEmpty().not()){
+                        val id = PushHelper.getHMSAppId(context)
+                        id?.let { hwAppId = it }
+                        Log.d(TAG,"appId:$hwAppId")
+                        if (hwAppId.isNotEmpty()){
                             pushConfigTypes.add(PushType.HMSPUSH)
                         }else{}
+
                     }catch (e: NullPointerException){
                         Log.e( TAG, "hms push config meta-data: not found in AndroidManifest.xml.")
                     }

@@ -34,34 +34,46 @@ object PushHelper {
     // 标识当前插件是否被销毁
     var IS_DESTROY = true
 
-    var eventCallback = mutableMapOf<String, JSCallback>()
+    const val FCM = 1
+    const val HMSPUSH = 2
+    const val MIPUSH = 3
+    const val MEIZUPUSH = 4
+    const val VIVOPUSH = 5
+    const val OPPOPUSH = 6
+    const val HONORPUSH = 7
+    const val NORMAL = 8
+
+    var notifyCallback = mutableMapOf<String, JSCallback>()
     var onNewTokenCallback = mutableMapOf<String,JSCallback>()
     var RENEW_TOKEN: JSONObject? = null
     var NOTIFICATION_DATA: JSONObject? = null
     var NOTIFICATION_TYPE: Int = 0
 
-    fun sendEvent(eventName: String, params: JSONObject?) {
+    private fun sendEvent(params: JSONObject?,jsCallback: JSCallback?) {
         try {
-            if (!TextUtils.isEmpty(eventName) && params != null) {
-                Log.e("sendEvent", "$eventName params:$params")
-                val jsCallback: JSCallback? = eventCallback[eventName]
-                jsCallback?.let {
-                    Log.e("","sendEvent :$eventName success")
-                    it.invokeAndKeepAlive(params)
+            params?.let {
+                Log.e("sendEvent", "params:$it")
+                jsCallback?.let { callback->
+                    Log.e(TAG,"sendEvent success")
+                    callback.invokeAndKeepAlive(it)
                     return
                 }
-                Log.e("","sendEvent :$eventName failed")
+                Log.e(TAG,"sendEvent failed")
+            }?:kotlin.run {
+                Log.e(TAG,"sendEvent error: params is null")
             }
         } catch (throwable: Throwable) {
-            Log.e("","sendEvent error:" + throwable.message)
+            Log.e(TAG,"sendEvent error:" + throwable.message)
         }
     }
 
     fun sendNotificationEvent(params: JSONObject?, notificationType: Int) {
-        if (notificationType != 1) {
-            sendEvent(PushConstants.NOTIFICATION_EVENT, params)
+        if (notificationType == 0) {
+            Log.e(TAG, "sendEvent eventName:${PushConstants.NOTIFICATION_RENEW_TOKEN}")
+            sendEvent(params, onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN])
         } else {
-            sendEvent(PushConstants.LOCAL_NOTIFICATION_EVENT, params)
+            Log.e(TAG, "sendEvent eventName:${PushConstants.NOTIFICATION_EVENT}")
+            sendEvent(params, notifyCallback[PushConstants.NOTIFICATION_EVENT])
         }
     }
 
@@ -72,8 +84,12 @@ object PushHelper {
      */
     fun saveNotifyData(jsonObject: JSONObject, type: Int) {
         if (IS_DESTROY) {
-            Log.d("","saveOpenNotifyData:$jsonObject")
-            NOTIFICATION_DATA = jsonObject
+            Log.d(TAG,"saveOpenNotifyData:$jsonObject")
+            if (type == 0){
+                RENEW_TOKEN = jsonObject
+            }else{
+                NOTIFICATION_DATA = jsonObject
+            }
             NOTIFICATION_TYPE = type
         }
     }
@@ -83,25 +99,50 @@ object PushHelper {
             return
         }
         if (!IS_DESTROY && NOTIFICATION_DATA.isNullOrEmpty().not()) {
-            Log.d("","sendCacheOpenNotify: $NOTIFICATION_DATA" )
+            Log.d(TAG,"sendCacheOpenNotify: $NOTIFICATION_DATA" )
             sendNotificationEvent(NOTIFICATION_DATA, NOTIFICATION_TYPE)
-            NOTIFICATION_DATA = null
+            if (type == 0){
+                RENEW_TOKEN = null
+            }else{
+                NOTIFICATION_DATA = null
+            }
         }
     }
 
-    fun saveRenewToken(token:String?, pushType: PushType? = PushType.NORMAL, code:Int = 200, error:String? = ""){
+    fun assemblyData(
+        token:String?,
+        pushType: PushType? = PushType.NORMAL,
+        code:Int = 200,
+        error:String? = ""
+    ):JSONObject{
         val jsonObject = JSONObject()
         jsonObject[PushConstants.PUSH_TOKEN] = token
-        jsonObject[PushConstants.PUSH_TYPE] = pushType
+        jsonObject[PushConstants.PUSH_TYPE] = checkPushType(pushType)
         jsonObject[PushConstants.CODE] = code
         jsonObject[PushConstants.ERROR] = error
-        RENEW_TOKEN = jsonObject
+        return  jsonObject
     }
 
-    fun sendCacheRenewToken(){
-        if (!IS_DESTROY){
-            sendEvent(PushConstants.NOTIFICATION_RENEW_TOKEN, RENEW_TOKEN)
-            RENEW_TOKEN = null
+    fun sendRenewTokenEvent(pushType: PushType? = PushType.NORMAL, token: String?){
+        token?.let {
+            val jsonObject = JSONObject()
+            jsonObject[PushConstants.PUSH_TOKEN] = token
+            jsonObject[PushConstants.PUSH_TYPE] = checkPushType(pushType)
+            sendNotificationEvent(jsonObject,0)
+        }
+    }
+
+    fun checkPushType(pushType: PushType?):Int{
+        return when(pushType){
+            PushType.FCM -> { FCM }
+            PushType.HMSPUSH -> { HMSPUSH }
+            PushType.MIPUSH -> { MIPUSH }
+            PushType.MEIZUPUSH -> { MEIZUPUSH }
+            PushType.VIVOPUSH -> { VIVOPUSH }
+            PushType.OPPOPUSH -> { OPPOPUSH }
+            PushType.HONORPUSH -> { HONORPUSH }
+            PushType.NORMAL -> { NORMAL }
+            else -> { NORMAL }
         }
     }
 
@@ -221,7 +262,7 @@ object PushHelper {
 
         return appId?.let {
             val jsonObject: JSONObject = JSONObject.parseObject(it)
-            Log.e("apex","jsonObject: $jsonObject")
+            Log.e(TAG,"jsonObject: $jsonObject")
             val appInfo: JSONObject = jsonObject.getJSONObject("app_info")
             appInfo.getString("app_id")
         }
@@ -236,7 +277,7 @@ object PushHelper {
                 context.startActivity(intent)
             }
         } catch (throwable: Throwable) {
-            Log.e("","")
+            Log.e(TAG,"error:${throwable.message}")
         }
     }
 

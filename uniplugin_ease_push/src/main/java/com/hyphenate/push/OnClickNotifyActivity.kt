@@ -29,8 +29,8 @@ class OnClickNotifyActivity : Activity(){
             }?:kotlin.run { "" }
             jsonObject["ext"] = e
         }
-        PushHelper.sendNotificationEvent(jsonObject,0)
-        PushHelper.saveNotifyData(jsonObject,0)
+        PushHelper.sendNotificationEvent(jsonObject,1)
+        PushHelper.saveNotifyData(jsonObject,1)
         PushHelper.launchApp(this)
     }
 

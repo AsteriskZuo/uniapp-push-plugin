@@ -7,8 +7,7 @@ class PushConstants {
 
         const val NOTIFICATION_ID = "notificationId"
         const val NOTIFICATION_RENEW_TOKEN = "notification_renew_token"
-        const val NOTIFICATION_EVENT = "notificationEvent"
-        const val LOCAL_NOTIFICATION_EVENT = "localNotificationEvent"
+        const val NOTIFICATION_EVENT = "notification_event"
 
         const val PUSH_TOKEN = "push_token"
         const val PUSH_EVENT = "push_event"

@@ -3,11 +3,17 @@ package com.hyphenate.push
 import android.app.NotificationManager
 import android.content.Context
 import android.util.Log
-import com.alibaba.fastjson.JSONObject
 import com.hyphenate.push.common.PushConstants
 import com.hyphenate.push.common.PushHelper
 import com.hyphenate.push.platform.IPush
 import com.hyphenate.push.platform.OnTokenResultListener
+import com.hyphenate.push.platform.honor.HonorPush
+import com.hyphenate.push.platform.huawei.HMSPush
+import com.hyphenate.push.platform.meizu.MzPush
+import com.hyphenate.push.platform.normal.NormalPush
+import com.hyphenate.push.platform.oppo.OppoPush
+import com.hyphenate.push.platform.vivo.ViVoPush
+import com.hyphenate.push.platform.xiaomi.MiPush
 import com.taobao.weex.bridge.JSCallback
 import io.dcloud.feature.uniapp.annotation.UniJSMethod
 import io.dcloud.feature.uniapp.bridge.UniJSCallback
@@ -23,7 +29,6 @@ class PushModule: UniDestroyableModule() {
     val pushConfig by lazy { PushConfig() }
     var uniContext: Context? = null
     var pushClient: IPush? = null
-    var receiver: PushEventReceiver? = null
 
     private fun updatePluginStatus() {
         if (uniContext == null){
@@ -51,51 +56,48 @@ class PushModule: UniDestroyableModule() {
     fun onRegister(callback: UniJSCallback?){
         updatePluginStatus()
         Log.d(TAG,"onRegister")
-        pushClient = PushHelper.getPushClient(pushConfig)
-        pushClient?.register(uniContext, pushConfig)
+        callback?.let {
+            PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
+        }
+        pushClient = when(PushHelper.getPreferPushType(pushConfig)){
+            PushType.MIPUSH -> MiPush()
+            PushType.OPPOPUSH -> OppoPush()
+            PushType.VIVOPUSH -> ViVoPush()
+            PushType.HONORPUSH -> HonorPush()
+            PushType.MEIZUPUSH -> MzPush()
+            PushType.HMSPUSH -> HMSPush()
+            PushType.NORMAL -> NormalPush()
+            else -> NormalPush()
+        }
         pushClient?.setTokenResultListener(object : OnTokenResultListener {
             override fun getPushTokenSuccess(pushType: PushType, pushToken: String?) {
                 Log.d(TAG,"getPushTokenSuccess:${pushType.name} $pushToken")
-                callback?.let {
-                    PushHelper.saveRenewToken(pushToken,pushType)
-                    PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
-                    PushHelper.sendCacheRenewToken()
-                }
+                PushHelper.sendRenewTokenEvent(pushType,pushToken)
             }
 
             override fun getPushTokenFail(pushType: PushType, code: Int, error: String?) {
                 Log.e(TAG,"getPushTokenFail:${pushType.name} $code $error")
                 callback?.let {
-                    PushHelper.saveRenewToken("",pushType,code,error)
-                    PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
-                    PushHelper.sendCacheRenewToken()
+                    val jsonObject = PushHelper.assemblyData("",pushType,code,error)
+                    PushHelper.sendNotificationEvent(jsonObject,0)
                 }
             }
 
             override fun onError(type: PushType, code: Int, error: String?) {
                 Log.e(TAG,"onError: ${type.name} $code $error")
                 callback?.let {
-                    PushHelper.saveRenewToken("",type,code,error)
-                    PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
-                    PushHelper.sendCacheRenewToken()
+                    val jsonObject = PushHelper.assemblyData("",type,code,error)
+                    PushHelper.sendNotificationEvent(jsonObject,0)
                 }
             }
         })
+        pushClient?.register(uniContext, pushConfig)
     }
 
     @UniJSMethod(uiThread = true)
-    fun getToken(callback: UniJSCallback?){
+    fun getMateDataInfo(callback: UniJSCallback?){
         updatePluginStatus()
-        val jsonObject = JSONObject()
-        val type = PushHelper.getPreferPushType(pushConfig)
-        pushClient = PushHelper.getPushClient(pushConfig)
-        val token = uniContext?.let { pushClient?.getPushToken(it) }
-        token?.let {
-            jsonObject[PushConstants.PUSH_TYPE] = type
-            jsonObject[PushConstants.CODE] = PushConstants.CODE_SUCCESS
-            jsonObject[PushConstants.PUSH_TOKEN] = token
-            callback?.invoke(jsonObject)
-        }
+        pushConfig.getMetaDataInfo(uniContext,callback)
     }
 
     @UniJSMethod(uiThread = true)
@@ -103,13 +105,12 @@ class PushModule: UniDestroyableModule() {
         updatePluginStatus()
         callback?.let {
             Log.d( TAG,"addNotificationListener")
-            PushHelper.eventCallback[PushConstants.NOTIFICATION_EVENT] = it
+            PushHelper.notifyCallback[PushConstants.NOTIFICATION_EVENT] = it
             PushHelper.sendCacheNotify(0)
         }
     }
 
     override fun destroy() {
         PushHelper.IS_DESTROY = true
-        uniContext?.applicationContext?.unregisterReceiver(receiver)
     }
 }

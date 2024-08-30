@@ -3,6 +3,7 @@ package com.hyphenate.push.platform.meizu
 import android.content.Context
 import android.util.Log
 import com.alibaba.fastjson.JSONObject
+import com.hyphenate.push.PushType
 import com.hyphenate.push.common.PushHelper
 import com.meizu.cloud.pushsdk.MzPushMessageReceiver
 import com.meizu.cloud.pushsdk.handler.MzPushMessage
@@ -21,8 +22,7 @@ class MzMsgReceiver: MzPushMessageReceiver() {
             if (token.isNullOrEmpty().not()) {
                 //没有失败回调，假定token失败时token为null
                 Log.d("MzMsgReceiver", "service register honor push token success token:$token")
-                PushHelper.saveRenewToken(token)
-                PushHelper.sendCacheRenewToken()
+                PushHelper.sendRenewTokenEvent(PushType.MEIZUPUSH,token)
             } else {
                 Log.e("MzMsgReceiver", "service register honor push token fail!")
             }
@@ -60,8 +60,8 @@ class MzMsgReceiver: MzPushMessageReceiver() {
             jsonObject["groupId"] = g
             val e: Any = extras.getJSONObject("e")
             jsonObject["ext"] = e
-            PushHelper.sendNotificationEvent(jsonObject,0)
-            PushHelper.saveNotifyData(jsonObject,0)
+            PushHelper.sendNotificationEvent(jsonObject,1)
+            PushHelper.saveNotifyData(jsonObject,1)
             context?.let { PushHelper.launchApp(it) }
         }
     }

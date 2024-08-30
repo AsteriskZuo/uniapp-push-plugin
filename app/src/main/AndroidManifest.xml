@@ -101,12 +101,12 @@
             android:value="d9eaefb90c4b4c8e837e3e30cda6ffb2" />
 
         <meta-data
-            android:name="com.vivo.push.api_key"
-            android:value="bf9b5941615f32b60ab906966b3b9755" />
-
-        <meta-data
             android:name="com.vivo.push.app_id"
             android:value="105792633" />
+
+        <meta-data
+            android:name="com.vivo.push.api_key"
+            android:value="bf9b5941615f32b60ab906966b3b9755" />
 
         <meta-data
             android:name="XIAO_MI_APP_ID"
