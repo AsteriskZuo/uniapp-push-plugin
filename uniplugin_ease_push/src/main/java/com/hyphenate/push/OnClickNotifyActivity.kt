@@ -2,6 +2,7 @@ package com.hyphenate.push
 
 import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import com.alibaba.fastjson.JSONObject
 import com.hyphenate.push.common.PushHelper
 
@@ -24,10 +25,14 @@ class OnClickNotifyActivity : Activity(){
             jsonObject["msgId"] = m
             val g: String = it.getString("g","")
             jsonObject["groupId"] = g
-            val e = it.getBundle("e")?.let { bundle ->
-                bundle.keySet().associateWith { bundle.getString(it) }
-            }?:kotlin.run { "" }
-            jsonObject["ext"] = e
+            val bundles = it.getBundle("e")
+            bundles?.let {
+                val map =  it.keySet()?.associateWith { bundle.get(it) }
+                map?.let {
+                    Log.d("OnClickNotifyActivity","ext: $it")
+                    jsonObject["ext"] = it
+                }
+            }
         }
         PushHelper.sendNotificationEvent(jsonObject,1)
         PushHelper.saveNotifyData(jsonObject,1)
