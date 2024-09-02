@@ -95,15 +95,13 @@ object PushHelper {
     }
 
     fun sendCacheNotify(type: Int) {
-        if (type == 0 && NOTIFICATION_TYPE == 1) {
-            return
-        }
         if (!IS_DESTROY && NOTIFICATION_DATA.isNullOrEmpty().not()) {
             Log.d(TAG,"sendCacheOpenNotify: $NOTIFICATION_DATA" )
-            sendNotificationEvent(NOTIFICATION_DATA, NOTIFICATION_TYPE)
             if (type == 0){
+                sendNotificationEvent(RENEW_TOKEN, NOTIFICATION_TYPE)
                 RENEW_TOKEN = null
             }else{
+                sendNotificationEvent(NOTIFICATION_DATA, NOTIFICATION_TYPE)
                 NOTIFICATION_DATA = null
             }
         }

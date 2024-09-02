@@ -32,6 +32,7 @@ class OnClickNotifyActivity : Activity(){
         PushHelper.sendNotificationEvent(jsonObject,1)
         PushHelper.saveNotifyData(jsonObject,1)
         PushHelper.launchApp(this)
+        this@OnClickNotifyActivity.finish()
     }
 
 }

@@ -126,7 +126,7 @@ class PushModule: UniDestroyableModule() {
         callback?.let {
             Log.d( TAG,"addNotificationListener")
             PushHelper.notifyCallback[PushConstants.NOTIFICATION_EVENT] = it
-            PushHelper.sendCacheNotify(0)
+            PushHelper.sendCacheNotify(1)
         }
     }
 
