@@ -30,7 +30,7 @@ class HMSPush: IPush() {
         }
     }
 
-    override fun onUnregister(context: Context?) {
+    override fun onUnregister(context: Context?, config: PushConfig) {
 
     }
 

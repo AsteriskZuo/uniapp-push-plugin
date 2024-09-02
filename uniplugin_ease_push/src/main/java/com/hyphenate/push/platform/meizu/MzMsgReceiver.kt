@@ -16,12 +16,13 @@ import com.meizu.cloud.pushsdk.platform.message.UnRegisterStatus
 class MzMsgReceiver: MzPushMessageReceiver() {
 
     override fun onRegisterStatus(context: Context?, registerStatus: RegisterStatus?) {
+        Log.e("MzMsgReceiver", "onRegisterStatus")
         context?.let {
             // token 过期需要重新#register()获取新的Id，目前sdk内部无法知道Id过期事件。
             val token: String? = registerStatus?.pushId
             if (token.isNullOrEmpty().not()) {
                 //没有失败回调，假定token失败时token为null
-                Log.d("MzMsgReceiver", "service register honor push token success token:$token")
+                Log.e("MzMsgReceiver", "service register honor push token success token:$token")
                 PushHelper.sendRenewTokenEvent(PushType.MEIZUPUSH,token)
             } else {
                 Log.e("MzMsgReceiver", "service register honor push token fail!")

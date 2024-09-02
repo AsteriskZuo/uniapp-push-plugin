@@ -158,11 +158,21 @@ class PushConfig {
                     try {
                         // meizu
                         if (appInfo.metaData.containsKey("MEI_ZU_APP_ID")){
-                            val id = appInfo.metaData.getString("MEI_ZU_APP_ID","")
-                            mzAppId = if (id.contains("_")){
-                                id.substringAfter("_")
-                            }else{
-                                appInfo.metaData.getString("MEI_ZU_APP_ID","")
+                            when(appInfo.metaData.get("MEI_ZU_APP_ID")){
+                                is String -> {
+                                    val id = appInfo.metaData.getString("MEI_ZU_APP_ID","")
+                                    mzAppId = if (id.contains("_")){
+                                        id.substringAfter("_")
+                                    }else{
+                                        appInfo.metaData.getString("MEI_ZU_APP_ID","")
+                                    }
+                                }
+                                is Int -> {
+                                    val id = appInfo.metaData.getInt("MEI_ZU_APP_ID",0)
+                                    if (id != 0){
+                                        mzAppId = id.toString()
+                                    }
+                                }
                             }
                         }
                         if (appInfo.metaData.containsKey("MEI_ZU_APP_KEY")){
@@ -173,6 +183,7 @@ class PushConfig {
                                 appInfo.metaData.getString("MEI_ZU_APP_KEY","")
                             }
                         }
+                        Log.e(TAG,"apex_meizu mzAppId:$vivoAppId - mzAppKey:$vivoAppKey")
                         if (mzAppId.isNotEmpty() && mzAppKey.isNotEmpty()){
                             pushConfigTypes.add(PushType.MEIZUPUSH)
                         }

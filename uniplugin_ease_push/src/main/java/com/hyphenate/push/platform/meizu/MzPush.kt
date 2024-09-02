@@ -1,6 +1,7 @@
 package com.hyphenate.push.platform.meizu
 
 import android.content.Context
+import android.util.Log
 import com.hyphenate.push.PushConfig
 import com.hyphenate.push.PushType
 import com.hyphenate.push.platform.IPush
@@ -23,6 +24,7 @@ class MzPush: IPush() {
             val support = MzSystemUtils.isBrandMeizu(it)
             if (support){
                 pushToken = PushManager.getPushId(context)
+                Log.e(TAG,"pushToken:$pushToken ${config.mzAppId} - ${config.mzAppKey}")
                 if (pushToken.isNullOrEmpty()){
                     PushManager.register(context, config.mzAppId, config.mzAppKey)
                 }else{
@@ -36,8 +38,10 @@ class MzPush: IPush() {
         }
     }
 
-    override fun onUnregister(context: Context?) {
-
+    override fun onUnregister(context: Context?, config: PushConfig) {
+        if (config.mzAppId.isNotEmpty() && config.mzAppKey.isNotEmpty()){
+            PushManager.unRegister(context,config.mzAppId,config.mzAppKey)
+        }
     }
 
     override fun onGetNotifierName(config: PushConfig): String {

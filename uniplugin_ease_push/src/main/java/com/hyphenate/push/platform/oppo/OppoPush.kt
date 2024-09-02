@@ -53,8 +53,10 @@ class OppoPush: IPush() {
 
     }
 
-    override fun onUnregister(context: Context?) {
-        HeytapPushManager.unRegister()
+    override fun onUnregister(context: Context?, config: PushConfig) {
+        context.let {
+            HeytapPushManager.unRegister()
+        }
     }
 
     override fun onGetNotifierName(config: PushConfig): String {

@@ -21,8 +21,8 @@ abstract class IPush {
         onRegister(context, config)
     }
 
-    open fun unregister(context: Context?) {
-        onUnregister(context)
+    open fun unregister(context: Context?,config: PushConfig) {
+        onUnregister(context, config)
     }
 
     fun setTokenResultListener(listener: OnTokenResultListener){
@@ -35,7 +35,7 @@ abstract class IPush {
 
     abstract fun onRegister(context: Context?, config: PushConfig)
 
-    abstract fun onUnregister(context: Context?)
+    abstract fun onUnregister(context: Context?,config: PushConfig)
 
     abstract fun onGetNotifierName(config: PushConfig): String
 }

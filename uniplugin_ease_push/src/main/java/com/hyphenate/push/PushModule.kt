@@ -95,6 +95,26 @@ class PushModule: UniDestroyableModule() {
     }
 
     @UniJSMethod(uiThread = true)
+    fun unRegister(){
+        updatePluginStatus()
+        pushClient?.let {
+            it.unregister(uniContext,pushConfig)
+        }?:kotlin.run {
+            pushClient = when(PushHelper.getPreferPushType(pushConfig)){
+                PushType.MIPUSH -> MiPush()
+                PushType.OPPOPUSH -> OppoPush()
+                PushType.VIVOPUSH -> ViVoPush()
+                PushType.HONORPUSH -> HonorPush()
+                PushType.MEIZUPUSH -> MzPush()
+                PushType.HMSPUSH -> HMSPush()
+                PushType.NORMAL -> NormalPush()
+                else -> NormalPush()
+            }
+            pushClient?.unregister(uniContext,pushConfig)
+        }
+    }
+
+    @UniJSMethod(uiThread = true)
     fun getMateDataInfo(callback: UniJSCallback?){
         updatePluginStatus()
         pushConfig.getMetaDataInfo(uniContext,callback)

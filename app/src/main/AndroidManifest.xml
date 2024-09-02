@@ -118,11 +118,11 @@
 
         <meta-data
             android:name="MEI_ZU_APP_ID"
-            android:value="153508" />
+            android:value="154123" />
 
         <meta-data
             android:name="MEI_ZU_APP_KEY"
-            android:value="99c0860422a649fbb0b4654a82b06e3f" />
+            android:value="3e490dd7c3804f89b4c32d4b67ff1d51" />
 
 
     </application>

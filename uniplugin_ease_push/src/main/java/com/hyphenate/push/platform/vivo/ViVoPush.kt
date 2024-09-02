@@ -47,10 +47,8 @@ class ViVoPush : IPush() {
         }
     }
 
-    override fun onUnregister(context: Context?) {
-        context?.let {
+    override fun onUnregister(context: Context?, config: PushConfig) {
 
-        }
     }
 
     override fun onGetNotifierName(config: PushConfig): String {

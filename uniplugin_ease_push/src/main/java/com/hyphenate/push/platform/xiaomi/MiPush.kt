@@ -35,7 +35,7 @@ class MiPush: IPush() {
         }
     }
 
-    override fun onUnregister(context: Context?) {
+    override fun onUnregister(context: Context?, config: PushConfig) {
         context?.let {
             MiPushClient.unregisterPush(it)
         }
