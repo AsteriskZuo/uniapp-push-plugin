@@ -14,6 +14,7 @@ import com.huawei.hms.aaid.HmsInstanceId
 import com.hyphenate.push.PushConfig
 import com.hyphenate.push.PushType
 import com.hyphenate.push.platform.IPush
+import com.hyphenate.push.platform.fcm.FCMPush
 import com.hyphenate.push.platform.honor.HonorPush
 import com.hyphenate.push.platform.huawei.HMSPush
 import com.hyphenate.push.platform.meizu.MzPush
@@ -144,9 +145,8 @@ object PushHelper {
         }
     }
 
-    fun getPreferPushType(pushConfig: PushConfig): PushType {
+    private fun selectPushType(pushConfig: PushConfig): PushType {
         val supportedPushTypes: Array<PushType> = arrayOf<PushType>(
-            PushType.FCM,
             PushType.MIPUSH,
             PushType.HMSPUSH,
             PushType.MEIZUPUSH,
@@ -167,9 +167,18 @@ object PushHelper {
         return PushType.NORMAL
     }
 
-    fun getPushClient(config: PushConfig):IPush{
-        Log.e(TAG,"register: pushType:${getPreferPushType(config)}")
-        return when(getPreferPushType(config)){
+    fun getPushClient(config: PushConfig, context: Context?):IPush{
+        Log.e(TAG,"getPushClient:${config}")
+        if (config.currentPushType == PushType.NORMAL && config.fcmAvailable(context)){
+            config.currentPushType = PushType.FCM
+            return FCMPush()
+        }
+        if (config.currentPushType == PushType.FCM){
+            return FCMPush()
+        }
+        val pushType = selectPushType(config)
+        config.currentPushType = pushType
+        return when(pushType){
             PushType.MIPUSH -> MiPush()
             PushType.OPPOPUSH -> OppoPush()
             PushType.VIVOPUSH -> ViVoPush()
@@ -180,6 +189,7 @@ object PushHelper {
             else -> NormalPush()
         }
     }
+    
 
     /**
      * 申请华为Push Token
@@ -263,6 +273,41 @@ object PushHelper {
             Log.e(TAG,"jsonObject: $jsonObject")
             val appInfo: JSONObject = jsonObject.getJSONObject("app_info")
             appInfo.getString("app_id")
+        }
+    }
+
+    fun getFCMSenderId(context: Context): String? {
+        var senderId: String? = null
+        try {
+            // 获取 AssetManager
+            val assetManager: AssetManager = context.assets
+            // 打开 assets 目录下的 google-services.json 文件
+            val inputStream: InputStream = assetManager.open("google-services.json")
+            // 读取文件内容
+            val reader = BufferedReader(InputStreamReader(inputStream))
+            val stringBuilder = StringBuilder()
+            var line: String?
+
+            while (reader.readLine().also { line = it } != null) {
+                stringBuilder.append(line)
+            }
+            senderId = stringBuilder.toString()
+            reader.close()
+        } catch (e: IOException) {
+            Log.e(TAG, "Failed to read google-services.json: ${e.message}")
+            e.printStackTrace()
+        }
+
+        return senderId?.let {
+            try {
+                val jsonObject: JSONObject = JSONObject.parseObject(it)
+                Log.d(TAG, "FCM jsonObject: $jsonObject")
+                val projectInfo: JSONObject = jsonObject.getJSONObject("project_info")
+                projectInfo.getString("project_number")
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to parse FCM sender ID: ${e.message}")
+                null
+            }
         }
     }
 

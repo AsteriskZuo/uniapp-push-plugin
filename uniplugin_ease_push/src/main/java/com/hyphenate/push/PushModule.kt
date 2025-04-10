@@ -7,13 +7,6 @@ import com.hyphenate.push.common.PushConstants
 import com.hyphenate.push.common.PushHelper
 import com.hyphenate.push.platform.IPush
 import com.hyphenate.push.platform.OnTokenResultListener
-import com.hyphenate.push.platform.honor.HonorPush
-import com.hyphenate.push.platform.huawei.HMSPush
-import com.hyphenate.push.platform.meizu.MzPush
-import com.hyphenate.push.platform.normal.NormalPush
-import com.hyphenate.push.platform.oppo.OppoPush
-import com.hyphenate.push.platform.vivo.ViVoPush
-import com.hyphenate.push.platform.xiaomi.MiPush
 import com.taobao.weex.bridge.JSCallback
 import io.dcloud.feature.uniapp.annotation.UniJSMethod
 import io.dcloud.feature.uniapp.bridge.UniJSCallback
@@ -39,6 +32,7 @@ class PushModule: UniDestroyableModule() {
 
     @UniJSMethod(uiThread = true)
     fun initPushModule(callback: UniJSCallback?){
+        Log.e(TAG,"initPushModule")
         updatePluginStatus()
         pushConfig.checkPushConfig(uniContext,callback)
     }
@@ -55,28 +49,20 @@ class PushModule: UniDestroyableModule() {
     @UniJSMethod(uiThread = false)
     fun onRegister(callback: UniJSCallback?){
         updatePluginStatus()
-        Log.d(TAG,"onRegister")
+        Log.e(TAG,"onRegister")
         callback?.let {
             PushHelper.onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN] = it
         }
-        pushClient = when(PushHelper.getPreferPushType(pushConfig)){
-            PushType.MIPUSH -> MiPush()
-            PushType.OPPOPUSH -> OppoPush()
-            PushType.VIVOPUSH -> ViVoPush()
-            PushType.HONORPUSH -> HonorPush()
-            PushType.MEIZUPUSH -> MzPush()
-            PushType.HMSPUSH -> HMSPush()
-            PushType.NORMAL -> NormalPush()
-            else -> NormalPush()
-        }
+        pushClient = PushHelper.getPushClient(pushConfig,uniContext)
+        Log.e(TAG, "onRegister:pushType:${pushClient?.getPushType()?.name}")
         pushClient?.setTokenResultListener(object : OnTokenResultListener {
             override fun getPushTokenSuccess(pushType: PushType, pushToken: String?) {
-                Log.d(TAG,"getPushTokenSuccess:${pushType.name} $pushToken")
+                Log.e(TAG,"onRegister:getPushTokenSuccess:${pushType.name} $pushToken")
                 PushHelper.sendRenewTokenEvent(pushType,pushToken)
             }
 
             override fun getPushTokenFail(pushType: PushType, code: Int, error: String?) {
-                Log.e(TAG,"getPushTokenFail:${pushType.name} $code $error")
+                Log.e(TAG,"onRegister:getPushTokenFail:${pushType.name} $code $error")
                 callback?.let {
                     val jsonObject = PushHelper.assemblyData("",pushType,code,error)
                     PushHelper.sendNotificationEvent(jsonObject,0)
@@ -84,7 +70,7 @@ class PushModule: UniDestroyableModule() {
             }
 
             override fun onError(type: PushType, code: Int, error: String?) {
-                Log.e(TAG,"onError: ${type.name} $code $error")
+                Log.e(TAG,"onRegister:onError: ${type.name} $code $error")
                 callback?.let {
                     val jsonObject = PushHelper.assemblyData("",type,code,error)
                     PushHelper.sendNotificationEvent(jsonObject,0)
@@ -97,21 +83,8 @@ class PushModule: UniDestroyableModule() {
     @UniJSMethod(uiThread = true)
     fun unRegister(){
         updatePluginStatus()
-        pushClient?.let {
-            it.unregister(uniContext,pushConfig)
-        }?:kotlin.run {
-            pushClient = when(PushHelper.getPreferPushType(pushConfig)){
-                PushType.MIPUSH -> MiPush()
-                PushType.OPPOPUSH -> OppoPush()
-                PushType.VIVOPUSH -> ViVoPush()
-                PushType.HONORPUSH -> HonorPush()
-                PushType.MEIZUPUSH -> MzPush()
-                PushType.HMSPUSH -> HMSPush()
-                PushType.NORMAL -> NormalPush()
-                else -> NormalPush()
-            }
-            pushClient?.unregister(uniContext,pushConfig)
-        }
+        Log.e(TAG,"onRegister:unRegister:")
+        pushClient?.unregister(uniContext,pushConfig)
     }
 
     @UniJSMethod(uiThread = true)
@@ -124,7 +97,7 @@ class PushModule: UniDestroyableModule() {
     fun addNotificationListener(callback: JSCallback?) {
         updatePluginStatus()
         callback?.let {
-            Log.d( TAG,"addNotificationListener")
+            Log.e( TAG,"addNotificationListener")
             PushHelper.notifyCallback[PushConstants.NOTIFICATION_EVENT] = it
             PushHelper.sendCacheNotify(1)
         }

@@ -34,6 +34,7 @@
 -keep class io.dcloud.nineoldandroids.** {*;}
 -keep class vi.com.gdi.** {*;}
 -keep class androidx.** {*;}
+-keep class com.google.firebase.** {*;}
 -dontwarn pl.droidsonroids.gif.**
 
 -keepclasseswithmembers class * extends io.dcloud.js.geolocation.GeoManagerBase {

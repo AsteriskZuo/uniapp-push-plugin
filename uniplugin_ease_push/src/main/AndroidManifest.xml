@@ -201,6 +201,16 @@
         </receiver>
         <!-- Mi推送配置 end-->
 
+        <!-- FCM推送配置 start-->
+        <service
+            android:name="com.hyphenate.push.platform.fcm.FCMPushService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- FCM推送配置 end-->
+
     </application>
 
 </manifest>

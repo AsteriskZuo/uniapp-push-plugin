@@ -3,11 +3,11 @@ package com.hyphenate.push
 import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import android.nfc.Tag
 import android.util.Log
 import com.alibaba.fastjson.JSONObject
 import com.hyphenate.push.common.PushConstants
 import com.hyphenate.push.common.PushHelper
+import com.hyphenate.push.platform.fcm.FCMPushHelper
 import com.taobao.weex.bridge.JSCallback
 
 
@@ -31,20 +31,25 @@ class PushConfig {
     //meizu
     var mzAppId: String = ""
     var mzAppKey: String = ""
+    //fcm
+    var fcmSenderId: String = ""
 
     val pushConfigTypes: MutableList<PushType> = mutableListOf()
 
     var jsonObject: JSONObject = JSONObject()
 
+    var currentPushType: PushType = PushType.NORMAL
+
     fun checkPushConfig(context:Context?,callback: JSCallback?){
         pushConfigTypes.clear()
-        checkPush(context)
+        getInfo(context)
         jsonObject[PushConstants.PUSH_ENABLE_TYPES] = pushConfigTypes.map { PushHelper.checkPushType(it) }
         Log.e(TAG,"pushConfigTypes:$pushConfigTypes")
         callback?.invoke(jsonObject)
     }
 
-    private fun checkPush(context:Context?){
+    private fun getInfo(context:Context?){
+        Log.d(TAG,"getInfo")
         context?.let {
             try {
                 it.packageManager.getApplicationInfo(
@@ -54,6 +59,7 @@ class PushConfig {
                         Log.e(TAG,"metaData info is empty")
                         return
                     }
+                    Log.e(TAG,"metaData info is" + appInfo.metaData)
                     try {
                         // xiaomi
                         if (appInfo.metaData.containsKey("XIAO_MI_APP_ID")){
@@ -224,7 +230,16 @@ class PushConfig {
                         }else{}
 
                     }catch (e: NullPointerException){
-                        Log.e( TAG, "hms push config meta-data: not found in AndroidManifest.xml.")
+                        Log.e( TAG, "hms appId is null")
+                    }
+
+                    // fcm
+                    try {
+                        val id = PushHelper.getFCMSenderId(context)
+                        id?.let { fcmSenderId = it }
+                        Log.d(TAG,"fcmSenderId:$fcmSenderId")
+                    } catch (e: NullPointerException) {
+                        Log.e(TAG, "fcm senderId is null")
                     }
                 }
             } catch (e: PackageManager.NameNotFoundException) {
@@ -234,6 +249,13 @@ class PushConfig {
         }?:kotlin.run {
             Log.e( TAG, "context is null.")
         }
+    }
+
+    fun fcmAvailable(context: Context?): Boolean{
+        if (context == null){
+            return false
+        }
+        return FCMPushHelper.isGoogleServiceAvailable(context) && fcmSenderId.isNotEmpty()
     }
 
     fun getMetaDataInfo(context:Context?,callback: JSCallback?){
@@ -253,7 +275,7 @@ class PushConfig {
                         jsonObject[s+i] = v.get(s)?.javaClass.toString()
                         i++
                     }
-                    Log.e(TAG,"getInfo: $jsonObject")
+                    Log.e(TAG,"getMetaDataInfo: $jsonObject")
                     callback?.invoke(jsonObject)
                 }?:kotlin.run {
                     jsonObject[PushConstants.ERROR] = "value is null."
