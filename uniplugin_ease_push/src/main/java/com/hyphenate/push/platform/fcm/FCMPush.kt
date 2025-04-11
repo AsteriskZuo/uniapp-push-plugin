@@ -4,12 +4,12 @@ import android.content.Context
 import com.hyphenate.push.PushConfig
 import com.hyphenate.push.PushType
 import com.hyphenate.push.platform.IPush
-import com.google.firebase.FirebaseApp
 import android.util.Log
 import com.google.firebase.messaging.FirebaseMessaging
 
+
 class FCMPush : IPush() {
-  
+
   override fun getPushType(): PushType {
     return PushType.FCM
   }
@@ -21,12 +21,8 @@ class FCMPush : IPush() {
   override fun onRegister(context: Context?, config: PushConfig) {
     context?.let {
       try {
-        if (FirebaseApp.getApps(it).isEmpty()) {
-          FirebaseApp.initializeApp(it)
-        }
-        
         FirebaseMessaging.getInstance().isNotificationDelegationEnabled = true
-        
+
         if (pushToken.isNullOrEmpty()) {
           FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
             if (!task.isSuccessful) {
@@ -53,18 +49,20 @@ class FCMPush : IPush() {
   }
 
   override fun onUnregister(context: Context?, config: PushConfig) {
-    try {
-      FirebaseMessaging.getInstance().deleteToken().addOnCompleteListener { task ->
-        if (!task.isSuccessful) {
-          val errorMessage = task.exception?.message ?: "Unknown error"
-          Log.e(TAG, "Failed to delete FCM token: $errorMessage")
-        } else {
-          pushToken = null
-          Log.d(TAG, "FCM token deleted successfully")
+    context?.let {
+      try {
+        FirebaseMessaging.getInstance().deleteToken().addOnCompleteListener { task ->
+          if (!task.isSuccessful) {
+            val errorMessage = task.exception?.message ?: "Unknown error"
+            Log.e(TAG, "Failed to delete FCM token: $errorMessage")
+          } else {
+            pushToken = null
+            Log.d(TAG, "FCM token deleted successfully")
+          }
         }
+      } catch (e: Exception) {
+        Log.e(TAG, "FCM unregistration error: ${e.message}")
       }
-    } catch (e: Exception) {
-      Log.e(TAG, "FCM unregistration error: ${e.message}")
     }
   }
 

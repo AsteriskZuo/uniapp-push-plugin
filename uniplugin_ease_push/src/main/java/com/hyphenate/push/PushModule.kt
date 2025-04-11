@@ -57,7 +57,7 @@ class PushModule: UniDestroyableModule() {
         Log.e(TAG, "onRegister:pushType:${pushClient?.getPushType()?.name}")
         pushClient?.setTokenResultListener(object : OnTokenResultListener {
             override fun getPushTokenSuccess(pushType: PushType, pushToken: String?) {
-                Log.e(TAG,"onRegister:getPushTokenSuccess:${pushType.name} $pushToken")
+                Log.d(TAG,"onRegister:getPushTokenSuccess:${pushType.name} $pushToken")
                 PushHelper.sendRenewTokenEvent(pushType,pushToken)
             }
 
@@ -83,7 +83,7 @@ class PushModule: UniDestroyableModule() {
     @UniJSMethod(uiThread = true)
     fun unRegister(){
         updatePluginStatus()
-        Log.e(TAG,"onRegister:unRegister:")
+        Log.d(TAG,"onRegister:unRegister:")
         pushClient?.unregister(uniContext,pushConfig)
     }
 
@@ -97,7 +97,7 @@ class PushModule: UniDestroyableModule() {
     fun addNotificationListener(callback: JSCallback?) {
         updatePluginStatus()
         callback?.let {
-            Log.e( TAG,"addNotificationListener")
+            Log.d( TAG,"addNotificationListener")
             PushHelper.notifyCallback[PushConstants.NOTIFICATION_EVENT] = it
             PushHelper.sendCacheNotify(1)
         }

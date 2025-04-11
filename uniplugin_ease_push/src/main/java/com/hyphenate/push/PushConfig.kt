@@ -44,7 +44,7 @@ class PushConfig {
         pushConfigTypes.clear()
         getInfo(context)
         jsonObject[PushConstants.PUSH_ENABLE_TYPES] = pushConfigTypes.map { PushHelper.checkPushType(it) }
-        Log.e(TAG,"pushConfigTypes:$pushConfigTypes")
+        Log.d(TAG,"pushConfigTypes:$pushConfigTypes")
         callback?.invoke(jsonObject)
     }
 
@@ -59,7 +59,7 @@ class PushConfig {
                         Log.e(TAG,"metaData info is empty")
                         return
                     }
-                    Log.e(TAG,"metaData info is" + appInfo.metaData)
+                    Log.d(TAG,"metaData info is" + appInfo.metaData)
                     try {
                         // xiaomi
                         if (appInfo.metaData.containsKey("XIAO_MI_APP_ID")){
@@ -149,7 +149,7 @@ class PushConfig {
                             }
 
                         }
-                        Log.e(TAG,"vivoAppId:$vivoAppId - vivoAppKey:$vivoAppKey")
+                        Log.d(TAG,"vivoAppId:$vivoAppId - vivoAppKey:$vivoAppKey")
                         if (appInfo.metaData.containsKey("com.vivo.push.api_key")){
                             vivoAppKey = appInfo.metaData.getString("com.vivo.push.api_key","")
                         }
@@ -189,7 +189,7 @@ class PushConfig {
                                 appInfo.metaData.getString("MEI_ZU_APP_KEY","")
                             }
                         }
-                        Log.e(TAG,"apex_meizu mzAppId:$vivoAppId - mzAppKey:$vivoAppKey")
+                        Log.d(TAG,"apex_meizu mzAppId:$vivoAppId - mzAppKey:$vivoAppKey")
                         if (mzAppId.isNotEmpty() && mzAppKey.isNotEmpty()){
                             pushConfigTypes.add(PushType.MEIZUPUSH)
                         }
@@ -235,7 +235,8 @@ class PushConfig {
 
                     // fcm
                     try {
-                        val id = PushHelper.getFCMSenderId(context)
+//                        val id = PushHelper.getFCMSenderId(context)
+                        val id = FCMPushHelper.getFCMSenderId(context)
                         id?.let { fcmSenderId = it }
                         Log.d(TAG,"fcmSenderId:$fcmSenderId")
                     } catch (e: NullPointerException) {
@@ -252,10 +253,7 @@ class PushConfig {
     }
 
     fun fcmAvailable(context: Context?): Boolean{
-        if (context == null){
-            return false
-        }
-        return FCMPushHelper.isGoogleServiceAvailable(context) && fcmSenderId.isNotEmpty()
+        return FCMPushHelper.getFCMSenderId(context) != null
     }
 
     fun getMetaDataInfo(context:Context?,callback: JSCallback?){

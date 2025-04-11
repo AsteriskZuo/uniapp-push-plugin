@@ -1,11 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
-// googleServices {
-//     // 配置google-services.json文件的自定义位置
-//     configFile = file("./src/main/assets/google-services.json")
-// }
-
 android {
 
     compileSdk 34
@@ -65,10 +60,10 @@ android {
 
     // sourceSets {
     //     debug {
-    //         assets.srcDirs += ['src/main/assets/google-services.json']
+    //         assets.srcDirs += ['src/main/assets']
     //     }
     //     release {
-    //         assets.srcDirs += ['src/main/assets/google-services.json']
+    //         assets.srcDirs += ['src/main/assets']
     //     }
     // }
 }

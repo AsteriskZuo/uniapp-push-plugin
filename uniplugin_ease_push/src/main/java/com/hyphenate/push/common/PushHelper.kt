@@ -53,9 +53,9 @@ object PushHelper {
     private fun sendEvent(params: JSONObject?,jsCallback: JSCallback?) {
         try {
             params?.let {
-                Log.e("sendEvent", "params:$it")
+                Log.d("sendEvent", "params:$it")
                 jsCallback?.let { callback->
-                    Log.e(TAG,"sendEvent success")
+                    Log.d(TAG,"sendEvent success")
                     callback.invokeAndKeepAlive(it)
                     return
                 }
@@ -70,10 +70,10 @@ object PushHelper {
 
     fun sendNotificationEvent(params: JSONObject?, notificationType: Int) {
         if (notificationType == 0) {
-            Log.e(TAG, "sendEvent eventName:${PushConstants.NOTIFICATION_RENEW_TOKEN}")
+            Log.d(TAG, "sendEvent eventName:${PushConstants.NOTIFICATION_RENEW_TOKEN}")
             sendEvent(params, onNewTokenCallback[PushConstants.NOTIFICATION_RENEW_TOKEN])
         } else {
-            Log.e(TAG, "sendEvent eventName:${PushConstants.NOTIFICATION_EVENT}")
+            Log.d(TAG, "sendEvent eventName:${PushConstants.NOTIFICATION_EVENT}")
             sendEvent(params, notifyCallback[PushConstants.NOTIFICATION_EVENT])
         }
     }
@@ -168,12 +168,13 @@ object PushHelper {
     }
 
     fun getPushClient(config: PushConfig, context: Context?):IPush{
-        Log.e(TAG,"getPushClient:${config}")
+        Log.d(TAG,"getPushClient:${config}")
+
         if (config.currentPushType == PushType.NORMAL && config.fcmAvailable(context)){
             config.currentPushType = PushType.FCM
             return FCMPush()
         }
-        if (config.currentPushType == PushType.FCM){
+        if (config.currentPushType == PushType.FCM && config.fcmAvailable(context)){
             return FCMPush()
         }
         val pushType = selectPushType(config)
