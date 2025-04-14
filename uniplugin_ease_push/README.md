@@ -1,135 +1,166 @@
-# android 平台 推送集成说明
+# Android 平台推送集成指南
 
-目前支持的平台有：小米、oppo、vivo、荣耀、魅族、华为、fcm。
+## 目录
 
-如果，国内厂商手机安装了 谷歌服务，并且 配置了 fcm 推送，那么，将走 fcm 推送，否则，将走厂商的推送。
+- [Android 平台推送集成指南](#android-平台推送集成指南)
+  - [目录](#目录)
+  - [支持的推送平台](#支持的推送平台)
+    - [推送路径说明](#推送路径说明)
+  - [集成方式概述](#集成方式概述)
+    - [1. 离线打包](#1-离线打包)
+    - [2. 云打包](#2-云打包)
+  - [离线打包集成 FCM](#离线打包集成-fcm)
+    - [配置权限](#配置权限)
+    - [FCM 配置](#fcm-配置)
+    - [项目配置](#项目配置)
+    - [打包与验证](#打包与验证)
+  - [云打包集成](#云打包集成)
+    - [AAR 配置](#aar-配置)
+    - [权限配置](#权限配置)
+    - [推送参数配置](#推送参数配置)
+    - [构建与安装](#构建与安装)
 
-如果是其它手机厂商，首先判断是否已经安装谷歌服务 并且配置了 fcm 推送，将走 fcm 推送，否则，没有推送服务。
+## 支持的推送平台
 
-其他厂商。例如：一加、真我 走 oppo 推送服务。 PTAC 走 华为 推送服务。
+本插件支持以下推送平台：
 
-## 集成方式
+- 小米
+- OPPO
+- vivo
+- 荣耀
+- 魅族
+- 华为
+- FCM (Firebase Cloud Messaging)
 
-1. 离线打包
-   离线打包是将 uniapp 打包成资源，放在 android 项目中，通过 android studio 编译运行
-2. 云打包
-   云打包是将 aar 放在 uniapp 的指定位置，通过 hbuilder 进行云打包，然后编译和运行
+### 推送路径说明
 
-[离线打包说明文档](https://nativesupport.dcloud.net.cn/AppDocs/download/android.html)
-[云打包说明文档](https://doc.dcloud.net.cn/uniCloud/)
+- 当国内厂商手机安装了谷歌服务并且配置了 FCM 推送时，将优先使用 FCM 推送；否则使用厂商自身的推送服务
+- 其他手机厂商的推送路径：
+  - 一加、真我：使用 OPPO 推送服务
+  - PTAC：使用华为推送服务
+  - 其他厂商：如已安装谷歌服务并配置 FCM，则使用 FCM 推送；否则无推送服务
 
-## fcm 集成离线打包
+## 集成方式概述
 
-fcm 集成需要使用离线打包的方式集成。 其他厂商可以离线打包也可以云打包。
+### 1. 离线打包
 
-### 权限配置
+将 UniApp 打包成资源，放在 Android 项目中，通过 Android Studio 编译运行
 
-android 应用如果想要收到通知需要配置权限
+### 2. 云打包
 
-修改 `AndroidManifest.xml` 文件内容。
+将 AAR 放在 UniApp 的指定位置，通过 HBuilder 进行云打包
+
+**相关文档：**
+
+- [离线打包说明文档](https://nativesupport.dcloud.net.cn/AppDocs/download/android.html)
+- [云打包说明文档](https://doc.dcloud.net.cn/uniCloud/)
+
+> **注意**：FCM 集成必须使用离线打包方式，其他厂商推送既可以离线打包也可以云打包。
+
+## 离线打包集成 FCM
+
+### 配置权限
+
+Android 应用接收通知需要配置以下权限，修改`AndroidManifest.xml`文件：
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 基本网络权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
-    <!-- android 13 通知运行时权限 -->
+    <!-- Android 13 通知运行时权限 -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-    <!-- Android 13 用于替换 READ_EXTERNAL_STORAGE 权限 -->
+
+    <!-- Android 13 媒体权限 -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
-    <!-- Android 14 用于申请部分权限 -->
+
+    <!-- Android 14 权限 -->
     <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
-    <!-- 从扩展存储读取权限 -->
+
+    <!-- 存储权限（Android 12及以下） -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32"/>
-
-
 </manifest>
 ```
 
-### fcm 配置
+### FCM 配置
 
-进入 fcm 控制台，申请 应用配置。
+1. 进入[Firebase 控制台](https://console.firebase.google.com/)，创建项目并申请应用配置
+2. 参考[FCM 集成文档](https://firebase.google.com/docs/cloud-messaging/android/client?hl=zh-cn)完成基本配置
 
-[fcm 集成参考文档](https://firebase.google.com/docs/cloud-messaging/android/client?hl=zh-cn)
-[fcm 配置控制台地址](https://console.firebase.google.com/)
+![FCM配置](./docs/res/fcm_android_config.png)
 
-![img](./docs/res/fcm_android_config.png)
+### 项目配置
 
-### android 项目配置
+1. **添加 FCM 依赖**
 
-修改 app 文件夹下的 build.gradle 文件，添加 fcm 依赖
+   修改 app 文件夹下的`build.gradle`文件：
 
-```gradle
-apply plugin: 'com.google.gms.google-services'
+   ```gradle
+   apply plugin: 'com.google.gms.google-services'
 
-// ...
+   // ...
 
-dependencies {
-    // fcm config
-    implementation 'com.google.firebase:firebase-messaging:24.1.1'
-    implementation 'com.google.android.gms:play-services-base:18.6.0'
-}
-```
+   dependencies {
+       // FCM配置
+       implementation 'com.google.firebase:firebase-messaging:24.1.1'
+       implementation 'com.google.android.gms:play-services-base:18.6.0'
+   }
+   ```
 
-### google-services.json
+2. **添加配置文件**
 
-将 `google-services.json` 放在 app 文件夹下。
+   将`google-services.json`放在 app 文件夹下
 
-![img](./docs/res/native-app_fcm_config.png)
+   ![FCM配置文件](./docs/res/native-app_fcm_config.png)
 
-### 打包 app 资源
+3. **打包 App 资源**
 
-使用 hbuilder 将 uni-app 打包成 app 资源，放在 `app/src/main/assets/apps` 项目中，通过 android studio 编译运行。
+   使用 HBuilder 将 UniApp 打包成 App 资源，放在`app/src/main/assets/apps`目录中
 
-![img](./docs/res/build_native_app_res.png)
+   ![构建资源](./docs/res/build_native_app_res.png)
 
-### 配置 app 资源
+4. **配置 App 资源**
 
-修改 `app/src/main/assets/data/dcloud_control.xml` 文件，设置 appid 为 上面打包的文件夹的名字。
+   修改`app/src/main/assets/data/dcloud_control.xml`文件，设置 appid 为打包的文件夹名
 
-![img](./docs/res/native_config_app_res.png)
+   ![配置资源](./docs/res/native_config_app_res.png)
 
-### 配置 dcloud key
+5. **配置 DCloud Key**
 
-修改 `stand_alone/app/src/main/AndroidManifest.xml` 文件，设置 dcloud_appkey 的值。
+   修改`stand_alone/app/src/main/AndroidManifest.xml`文件，设置 dcloud_appkey
 
-[appkey 获取](https://nativesupport.dcloud.net.cn/AppDocs/usesdk/appkey.html)
+   [获取 AppKey](https://nativesupport.dcloud.net.cn/AppDocs/usesdk/appkey.html)
 
-### 编译运行和验证
+### 打包与验证
 
-使用 android studio 打开 项目，安装 应用到移动设备上。
+1. 使用 Android Studio 打开项目，安装应用到移动设备
+2. 通过 FCM 控制台发送测试消息验证推送功能
 
-通过 fcm 提供的控制台发送测试消息来验证。
+   ![测试消息](./docs/res/fcm_send_test_message.png)
 
-![img](./docs/res/fcm_send_test_message.png)
+## 云打包集成
 
-## 云打包
+### AAR 配置
 
-### native aar 配置
+将 Android 依赖通过 AAR 方式引入，放在`nativeplugins/EMPushUniPlugin`目录下
 
-android 的依赖通过 aar 的方式引入。放在 `nativeplugins/EMPushUniPlugin` 下面。
-
-![img](./docs/res/uni-app_naitve_aar.png)
+![AAR配置](./docs/res/uni-app_naitve_aar.png)
 
 ### 权限配置
 
-修改 `manifest.json` 文件内容：
+修改`manifest.json`文件配置权限：
 
 ```json
 {
-  /* 5+App特有相关 */
   "app-plus": {
-    /* 应用发布信息 */
     "distribute": {
-      /* android打包配置 */
       "android": {
         "permissions": [
           "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
@@ -155,82 +186,28 @@ android 的依赖通过 aar 的方式引入。放在 `nativeplugins/EMPushUniPlu
 }
 ```
 
-![img](./docs/res/uni-app_native_permission.png)
+![权限配置](./docs/res/uni-app_native_permission.png)
 
-### 推送配置
+### 推送参数配置
+
+在`manifest.json`中配置各平台的推送参数：
 
 ```json
 {
-  /* 5+App特有相关 */
   "app-plus": {
     "nativePlugins": {
       "EMPushUniPlugin": {
-        "hihonor_app_id": "104459115",
-        "oppo_app_key": "0b70d6a74a7148468899c3dca737654a",
-        "oppo_app_secret": "d9eaefb90c4b4c8e837e3e30cda6ffb2",
-        "com.vivo.push.app_id": "bf9b5941615f32b60ab906966b3b9755",
-        "com.vivo.push.api_key": "105792633",
-        "xiaomi_app_id": "2882303761520334485",
-        "xiaomi_app_key": "5912033445485",
-        "meizu_app_id": "154123",
-        "meizu_app_key": "3e490dd7c3804f89b4c32d4b67ff1d51",
+        "hihonor_app_id": "YOUR_HONOR_APP_ID",
+        "oppo_app_key": "YOUR_OPPO_APP_KEY",
+        "oppo_app_secret": "YOUR_OPPO_APP_SECRET",
+        "com.vivo.push.app_id": "YOUR_VIVO_APP_ID",
+        "com.vivo.push.api_key": "YOUR_VIVO_API_KEY",
+        "xiaomi_app_id": "YOUR_XIAOMI_APP_ID",
+        "xiaomi_app_key": "YOUR_XIAOMI_APP_KEY",
+        "meizu_app_id": "YOUR_MEIZU_APP_ID",
+        "meizu_app_key": "YOUR_MEIZU_APP_KEY",
         "__plugin_info__": {
-          "name": "EMPushUniPlugin",
-          "description": "环信UNIAPP推送插件",
-          "platforms": "Android,iOS",
-          "url": "",
-          "android_package_name": "",
-          "ios_bundle_id": "",
-          "isCloud": false,
-          "bought": -1,
-          "pid": "",
-          "parameters": {
-            "hihonor_app_id": {
-              "des": "荣耀推送 appId",
-              "key": "com.hihonor.push.app_id",
-              "value": ""
-            },
-            "oppo_app_key": {
-              "des": "OPPO推送 app_key",
-              "key": "OPPO_APP_KEY",
-              "value": "push_${oppo_app_key}"
-            },
-            "oppo_app_secret": {
-              "des": "OPPO推送 app_secret",
-              "key": "OPPO_APP_SECRET",
-              "value": "push_${oppo_app_secret}"
-            },
-            "com.vivo.push.app_id": {
-              "des": "VIVO推送 app_id",
-              "key": "com.vivo.push.app_id",
-              "value": ""
-            },
-            "com.vivo.push.api_key": {
-              "des": "VIVO推送 api_key",
-              "key": "com.vivo.push.api_key",
-              "value": ""
-            },
-            "xiaomi_app_id": {
-              "des": "XIAOMI推送 app_id",
-              "key": "XIAO_MI_APP_ID",
-              "value": "push_${xiaomi_app_id}"
-            },
-            "xiaomi_app_key": {
-              "des": "XIAOMI推送 app_key",
-              "key": "XIAO_MI_APP_KEY",
-              "value": "push_${xiaomi_app_key}"
-            },
-            "meizu_app_id": {
-              "des": "MEIZU推送 app_id",
-              "key": "MEI_ZU_APP_ID",
-              "value": "push_${meizu_app_id}"
-            },
-            "meizu_app_key": {
-              "des": "MEIZU推送 app_key",
-              "key": "MEI_ZU_APP_KEY",
-              "value": "push_${meizu_app_key}"
-            }
-          }
+          // 插件配置信息
         }
       }
     }
@@ -238,15 +215,15 @@ android 的依赖通过 aar 的方式引入。放在 `nativeplugins/EMPushUniPlu
 }
 ```
 
-![img](./docs/res/uni-app_native_config.png)
+![推送配置](./docs/res/uni-app_native_config.png)
 
-### 移动应用云构建
+### 构建与安装
 
-如果是免费的云构建可能需要排队等待。
+1. 使用 HBuilder 进行云构建（免费版可能需要排队等待）
 
-![img](./docs/res/dcloud_mobile_app_build.png)
+   ![云构建](./docs/res/dcloud_mobile_app_build.png)
 
-### 安装和运行
+2. 构建完成后安装应用
 
-![img](./docs/res/uni-app_run_1.png)
-![img](./docs/res/uni-app_run_2.png)
+   ![安装步骤1](./docs/res/uni-app_run_1.png)
+   ![安装步骤2](./docs/res/uni-app_run_2.png)
