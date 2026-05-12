@@ -234,13 +234,15 @@ class PushConfig {
                     }
 
                     // fcm
+                    // 这里用 Throwable 而不是 Exception，是为了兜住云打包场景下
+                    // 缺少 firebase-messaging / play-services-base 时抛出的
+                    // NoClassDefFoundError（属于 Error，不是 Exception）。
                     try {
-//                        val id = PushHelper.getFCMSenderId(context)
                         val id = FCMPushHelper.getFCMSenderId(context)
                         id?.let { fcmSenderId = it }
                         Log.d(TAG,"fcmSenderId:$fcmSenderId")
-                    } catch (e: NullPointerException) {
-                        Log.e(TAG, "fcm senderId is null")
+                    } catch (t: Throwable) {
+                        Log.e(TAG, "fcm senderId fetch failed: ${t.message}")
                     }
                 }
             } catch (e: PackageManager.NameNotFoundException) {
@@ -252,8 +254,14 @@ class PushConfig {
         }
     }
 
-    fun fcmAvailable(context: Context?): Boolean{
-        return FCMPushHelper.getFCMSenderId(context) != null
+    fun fcmAvailable(context: Context?): Boolean {
+        if (!FCMPushHelper.isFcmDependencyAvailable()) return false
+        return try {
+            FCMPushHelper.getFCMSenderId(context) != null
+        } catch (t: Throwable) {
+            Log.e(TAG, "fcmAvailable error: ${t.message}")
+            false
+        }
     }
 
     fun getMetaDataInfo(context:Context?,callback: JSCallback?){

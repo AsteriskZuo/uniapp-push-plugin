@@ -170,11 +170,20 @@ object PushHelper {
     fun getPushClient(config: PushConfig, context: Context?):IPush{
         Log.d(TAG,"getPushClient:${config}")
 
-        if (config.currentPushType == PushType.NORMAL && config.fcmAvailable(context)){
+        // 任何 FCM 相关检测都额外加一层 Throwable 兜底，避免云打包未带 FCM 依赖时
+        // NoClassDefFoundError 透传到上层导致 onRegister 整体失败。
+        val fcmReady = try {
+            config.fcmAvailable(context)
+        } catch (t: Throwable) {
+            Log.e(TAG, "fcmAvailable check failed, fallback to vendor push: ${t.message}")
+            false
+        }
+
+        if (config.currentPushType == PushType.NORMAL && fcmReady){
             config.currentPushType = PushType.FCM
             return FCMPush()
         }
-        if (config.currentPushType == PushType.FCM && config.fcmAvailable(context)){
+        if (config.currentPushType == PushType.FCM && fcmReady){
             return FCMPush()
         }
         val pushType = selectPushType(config)

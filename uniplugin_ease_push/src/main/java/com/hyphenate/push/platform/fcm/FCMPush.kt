@@ -38,9 +38,9 @@ class FCMPush : IPush() {
         } else {
           resultListener?.getPushTokenSuccess(PushType.FCM, pushToken)
         }
-      } catch (e: Exception) {
-        Log.e(TAG, "FCM registration error: ${e.message}")
-        resultListener?.getPushTokenFail(PushType.FCM, 2003, e.message ?: "isSupportPush false")
+      } catch (t: Throwable) {
+        Log.e(TAG, "FCM registration error: ${t.message}")
+        resultListener?.getPushTokenFail(PushType.FCM, 2003, t.message ?: "isSupportPush false")
       }
     } ?: run {
       Log.e(TAG, "Context is null, cannot register FCM")
@@ -60,8 +60,8 @@ class FCMPush : IPush() {
             Log.d(TAG, "FCM token deleted successfully")
           }
         }
-      } catch (e: Exception) {
-        Log.e(TAG, "FCM unregistration error: ${e.message}")
+      } catch (t: Throwable) {
+        Log.e(TAG, "FCM unregistration error: ${t.message}")
       }
     }
   }

@@ -56,6 +56,10 @@
 - [云打包说明文档](https://doc.dcloud.net.cn/uniCloud/)
 
 > **注意**：FCM 集成必须使用离线打包方式，其他厂商推送既可以离线打包也可以云打包。
+>
+> 自 v1.1.1 起，云打包（或离线打包未引入 FCM 依赖）时，插件会在运行时检测 FCM/Google Play Services
+> 类是否存在，缺失时会自动跳过 FCM 通道，使用对应的厂商通道，**不会再因为缺少
+> `com.google.android.gms.common.GoogleApiAvailability` 抛出 `NoClassDefFoundError`**。
 
 ## 离线打包集成 FCM
 
