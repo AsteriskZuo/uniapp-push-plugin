@@ -1,0 +1,332 @@
+{
+    "name" : "爱尚往约到家",
+    "appid" : "__UNI__FAA4319",
+    "description" : "",
+    "versionName" : "1.2.9",
+    "versionCode" : 129,
+    "transformPx" : false,
+    "sassImplementationName" : "node-sass",
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueStyleCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "autoDensify" : true,
+        "splashscreen" : {
+            "androidTranslucent" : true,
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        "confusion" : {
+            "description" : "JS原生混淆",
+            "resources" : {
+                "common/api.js" : {},
+                "common/config.js" : {},
+                "util/pay.js" : {},
+                "util/uqrcode.js" : {},
+                "util/pay-shop.js" : {},
+                "util/util.js" : {}
+            }
+        },
+        /* 模块配置 */
+        "modules" : {
+            "Payment" : {},
+            "Maps" : {},
+            "Geolocation" : {},
+            "Camera" : {},
+            "Share" : {},
+            "OAuth" : {},
+            "uni.webView" : {
+                "type" : "namespace",
+                "methods" : [ "postMessage" ]
+            },
+            "VideoPlayer" : {},
+            "Push" : {}
+        },
+        "checkPermissionDenied" : true, // 是否校验已拒绝权限 如果拒绝则不会再申请 默认false 不校验已拒绝权限
+
+        /* 应用发布信息 */
+        "distribute" : {
+            "distribute" : {
+                "orientation" : [ "portrait-primary" ]
+            },
+            /* android打包配置 */
+            "android" : {
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>"
+                ],
+                "schemes" : "aswydj",
+                "abiFilters" : [ "arm64-v8a" ],
+                "permissionExternalStorage" : {
+                    //可选，JSON对象，Android平台应用启动时申请读写手机存储权限策略
+                    "request" : "none", //必填，字符串类型，申请读写手机存储权限策略，可取值none、once、always
+                    "prompt" : "应用保存运行状态等信息，需要获取读写手机存储（系统提示为访问设备上的照片、媒体内容和文件）权限，请允许。" //可选，字符串类型，当request设置为always值用户拒绝时弹出提示框上的内容
+                },
+                "permissionPhoneState" : {
+                    "request" : "none",
+                    "prompt" : "为保证您正常、安全地使用，需要获取设备识别码（部分手机提示为获取手机号码、拨打电话）使用权限，请允许。"
+                },
+                "targetSdkVersion" : 30,
+                "minSdkVersion" : 21,
+                "excludePermissions" : [
+                    "<uses-permission android:name=\"android.permission.READ_SMS\" />",
+                    "<uses-permission android:name=\"android.permission.WRITE_SMS\" />",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_SMS\" />",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_WAP_PUSH\" />",
+                    "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
+                    "<uses-permission android:name=\"android.permission.READ_CALENDAR\" />",
+                    "<uses-permission android:name=\"android.permission.WRITE_CALENDAR\" />"
+                ]
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "idfa" : true,
+                "urltypes" : "aswydj",
+                "privacyDescription" : {
+                    "NSLocationWhenInUseUsageDescription" : "该应用需要你的地理位置，以便计算您与技师之间的距离",
+                    "NSLocationAlwaysUsageDescription" : "该应用需要你的地理位置，以便为你提供当前位置信息",
+                    "NSLocationAlwaysAndWhenInUseUsageDescription" : "该应用需要持续获取用户地理位置，以便为你进行导航",
+                    "NSContactsUsageDescription" : "该应用需要你的拨打电话权限，以便为你提供便捷呼叫服务",
+                    "NSPhotoLibraryUsageDescription" : "该应用需要读取你的相册，以便为你编辑用户信息",
+                    "NSPhotoLibraryAddUsageDescription" : "该应用需要读取你的相册，以便为你编辑用户信息",
+                    "NSCameraUsageDescription" : "该应用需要你的相机，以便你拍摄上传用户信息"
+                },
+                "dSYMs" : false,
+                "UIBackgroundModes" : ""
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "payment" : {
+                    "alipay" : {
+                        "__platform__" : [ "ios", "android" ]
+                    },
+                    "weixin" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appid" : "wxe0ecb1880347c691",
+                        "UniversalLinks" : "https://demo.dcloud.net.cn/ulink/"
+                    }
+                },
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "wxe0ecb1880347c691",
+                        "UniversalLinks" : "https://demo.dcloud.net.cn/ulink/"
+                    },
+                    "univerify" : {}
+                },
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wxe0ecb1880347c691",
+                        "UniversalLinks" : "https://demo.dcloud.net.cn/ulink/"
+                    }
+                },
+                "push" : {},
+                "ad" : {},
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "c644f7d67af8bd641e2589cea7e700ca",
+                        "appkey_android" : "c6b832d50d6b91027f357f4c09a45e7b"
+                    }
+                },
+                "geolocation" : {
+                    "amap" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "c644f7d67af8bd641e2589cea7e700ca",
+                        "appkey_android" : "c6b832d50d6b91027f357f4c09a45e7b"
+                    }
+                }
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            },
+            "splashscreen" : {
+                "android" : {
+                    "hdpi" : "static/launch/480-762.9.png",
+                    "xhdpi" : "static/launch/720-1242.9.png",
+                    "xxhdpi" : "static/launch/1080-1882.9.png"
+                },
+                "useOriginalMsgbox" : true,
+                "iosStyle" : "common",
+                "androidStyle" : "common",
+                "ios" : {
+                    "storyboard" : ""
+                }
+            }
+        },
+        "uniStatistics" : {
+            "enable" : true
+        },
+        "nativePlugins" : {
+            "EMPushUniPlugin" : {
+                "hihonor_app_id" : "104455928",
+                "oppo_app_key" : "69641d80da70473db410d6ea8962f2ec",
+                "oppo_app_secret" : "b4c8c21303b14c78bd85622b9d6d3fc2",
+                "com.vivo.push.app_id" : "105739920",
+                "com.vivo.push.api_key" : "a7148cbd02a7edac1bbae6af86928cd8",
+                "xiaomi_app_id" : "2882303761520311253",
+                "xiaomi_app_key" : "5412031192253",
+                "meizu_app_id" : "155542",
+                "meizu_app_key" : "8c8be5790f1b483b8bae2e6d08b8386b",
+                "__plugin_info__" : {
+                    "name" : "EMPushUniPlugin",
+                    "description" : "环信UNIAPP推送插件",
+                    "platforms" : "Android,iOS",
+                    "url" : "",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : false,
+                    "bought" : -1,
+                    "pid" : "",
+                    "parameters" : {
+                        "hihonor_app_id" : {
+                            "des" : "荣耀推送 appId",
+                            "key" : "com.hihonor.push.app_id",
+                            "value" : ""
+                        },
+                        "oppo_app_key" : {
+                            "des" : "OPPO推送 app_key",
+                            "key" : "OPPO_APP_KEY",
+                            "value" : "push_${oppo_app_key}"
+                        },
+                        "oppo_app_secret" : {
+                            "des" : "OPPO推送 app_secret",
+                            "key" : "OPPO_APP_SECRET",
+                            "value" : "push_${oppo_app_secret}"
+                        },
+                        "com.vivo.push.app_id" : {
+                            "des" : "VIVO推送 app_id",
+                            "key" : "com.vivo.push.app_id",
+                            "value" : ""
+                        },
+                        "com.vivo.push.api_key" : {
+                            "des" : "VIVO推送 api_key",
+                            "key" : "com.vivo.push.api_key",
+                            "value" : ""
+                        },
+                        "xiaomi_app_id" : {
+                            "des" : "XIAOMI推送 app_id",
+                            "key" : "XIAO_MI_APP_ID",
+                            "value" : "push_${xiaomi_app_id}"
+                        },
+                        "xiaomi_app_key" : {
+                            "des" : "XIAOMI推送 app_key",
+                            "key" : "XIAO_MI_APP_KEY",
+                            "value" : "push_${xiaomi_app_key}"
+                        },
+                        "meizu_app_id" : {
+                            "des" : "MEIZU推送 app_id",
+                            "key" : "MEI_ZU_APP_ID",
+                            "value" : "push_${meizu_app_id}"
+                        },
+                        "meizu_app_key" : {
+                            "des" : "MEIZU推送 app_key",
+                            "key" : "MEI_ZU_APP_KEY",
+                            "value" : "push_${meizu_app_key}"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "vueVersion" : "2",
+    "h5" : {
+        "sdkConfigs" : {
+            "maps" : {
+                "amap" : {
+                    "key" : "b8404792b9f5a7690e0903b577b9a42e",
+                    "securityJsCode" : "",
+                    "serviceHost" : "/_AMapService"
+                }
+            }
+        },
+        "title" : "",
+        "devServer" : {
+            "port" : 8088,
+            "disableHostCheck" : true,
+            "proxy" : {
+                "/prod-api" : {
+                    "target" : "https://jiekou.cqwydj.com/prod-api",
+                    // "target" : "http://192.168.2.34:8080/",
+                    // "target" : "http://192.168.1.36:8080", //杨工
+                    // "target" : "http://10.34.0.96:8080",
+                    // "target" : "https://m.cqwydj.com/prod-api",
+                    // "target" : "https://api.cqwydj.com/prod-api",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/prod-api" : "/"
+                    }
+                }
+            },
+            "https" : true
+        },
+        "router" : {
+            "mode" : "hash",
+            "base" : "/h5/"
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : false
+            }
+        },
+        "template" : ""
+    },
+    "_spaceID" : "mp-2909dcd4-8ad8-4f4a-9621-6c5458d255a8"
+}
