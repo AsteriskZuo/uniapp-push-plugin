@@ -1,0 +1,11 @@
+{
+    "version" : "1.0",
+    "configurations" : [
+        {
+            "customPlaygroundType" : "device",
+            "packageName" : "uni.app.UNI927B015",
+            "playground" : "custom",
+            "type" : "uni-app:app-android"
+        }
+    ]
+}
