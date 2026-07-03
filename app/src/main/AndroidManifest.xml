@@ -85,7 +85,7 @@
         <!-- dcloud 离线打包需要的 appkey-->
         <meta-data
             android:name="dcloud_appkey"
-            android:value="d83ece77722f6ae9c4bf898df5a5538c" />
+            android:value="2a8ef8b3b479518a8aa755fab9021af7" />
 
         <!-- 本地调试推送配置 start-->
         <meta-data

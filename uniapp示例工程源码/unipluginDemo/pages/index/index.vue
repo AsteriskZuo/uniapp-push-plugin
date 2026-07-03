@@ -3,6 +3,10 @@
 		<view class="uni-hello-text">
 			<text class="hello-text">uni原生插件示例</text>
 		</view>
+		<!-- 打开相册测试按钮 -->
+		<view class="test-section">
+			<button type="primary" @click="openGallery">打开相册（测试）</button>
+		</view>
 		<view class="uni-panel" v-for="(item, index) in list" :key="item.id">
 			<view class="uni-panel-h" :class="item.open ? 'uni-panel-h-on' : ''" @click="triggerCollapse(index)">
 				<text class="uni-panel-text">{{item.name}}</text>
@@ -50,6 +54,28 @@
 		},
 		onLoad() {},
 		methods: {
+			openGallery() {
+				uni.chooseImage({
+					count: 1,
+					sizeType: ['original', 'compressed'],
+					sourceType: ['album'],
+					success: (res) => {
+						console.log('选择图片成功', res);
+						uni.showToast({
+							title: '选择成功',
+							icon: 'success'
+						});
+					},
+					fail: (err) => {
+						console.error('选择图片失败', err);
+						uni.showToast({
+							title: '选择失败: ' + JSON.stringify(err),
+							icon: 'none',
+							duration: 3000
+						});
+					}
+				});
+			},
 			triggerCollapse(e) {
 				if (!this.list[e].pages) {
 					this.goDetailPage(this.list[e].url);
@@ -81,4 +107,8 @@
 </script>
 
 <style>
+	.test-section {
+		padding: 20rpx;
+		margin: 20rpx;
+	}
 </style>

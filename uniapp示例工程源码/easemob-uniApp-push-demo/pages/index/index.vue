@@ -16,6 +16,7 @@
       <button @click="loginIM">登录IM</button>
       <button @click="logoutIM">退出登录</button>
       <button @click="unBindPush">主动解绑push</button>
+      <button @click="openGallery">打开相册（测试）</button>
     </view>
   </view>
 </template>
@@ -76,6 +77,28 @@ export default {
     },
     unBindPush() {
       EMClient.unbindPushToken();
+    },
+    openGallery() {
+      uni.chooseImage({
+        count: 1,
+        sizeType: ["original", "compressed"],
+        sourceType: ["album"],
+        success: (res) => {
+          console.log("选择图片成功", res);
+          uni.showToast({
+            title: "选择成功",
+            icon: "success",
+          });
+        },
+        fail: (err) => {
+          console.error("选择图片失败", err);
+          uni.showToast({
+            title: "选择失败: " + JSON.stringify(err),
+            icon: "none",
+            duration: 3000,
+          });
+        },
+      });
     },
   },
 };

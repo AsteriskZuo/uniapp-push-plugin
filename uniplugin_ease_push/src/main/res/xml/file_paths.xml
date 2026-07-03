@@ -11,9 +11,9 @@
     <!--        path="CameraDemo" />-->
 
     <!-- 表示应用程序外部存储区根目录中的文件 物理路径相当于**Context.getExternalFilesDir(String) **+ /CameraDemo/ -->
-    <external-files-path
+    <!-- <external-files-path
         name="external-files-path"
-        path="CameraDemo" />
+        path="CameraDemo" /> -->
 
     <!-- 表示应用程序外部缓存区根目录中的文件 物理路径相当于 Context.getExternalCacheDir() + /CameraDemo/  -->
     <!--    <external-cache-path-->
@@ -27,8 +27,8 @@
     <!--        path="CameraDemo" />-->
 
     <!-- 注意，FileProvider 没有对外置SD卡公共目录的支持，通过这个标签可以正常实现，但是AS报警告说不要这样做，目前没找到更好的解决办法   -->
-    <root-path
+    <!-- <root-path
         name="root-path"
-        path="/" />
+        path="/" /> -->
 
 </paths>

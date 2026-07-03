@@ -1,6 +1,6 @@
 {
     "name" : "unipluginDemo",
-    "appid" : "",
+    "appid" : "__UNI__36B73FC",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -60,7 +60,78 @@
                 },
                 "ad" : {}
             }
-        }
+        },
+		"nativePlugins" : {
+		    "EMPushUniPlugin" : {
+		        "hihonor_app_id" : "104459115",
+		        "oppo_app_key" : "",
+		        "oppo_app_secret" : "",
+		        "com.vivo.push.app_id" : "105792633",
+		        "com.vivo.push.api_key" : "bf9b5941615f32b60ab906966b3b9755",
+		        "xiaomi_app_id" : "2882303761517520571",
+		        "xiaomi_app_key" : "5841752092571",
+		        "meizu_app_id" : "",
+		        "meizu_app_key" : "",
+		        "__plugin_info__" : {
+		            "name" : "EMPushUniPlugin",
+		            "description" : "环信UNIAPP推送插件",
+		            "platforms" : "Android,iOS",
+		            "url" : "",
+		            "android_package_name" : "",
+		            "ios_bundle_id" : "",
+		            "isCloud" : false,
+		            "bought" : -1,
+		            "pid" : "",
+		            "parameters" : {
+		                "hihonor_app_id" : {
+		                    "des" : "荣耀推送 appId",
+		                    "key" : "com.hihonor.push.app_id",
+		                    "value" : ""
+		                },
+		                "oppo_app_key" : {
+		                    "des" : "OPPO推送 app_key",
+		                    "key" : "OPPO_APP_KEY",
+		                    "value" : "push_${oppo_app_key}"
+		                },
+		                "oppo_app_secret" : {
+		                    "des" : "OPPO推送 app_secret",
+		                    "key" : "OPPO_APP_SECRET",
+		                    "value" : "push_${oppo_app_secret}"
+		                },
+		                "com.vivo.push.app_id" : {
+		                    "des" : "VIVO推送 app_id",
+		                    "key" : "com.vivo.push.app_id",
+		                    "value" : ""
+		                },
+		                "com.vivo.push.api_key" : {
+		                    "des" : "VIVO推送 api_key",
+		                    "key" : "com.vivo.push.api_key",
+		                    "value" : ""
+		                },
+		                "xiaomi_app_id" : {
+		                    "des" : "XIAOMI推送 app_id",
+		                    "key" : "XIAO_MI_APP_ID",
+		                    "value" : "push_${xiaomi_app_id}"
+		                },
+		                "xiaomi_app_key" : {
+		                    "des" : "XIAOMI推送 app_key",
+		                    "key" : "XIAO_MI_APP_KEY",
+		                    "value" : "push_${xiaomi_app_key}"
+		                },
+		                "meizu_app_id" : {
+		                    "des" : "MEIZU推送 app_id",
+		                    "key" : "MEI_ZU_APP_ID",
+		                    "value" : "push_${meizu_app_id}"
+		                },
+		                "meizu_app_key" : {
+		                    "des" : "MEIZU推送 app_key",
+		                    "key" : "MEI_ZU_APP_KEY",
+		                    "value" : "push_${meizu_app_key}"
+		                }
+		            }
+		        }
+		    }
+		}
     },
     /* 快应用特有相关 */
     "quickapp" : {},

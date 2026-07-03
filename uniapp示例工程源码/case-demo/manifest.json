@@ -1,6 +1,6 @@
 {
     "name" : "爱尚往约到家",
-    "appid" : "__UNI__FAA4319",
+    "appid" : "__UNI__32EB66E",
     "description" : "",
     "versionName" : "1.2.9",
     "versionCode" : 129,
@@ -117,8 +117,7 @@
                     "weixin" : {
                         "appid" : "wxe0ecb1880347c691",
                         "UniversalLinks" : "https://demo.dcloud.net.cn/ulink/"
-                    },
-                    "univerify" : {}
+                    }
                 },
                 "share" : {
                     "weixin" : {
